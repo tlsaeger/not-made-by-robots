@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        nuxt-netlify
+        Not Made By Robots
       </h1>
       <div class="links">
         <a
