@@ -6,9 +6,9 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - name: 'tutorial'
+    label: 'Tutorial'
+    folder: 'content/tutorial'
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
@@ -19,3 +19,5 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      
