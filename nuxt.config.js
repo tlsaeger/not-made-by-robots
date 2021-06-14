@@ -40,6 +40,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   
     modules: [
+      '@nuxt/image',
       '@nuxt/content'
     ],
     content: {
@@ -48,5 +49,10 @@ export default {
   
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+    image: {
+      cloudinary: {
+        baseURL: "https://res.cloudinary.com/nuxt/image/upload/",
+      },
+    },
 };

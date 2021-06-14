@@ -16,12 +16,15 @@
             v-for="tutorial in tutorials"
             :key="tutorial.slug"
           >
-            <img
+            <nuxt-img
+              provider="cloudinary" v-if="tutorial.image.includes('http')"
               class="preview-image"
-              :src="require(`~/assets${tutorial.image}`)"
+              src="v1623665002/sample.jpg"
             />
+            <!-- <img v-else  :src="require(`~/assets${tutorial.image}`)" class="preview-image"> -->
             <h1>{{ tutorial.title }}</h1>
             <p class="body-text">{{ tutorial.description }}</p>
+            <p>>></p>
           </NuxtLink>
         </div>
         <!-- <h1 v-for="item in pages" :key="item.slug">{{item.headline}}</h1> -->
@@ -97,6 +100,7 @@ span.not {
   background-color: #000;
   box-shadow: 10px 3px 5px #bb86fc;
   width: 20%;
+  min-height: 300px;
   height: 30%;
   margin: 1em;
   padding: 1em;
