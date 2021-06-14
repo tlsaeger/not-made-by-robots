@@ -5,16 +5,23 @@
 </template>
 
 <style>
+@font-face {
+  font-family: 'terminal-regular';
+  src: url(~/assets/fonts/terminal-grotesque-webfont.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'terminal-open';
+  src: url(~/assets/fonts/terminal-grotesque_open.otf) format("opentype");
+}
+@font-face {
+  font-family: 'EB-Garamond';
+  src: url(~/assets/fonts/EBGaramond-VariableFont_wght.ttf) format("truetype");
+}
+*{
+   font-family: 'terminal-regular',Arial, Helvetica, sans-serif;
+  color:#bb86fc;
+}
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -30,38 +37,19 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+h1,h2,p{
+  margin: 0;
+  font-weight: 400;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  line-height: 80%;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-
 body{
-  background-color: chartreuse;
+  margin: 0;
+   background-color: black;
+}
+a{
+  text-decoration: none;
 }
 
 </style>

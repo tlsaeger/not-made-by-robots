@@ -1,36 +1,34 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        Not Made By Robots!
-      </h1>
-      <ul>
-      <li v-for="page in post" :key=page.slug>
-      <NuxtLink :to="page.slug">{{page.title}} </NuxtLink>
-      </li>
-      </ul>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="home">
+       <section class="first_section">
+      <h1 class="title"><span class="not">Not</span> Made <br />By Robots</h1>
+      <p class="subline body-text">
+        A Toolkit for Artificial Intelligence in Design
+      </p>
+    </section>
+    <section class="second_section">
+        <h2 class="section-title">
+          Tutorials
+        </h2>
+        <div class="text-block-wrapper">
+          <NuxtLink :to="tutorial.slug"
+            class="card"
+            v-for="tutorial in tutorials"
+            :key="tutorial.slug"
+          >
+            <!-- <img
+              class="preview-image"
+              :src="require(`${tutorial.image}`)"
+            /> -->
+            <h1>{{ tutorial.image }}</h1>
+            <p class="body-text">{{ tutorial.description }}</p>
+          </NuxtLink>
+        </div>
+        <!-- <h1 v-for="item in pages" :key="item.slug">{{item.headline}}</h1> -->
+    </section>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -40,58 +38,94 @@ export default {
     };
   },
    async asyncData({ $content, params, error }) {
-    let post;
+    let tutorials;
     try {
-      post = await $content("blog", params.slug).fetch();
+      tutorials = await $content("tutorial", params.slug).fetch();
       // OR const article = await $content(`articles/${params.slug}`).fetch()
     } catch (e) {
       error({ message: "Blog Post not found" });
     }
 
     return {
-      post,
+      tutorials,
     };
   },
 };
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+.first_section {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  height: 100vh;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  flex-direction: column;
+  background: rgb(187, 134, 252);
+  background: radial-gradient(
+    circle,
+    rgba(187, 134, 252, 1) 0%,
+    rgba(0, 0, 0, 1) 50%
+  );
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+  color: #000;
+  font-size: 5em;
+  text-transform: uppercase;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+span.not {
+  font-family: "terminal-open", Arial, Helvetica, sans-serif;
+  color: #000;
 }
-
-.links {
-  padding-top: 15px;
+.subline {
+  color: #000;
+  font-size: 1.4em;
+}
+.text-block-wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section-title {
+  font-size: 4em;
+  margin: 1em 0 0.3em 1em;
+}
+.card {
+  background-color: #000;
+  box-shadow: 10px 3px 5px #bb86fc;
+  width: 20%;
+  height: 30%;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card:hover {
+  box-shadow: 5px 2px 10px #bb86fc;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.preview-image {
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+}
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
 }
 </style>
