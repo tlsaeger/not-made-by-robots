@@ -16,10 +16,10 @@
             v-for="tutorial in tutorials"
             :key="tutorial.slug"
           >
-            <img
+            <!-- <img
               class="preview-image"
               :src="require(`${tutorial.image}`)"
-            />
+            /> -->
             <h1>{{ tutorial.image }}</h1>
             <p class="body-text">{{ tutorial.description }}</p>
           </NuxtLink>

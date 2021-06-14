@@ -1,7 +1,7 @@
 <template>
   <div class="detail-page-main">
-    <h2>{{ post.slug }}</h2>
-   <p>{{post.title}}</p>
+    <h2>{{ post.title }}</h2>
+   <p>{{post.description}}</p>
   </div>
 </template>
 
@@ -23,14 +23,6 @@ export default {
 };
 </script>
 <style scoped>
-.nuxt-content{
-    background-color: black;
-}
-.nuxt-content p{
-    color: cadetblue;
-}
 
-.detail-page-main{
-    background-color: chartreuse;
-}
+
 </style>
