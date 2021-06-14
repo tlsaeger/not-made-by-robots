@@ -17,17 +17,16 @@
             :key="tutorial.slug"
           >
             <nuxt-img
-              provider="cloudinary" v-if="tutorial.image.includes('http')"
               class="preview-image"
-              src="v1623665002/sample.jpg"
+              :src="tutorial.image"
             />
-            <!-- <img v-else  :src="require(`~/assets${tutorial.image}`)" class="preview-image"> -->
-            <h1>{{ tutorial.title }}</h1>
+        
+            <h3>{{ tutorial.title }}</h3>
             <p class="body-text">{{ tutorial.description }}</p>
             <p>>></p>
           </NuxtLink>
         </div>
-        <!-- <h1 v-for="item in pages" :key="item.slug">{{item.headline}}</h1> -->
+
     </section>
   </div>
 </template>
@@ -96,6 +95,7 @@ span.not {
   font-size: 4em;
   margin: 1em 0 0.3em 1em;
 }
+
 .card {
   background-color: #000;
   box-shadow: 10px 3px 5px #bb86fc;

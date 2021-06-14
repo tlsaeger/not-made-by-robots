@@ -5,11 +5,14 @@ backend:
 media_folder: assets/img
 public_folder: /img
 
+locale: 'de'
+
 media_library:
   name: cloudinary
   config:
     cloud_name: dt5cqs0lv
     api_key: 347794518196229
+   
 
 collections:
   - name: 'tutorial'

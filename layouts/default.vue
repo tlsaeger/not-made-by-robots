@@ -22,7 +22,7 @@
   color:#bb86fc;
 }
 html {
-  font-size: 16px;
+  font-size: 20px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -36,8 +36,9 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: .3em 0;
 }
-h1,h2,p{
+h1,h2,h3,p{
   margin: 0;
   font-weight: 400;
   margin-block-start: 0em;
@@ -46,7 +47,11 @@ h1,h2,p{
 }
 body{
   margin: 0;
-   background-color: black;
+  background-color: black;
+  padding: 1em 5em;
+}
+h3{
+  font-size: 3em;
 }
 a{
   text-decoration: none;
