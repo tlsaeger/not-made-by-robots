@@ -56,5 +56,7 @@ h3{
 a{
   text-decoration: none;
 }
-
+.nuxt-content p{
+  box-shadow: 10px 3px 5px #bb86fc;
+}
 </style>
