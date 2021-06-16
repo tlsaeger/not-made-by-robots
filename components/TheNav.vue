@@ -1,6 +1,6 @@
 <template>
     <div class="nav-wrapper">
-        <h1>Ich bin die Navi</h1>
+        <h1>Not Made By Robots</h1>
     </div>
 </template>
 <style scoped>
