@@ -24,7 +24,8 @@ export default {
     return {
       post
     };
-  }
+  },
+  transition: "slide-bottom"
 };
 </script>
 <style scoped>

@@ -11,10 +11,11 @@
           Tutorials
         </h2>
         <div class="text-block-wrapper">
+            <transition name="fade"  v-for="tutorial in tutorials"
+            :key="tutorial.slug">
           <NuxtLink :to="tutorial.slug"
             class="card"
-            v-for="tutorial in tutorials"
-            :key="tutorial.slug"
+           
           >
             <nuxt-img
               class="preview-image"
@@ -25,6 +26,7 @@
             <p class="body-text">{{ tutorial.description }}</p>
             <p>>></p>
           </NuxtLink>
+            </transition>
         </div>
 
     </section>
