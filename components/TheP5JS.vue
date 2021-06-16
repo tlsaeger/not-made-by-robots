@@ -10,9 +10,25 @@ mounted() {
  const script = function (p5) {    
   var speed = 2;    
   var posX = 0;
-  
+
+const data = [{ x: 0, y: 0 }, { x: 0, y: 1 }, { x: 1, y: 0 }, { x: 1, y: 1 }];
+const options = {
+  k: 3,
+  maxIter: 4,
+  threshold: 0.5,
+};
+// Initialize the magicFeature
+const kmeans = ml5.kmeans(data, options, clustersCalculated);
+
+// When the model is loaded
+function clustersCalculated() {
+  console.log('Points Clustered!');
+  console.log(kmeans.dataset);
+}
   // NOTE: Set up is here   
   p5.setup = _ => {    
+
+console.log('ml5 version:', ml5.version);
   var canvas = p5.createCanvas(500, 500)
   canvas.parent("p5Canvas");     
    p5.ellipse(p5.width / 2, p5.height / 2, 500, 500);    
