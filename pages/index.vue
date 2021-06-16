@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <TheP5JS />
        <section class="first_section">
       <h1 class="title"><span class="not">Not</span> Made <br />By Robots</h1>
       <p class="subline body-text">
@@ -39,6 +40,8 @@ export default {
   head() {
     return {
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+      script: [{ src: 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/[p5_version]/p5.js' }],
+      script: [{ src: 'https://unpkg.com/ml5@latest/dist/ml5.min.js' }],
     };
   },
    async asyncData({ $content, params, error }) {
