@@ -22,8 +22,26 @@
             <nuxt-img class="preview-image" :src="tutorial.image" />
 
             <h3>{{ tutorial.title }}</h3>
-            <p class="body-text">{{ tutorial.description }}</p>
-            <p>>></p>
+            <p class="body-text">{{ tutorial.description }} ↗︎</p>
+          </NuxtLink>
+        </transition>
+      </div>
+    </section>
+     <section class="third_section">
+      <h2 class="section-title" id="wissenswertes">
+        Wissenswertes
+      </h2>
+      <div class="text-block-wrapper">
+        <transition
+          name="fade"
+          v-for="tutorial in tutorials"
+          :key="tutorial.slug"
+        >
+          <NuxtLink :to="tutorial.slug" class="card">
+            <nuxt-img class="preview-image" :src="tutorial.image" />
+
+            <h3>{{ tutorial.title }}</h3>
+            <p class="body-text">{{ tutorial.description }} ↗︎</p>
           </NuxtLink>
         </transition>
       </div>
@@ -145,9 +163,7 @@ export default {
   object-fit: contain;
  /* filter: grayscale(100%) hue-rotate(90deg); */
 }
-h3 {
-  margin: 40px 0 0;
-}
+
 ul {
   list-style-type: none;
   padding: 0;
