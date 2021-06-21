@@ -20,7 +20,7 @@ export default {
     } catch (e) {
       error({ message: "Blog Post not found" });
     }
-
+  console.log(params)
     return {
       post
     };

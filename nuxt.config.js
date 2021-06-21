@@ -15,7 +15,7 @@ export default {
   head: {
     title: 'nuxt-netlify',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'de'
     },
     meta: [
       { charset: 'utf-8' },

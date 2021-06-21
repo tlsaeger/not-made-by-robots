@@ -34,14 +34,14 @@
       <div class="text-block-wrapper">
         <transition
           name="fade"
-          v-for="tutorial in tutorials"
-          :key="tutorial.slug"
+          v-for="wissenpost in wissen"
+          :key="wissenpost.slug"
         >
-          <NuxtLink :to="tutorial.slug" class="card">
-            <nuxt-img class="preview-image" :src="tutorial.image" />
+          <NuxtLink :to="wissenpost.slug" class="card">
+            <nuxt-img class="preview-image" :src="wissenpost.image" />
 
-            <h3>{{ tutorial.title }}</h3>
-            <p class="body-text">{{ tutorial.description }} ↗︎</p>
+            <h3>{{ wissenpost.title }}</h3>
+            <p class="body-text">{{ wissenpost.description }} ↗︎</p>
           </NuxtLink>
         </transition>
       </div>
@@ -81,17 +81,33 @@ export default {
   },
   async asyncData({ $content, params, error }) {
     let tutorials;
+    let wissen;
     try {
       tutorials = await $content("tutorial", params.slug).fetch();
+      wissen = await $content("wissen", params.slug).fetch();
       // OR const article = await $content(`articles/${params.slug}`).fetch()
     } catch (e) {
       error({ message: "Blog Post not found" });
     }
 
     return {
-      tutorials
+      tutorials,
+      wissen
     };
-  }
+  },
+  // async asyncData({ $content, params, error }) {
+  //   let wissen;
+  //   try {
+  //     wissen = await $content("wissen", params.slug).fetch();
+  //     // OR const article = await $content(`articles/${params.slug}`).fetch()
+  //   } catch (e) {
+  //     error({ message: "Blog Post not found" });
+  //   }
+
+  //   return {
+  //     wissen
+  //   };
+  // }
 };
 </script>
 
