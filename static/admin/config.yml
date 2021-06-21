@@ -13,10 +13,6 @@ media_library:
     cloud_name: dt5cqs0lv
     api_key: 347794518196229
    
-slug:
-  encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "-"
 
 collections:
   - name: 'tutorial'
@@ -25,7 +21,7 @@ collections:
     format: 'frontmatter'
     create: true
     slug: 'tutorial-{{slug}}'
-    preview_path: "tutorial/{{slug}}"
+    preview_path: "{{dirname}}/{{slug}}"
     editor:
       preview: false
     fields:
