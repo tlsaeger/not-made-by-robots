@@ -18,7 +18,7 @@
           v-for="tutorial in tutorials"
           :key="tutorial.slug"
         >
-          <NuxtLink :to="tutorial.slug" class="card">
+          <NuxtLink :to="'tutorial/' + tutorial.slug" class="card">
             <nuxt-img class="preview-image" :src="tutorial.image" />
 
             <h3>{{ tutorial.title }}</h3>
@@ -37,7 +37,7 @@
           v-for="wissenpost in wissen"
           :key="wissenpost.slug"
         >
-          <NuxtLink :to="wissenpost.slug" class="card">
+          <NuxtLink :to="'wissen/' + wissenpost.slug" class="card">
             <nuxt-img class="preview-image" :src="wissenpost.image" />
 
             <h3>{{ wissenpost.title }}</h3>
