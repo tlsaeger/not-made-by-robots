@@ -20,7 +20,7 @@ collections:
     folder: 'content/tutorial'
     format: 'frontmatter'
     create: true
-    slug: '"{{year}}-{{month}}-{{day}}_{{slug}}"'
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     preview_path: "tutorial/{{slug}}"
     editor:
       preview: false
