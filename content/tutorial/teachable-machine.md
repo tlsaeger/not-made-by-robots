@@ -2,7 +2,7 @@
 title: Teachable Machine
 date: 2021-06-14T08:37:02.478Z
 description: Teachable Machine ist ein cooles Tool von Google
-image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1624272033/Tutorials/header_Image_TM_bgg0hi.png
+image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1624272574/Tutorials/header_Image_TM_cfkjd3.png
 ---
 ### **0. Intro**
 
