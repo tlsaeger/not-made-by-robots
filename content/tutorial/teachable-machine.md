@@ -9,11 +9,11 @@ image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1624272574/Tutorials/h
 
 Techable Machine ist ein vom Google Creative Lab entwickelte Plattform, die es dir ermöglicht ganz einfach dein eigenes Neuronales Netzwerk zu trainieren. Alles was du dafür brauchst, ist ein Computer und im besten Fall eine Webcam.
 
-![](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1623666894/Tutorials/tm_1_cjhlll.png)
 
 ### **1. Daten sammeln** 
 
 In unserem simplen Beispiel, wollen wir eine Bildeerkennung trainieren, die Äpfel von Bananen unterscheiden kann. Öffne dazu zu erst die [teachablemachine.withgoogle.com](http://teachablemachine.withgoogle.com) Klicke auf Get-Stared und wähle das «Image Project». Hier siehst du jetzt zwei Klassen, in einer Sammeln wir die Daten für den Apfel in der anderen für die Banane. Über den Stift können wir die Klassen entsprechend benennen. Klick dann auf Webcam nimm dein Obst zu Hand und sammle Bilder für den Apfel und Bilder für die Bananen indem du den Knopf «Hold to record» gedrückt hältst. Drehe das Obst dabei um es von allen Seiten und mit allen Entfernungen zur Kamera abzulichten.
+![](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1623666894/Tutorials/tm_1_cjhlll.png)
 
 
 
