@@ -29,6 +29,12 @@ export default {
 };
 </script>
 <style scoped>
+.detail-page-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .post-title{
   padding-top: 2em;
   font-size: 2em;
@@ -39,8 +45,12 @@ export default {
   width: 65%;
   /* height: 10%; */
   border-radius: 0.5em;
-  transition: 0.2s;
   object-fit: contain;
+  transition: 0.2s;
 }
-
+@media (prefers-color-scheme: dark) {
+.header-image{
+   border: solid 1px white;
+}
+}
 </style>

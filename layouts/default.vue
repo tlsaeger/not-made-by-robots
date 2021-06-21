@@ -49,9 +49,9 @@ h1,h2,h3,p{
   margin-block-end: 0em;
   line-height: 80%;
   margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 body{
   margin: 0;
@@ -65,6 +65,9 @@ a{
   text-decoration: none;
    cursor: pointer;
 }
+p{
+line-height: 120%;
+}
 .nuxt-content p{
   border: solid 1px black;
   box-shadow: 5px 3px 3px #a169e6;
@@ -73,14 +76,17 @@ a{
   padding: 1em;
   border-radius: 0.5em;
   transition: 0.2s;
-  line-height: 120%;
+  margin-bottom: 3em;
+}
+.nuxt-content a{
+  font-style: italic;
 }
 .nuxt-content img{
-   border: solid 1px black;
-  box-shadow: 5px 3px 3px #a169e6;
+   /* border: solid 1px black;
+  box-shadow: 5px 3px 3px #a169e6; */
   width: 65%;
   /* height: 10%; */
-  border-radius: 0.5em;
+  /* border-radius: 0.5em; */
   transition: 0.2s;
   object-fit: contain;
 }
