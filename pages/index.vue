@@ -1,50 +1,67 @@
 <template>
   <div class="home">
-    <TheP5JS />
-       <section class="first_section">
+    <!-- <TheP5JS /> -->
+    <section class="first_section">
       <h1 class="title"><span class="not">Not</span> Made <br />By Robots</h1>
       <p class="subline body-text">
         A Toolkit for Artificial Intelligence in Design
       </p>
+      <a @click="scrollToEl('tutorials')" class="arrow">↓</a>
     </section>
     <section class="second_section">
-        <h2 class="section-title">
-          Tutorials
-        </h2>
-        <div class="text-block-wrapper">
-            <transition name="fade"  v-for="tutorial in tutorials"
-            :key="tutorial.slug">
-          <NuxtLink :to="tutorial.slug"
-            class="card"
-           
-          >
-            <nuxt-img
-              class="preview-image"
-              :src="tutorial.image"
-            />
-        
+      <h2 class="section-title" id="tutorials">
+        Tutorials
+      </h2>
+      <div class="text-block-wrapper">
+        <transition
+          name="fade"
+          v-for="tutorial in tutorials"
+          :key="tutorial.slug"
+        >
+          <NuxtLink :to="tutorial.slug" class="card">
+            <nuxt-img class="preview-image" :src="tutorial.image" />
+
             <h3>{{ tutorial.title }}</h3>
             <p class="body-text">{{ tutorial.description }}</p>
             <p>>></p>
           </NuxtLink>
-            </transition>
-        </div>
-
+        </transition>
+      </div>
     </section>
   </div>
 </template>
-
 
 <script>
 export default {
   head() {
     return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-      script: [{ src: 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/[p5_version]/p5.js' }],
-      script: [{ src: 'https://unpkg.com/ml5@latest/dist/ml5.min.js' }],
+      script: [
+        { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
+      ],
+      script: [
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/p5.js/[p5_version]/p5.js"
+        }
+      ],
+      script: [
+        {
+          src: "https://unpkg.com/ml5@latest/dist/ml5.min.js"
+        }
+      ]
     };
   },
-   async asyncData({ $content, params, error }) {
+  methods: {
+    scrollToEl: function(element) {
+      let scroll = document.getElementById(element);
+      console.log(scroll);
+      scroll.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+      });
+    }
+  },
+  async asyncData({ $content, params, error }) {
     let tutorials;
     try {
       tutorials = await $content("tutorial", params.slug).fetch();
@@ -54,9 +71,9 @@ export default {
     }
 
     return {
-      tutorials,
+      tutorials
     };
-  },
+  }
 };
 </script>
 
@@ -69,26 +86,27 @@ export default {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  background: rgb(187, 134, 252);
-  background: radial-gradient(
-    circle,
-    rgba(187, 134, 252, 1) 0%,
-    rgba(0, 0, 0, 1) 50%
-  );
 }
 
 .title {
   color: #000;
-  font-size: 5em;
+  font-size: 8em;
   text-transform: uppercase;
 }
-span.not {
-  font-family: "terminal-open", Arial, Helvetica, sans-serif;
-  color: #000;
-}
 .subline {
-  color: #000;
-  font-size: 1.4em;
+  font-size: 2em;
+}
+.arrow {
+  position: absolute;
+  bottom: 1em;
+  left: 48%;
+  font-size: 3em;
+  transition: 0.2s;
+}
+.arrow:hover {
+  transform: scale(1.1);
+  transform: translateY(10px);
+  transition: 0.2s;
 }
 .text-block-wrapper {
   display: flex;
@@ -98,15 +116,15 @@ span.not {
 }
 .section-title {
   font-size: 4em;
-  margin: 1em 0 0.3em 1em;
+  margin: 1em 0 0.3em 0.3em;
 }
 
 .card {
-  background-color: #000;
-  box-shadow: 10px 3px 5px #bb86fc;
-  width: 20%;
-  min-height: 300px;
-  height: 30%;
+  border: solid 1px black;
+  box-shadow: 10px 3px 5px #a169e6;
+  width: 80vw;
+  /* min-height: 300px; */
+  height: 10%;
   margin: 1em;
   padding: 1em;
   border-radius: 0.5em;
@@ -114,14 +132,14 @@ span.not {
   transition: 0.2s;
 }
 .card:hover {
-  box-shadow: 5px 2px 10px #bb86fc;
-  transform: scale(1.1);
+  box-shadow: 5px 2px 10px #a169e6;
+  transform: scale(1.01);
   transition: 0.2s;
 }
 .preview-image {
-  width: 100%;
+  width: 50%;
   height: 30%;
-  object-fit: cover;
+  object-fit: contain;
 }
 h3 {
   margin: 40px 0 0;
@@ -134,7 +152,9 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
+@media (prefers-color-scheme: dark) {
+  .title   { color: white; }
+  .card{border: solid 1px white;}
+
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
 <div>
-    <h1>Hi</h1>
       <div class="d-flex justify-content-center" id="p5Canvas"></div>
 </div>
 </template>
@@ -28,14 +27,13 @@ function clustersCalculated() {
   // NOTE: Set up is here   
   p5.setup = _ => {    
 
-console.log('ml5 version:', ml5.version);
   var canvas = p5.createCanvas(500, 500)
   canvas.parent("p5Canvas");     
-   p5.ellipse(p5.width / 2, p5.height / 2, 500, 500);    
+  //  p5.ellipse(p5.width / 2, p5.height / 2, 500, 500);    
   }     
   // NOTE: Draw is here
   p5.draw = _ => {      
-   p5.background(255);
+  //  p5.background(255);
    const degree = p5.frameCount * 3;      
    const y = p5.sin(p5.radians(degree)) * 50;
     
