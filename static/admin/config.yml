@@ -24,7 +24,7 @@ collections:
     folder: 'content/tutorial'
     format: 'frontmatter'
     create: true
-    slug: '{{name}}-{{slug}}'
+    slug: '{{label}}-{{slug}}'
     preview_path: "tutorial/{{slug}}"
     editor:
       preview: false
@@ -39,7 +39,7 @@ collections:
     folder: 'content/wissen'
     format: 'frontmatter'
     create: true
-    slug: '{{name}}-{{slug}}'
+    slug: '{{label}}-{{slug}}'
     preview_path: "wissen/{{slug}}"
     editor:
       preview: false
