@@ -24,7 +24,7 @@ collections:
     folder: 'content/tutorial'
     format: 'frontmatter'
     create: true
-    slug: '{{label}}-{{slug}}'
+    slug: 'tutorial-{{slug}}'
     preview_path: "tutorial/{{slug}}"
     editor:
       preview: false
