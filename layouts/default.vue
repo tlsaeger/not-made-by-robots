@@ -53,6 +53,16 @@ h1,h2,h3,p{
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 body{
   margin: 0;
   background-color: white;
