@@ -115,8 +115,8 @@ export default {
   justify-content: center;
 }
 .section-title {
+  padding-top: 2em;
   font-size: 4em;
-  margin: 1em 0 0.3em 0.3em;
 }
 
 .card {
@@ -125,21 +125,25 @@ export default {
   width: 80vw;
   /* min-height: 300px; */
   height: 10%;
-  margin: 1em;
+  margin-bottom: 1em;
   padding: 1em;
   border-radius: 0.5em;
   cursor: pointer;
   transition: 0.2s;
 }
+/* .card > h3{
+  padding-left: 1em;
+} */
 .card:hover {
   box-shadow: 5px 2px 10px #a169e6;
   transform: scale(1.01);
   transition: 0.2s;
 }
 .preview-image {
-  width: 50%;
+  width: 100%;
   height: 30%;
   object-fit: contain;
+ /* filter: grayscale(100%) hue-rotate(90deg); */
 }
 h3 {
   margin: 40px 0 0;

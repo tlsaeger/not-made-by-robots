@@ -48,6 +48,10 @@ h1,h2,h3,p{
   margin-block-start: 0em;
   margin-block-end: 0em;
   line-height: 80%;
+  margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 body{
   margin: 0;
