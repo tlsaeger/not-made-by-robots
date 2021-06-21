@@ -20,8 +20,8 @@ collections:
     folder: 'content/tutorial'
     format: 'frontmatter'
     create: true
-    slug: 'tutorial-{{slug}}'
-    preview_path: "{{dirname}}/{{slug}}"
+    slug: '"{{year}}-{{month}}-{{day}}_{{slug}}"'
+    preview_path: "tutorial/{{slug}}"
     editor:
       preview: false
     fields:
@@ -35,7 +35,7 @@ collections:
     folder: 'content/wissen'
     format: 'frontmatter'
     create: true
-    slug: '{{label}}-{{slug}}'
+    slug: '{{slug}}'
     preview_path: "wissen/{{slug}}"
     editor:
       preview: false
