@@ -5,59 +5,58 @@ backend:
 media_folder: assets/img
 public_folder: /img
 
-locale: 'de'
+locale: "de"
 
 media_library:
   name: cloudinary
   config:
     cloud_name: dt5cqs0lv
     api_key: 347794518196229
-   
 
 collections:
-  - name: 'tutorial'
-    label: 'Tutorial'
-    folder: 'content/tutorial'
-    format: 'frontmatter'
+  - name: "tutorial"
+    label: "Tutorial"
+    folder: "content/tutorial"
+    format: "frontmatter"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     preview_path: "tutorial/{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Image', name: 'image', widget: 'image' }
-  - name: 'wissen'
-    label: 'Wissen'
-    folder: 'content/wissen'
-    format: 'frontmatter'
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
+  - name: "wissen"
+    label: "Wissen"
+    folder: "content/wissen"
+    format: "frontmatter"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     preview_path: "wissen/{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Image', name: 'image', widget: 'image' }
-  - name: 'ressourcen'
-    label: 'Ressourcen'
-    folder: 'content/ressourcen'
-    format: 'frontmatter'
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
+  - name: "ressourcen"
+    label: "Ressourcen"
+    folder: "content/ressourcen"
+    format: "frontmatter"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     preview_path: "ressourcen/{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Link', name: 'link', widget: 'string' }
-      
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["news"] }
