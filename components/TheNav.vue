@@ -5,7 +5,7 @@
         ><nuxt-link to='/' class="icon">🤖</nuxt-link> </transition>
         <nuxt-link :to="{path:'/', hash:'#tutorials'}" class="nav-links">Tutorials</nuxt-link>
         <nuxt-link to="/#wissenswertes" class="nav-links">Wissenswertes</nuxt-link>
-        <a class="nav-links">Weitere Links</a>
+        <nuxt-link :to="{path:'/', hash:'#tools'}" class="nav-links">Tools</nuxt-link>
     </div>
 </template>
 <style scoped>
