@@ -81,7 +81,7 @@
     </section>
     <section class="fifth_section">
       <h2 class="section-title" id="News">
-        News
+        News 2
       </h2>
       <div class="text-block-wrapper text-block-wrapper-mini">
         <ul>
