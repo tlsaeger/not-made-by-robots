@@ -62,12 +62,7 @@
             <h3>{{ ressource.title }}</h3>
             <p class="body-text">{{ ressource.description }} ↗︎</p>
             <div class="tag-container">
-            <div class="tag">No Code</div>
-            <div class="tag">No Code</div>
-            <div class="tag">No Code</div>
-            <div class="tag">No Code</div>
-            <div class="tag">No Code</div>
-            <div class="tag">No Code</div>
+            <div v-for="tag in ressource.tags" :key="tag" class="tag" :class="tag">{{tag}}</div>
             </div>
             </div>
           </a>
@@ -218,6 +213,19 @@ padding: 0;
   background-color: #63e93a;
   color: #000;
   transition: 0.1s;
+}
+.No-Code{
+  border: solid 1px #a169e6;
+  color: #a169e6;
+}
+.No-Code:hover{
+  background-color: #a169e6;
+  color: black;
+}
+
+.No-Code:hover{
+  background-color: #a169e6;
+  color: black;
 }
 .tag-container{
   display: flex;
