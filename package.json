@@ -18,6 +18,9 @@
     "vue-p5": "^0.8.4"
   },
   "devDependencies": {
-    "@nuxt/image": "^0.4.14"
+    "@nuxt/image": "^0.4.14",
+    "dotenv": "^9.0.2",
+    "fs-extra": "^9.1.0",
+    "twitter": "^1.7.1"
   }
 }

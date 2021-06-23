@@ -27,7 +27,7 @@
         </transition>
       </div>
     </section>
-     <section class="third_section">
+    <section class="third_section">
       <h2 class="section-title" id="wissenswertes">
         Wissenswertes
       </h2>
@@ -46,7 +46,7 @@
         </transition>
       </div>
     </section>
-     <section class="fourth_section">
+    <section class="fourth_section">
       <h2 class="section-title" id="tools">
         Tools
       </h2>
@@ -56,23 +56,46 @@
           v-for="ressource in ressourcen"
           :key="ressource.slug"
         >
-          <a  :href="ressource.link" target="_blank" class="card card-mini">
-            <nuxt-img class="preview-image preview-image-mini" :src="ressource.image" />
+          <a :href="ressource.link" target="_blank" class="card card-mini">
+            <nuxt-img
+              class="preview-image preview-image-mini"
+              :src="ressource.image"
+            />
             <div class="desc-text-wrapper">
-            <h3>{{ ressource.title }}</h3>
-            <p class="body-text">{{ ressource.description }} ↗︎</p>
-            <div class="tag-container">
-            <div v-for="tag in ressource.tags" :key="tag" class="tag" :class="tag">{{tag}}</div>
-            </div>
+              <h3>{{ ressource.title }}</h3>
+              <p class="body-text">{{ ressource.description }} ↗︎</p>
+              <div class="tag-container">
+                <div
+                  v-for="tag in ressource.tags"
+                  :key="tag"
+                  class="tag"
+                  :class="tag"
+                >
+                  {{ tag }}
+                </div>
+              </div>
             </div>
           </a>
         </transition>
+      </div>
+    </section>
+    <section class="fifth_section">
+      <h2 class="section-title" id="News">
+        News
+      </h2>
+      <div class="text-block-wrapper text-block-wrapper-mini">
+        <ul>
+          <li v-for="tweet in tweets" :key="tweet.id">
+            {{ tweet.text }}
+          </li>
+        </ul>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import tweets from "@/tweets/tweets";
 export default {
   head() {
     return {
@@ -91,6 +114,9 @@ export default {
       ]
     };
   },
+  data() {
+    return { tweets };
+  },
   methods: {
     scrollToEl: function(element) {
       let scroll = document.getElementById(element);
@@ -105,7 +131,7 @@ export default {
   async asyncData({ $content, params, error }) {
     let tutorials;
     let wissen;
-    let ressourcen
+    let ressourcen;
     try {
       tutorials = await $content("tutorial", params.slug).fetch();
       wissen = await $content("wissen", params.slug).fetch();
@@ -120,20 +146,7 @@ export default {
       wissen,
       ressourcen
     };
-  },
-  // async asyncData({ $content, params, error }) {
-  //   let wissen;
-  //   try {
-  //     wissen = await $content("wissen", params.slug).fetch();
-  //     // OR const article = await $content(`articles/${params.slug}`).fetch()
-  //   } catch (e) {
-  //     error({ message: "Blog Post not found" });
-  //   }
-
-  //   return {
-  //     wissen
-  //   };
-  // }
+  }
 };
 </script>
 
@@ -174,7 +187,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
-.text-block-wrapper-mini{
+.text-block-wrapper-mini {
   justify-content: space-between;
   padding: 0 7em;
 }
@@ -194,48 +207,48 @@ export default {
   cursor: pointer;
   transition: 0.2s;
 }
-.card-mini{
-width: 25%;
-padding: 0;
+.card-mini {
+  width: 25%;
+  padding: 0;
 }
-.tag{
+.tag {
   font-size: 0.5em;
   border: solid 1px #63e93a;
   color: #63e93a;
   width: fit-content;
-  padding:0.2em 0.5em;
+  padding: 0.2em 0.5em;
   text-align: center;
   border-radius: 50em;
   margin: 0.3em;
   transition: 0.1s;
 }
-.tag:hover{
+.tag:hover {
   background-color: #63e93a;
   color: #000;
   transition: 0.1s;
 }
-.No-Code{
+.No-Code {
   border: solid 1px #a169e6;
   color: #a169e6;
 }
-.No-Code:hover{
+.No-Code:hover {
   background-color: #a169e6;
   color: black;
 }
 
-.No-Code:hover{
+.No-Code:hover {
   background-color: #a169e6;
   color: black;
 }
-.tag-container{
+.tag-container {
   display: flex;
   flex-wrap: wrap;
 }
-.desc-text-wrapper{
-padding-left: 1em;
-padding-right: 1em;
+.desc-text-wrapper {
+  padding-left: 1em;
+  padding-right: 1em;
 }
-.desc-text-wrapper > h3{
+.desc-text-wrapper > h3 {
   font-size: 1.6em;
   line-height: 110%;
 }
@@ -251,11 +264,11 @@ padding-right: 1em;
   width: 100%;
   height: 30%;
   object-fit: contain;
- /* filter: grayscale(100%) hue-rotate(90deg); */
+  /* filter: grayscale(100%) hue-rotate(90deg); */
 }
-.preview-image-mini{
+.preview-image-mini {
   padding: 0;
-  border-radius: 0.5em 0.5em 0 0 ;
+  border-radius: 0.5em 0.5em 0 0;
 }
 ul {
   list-style-type: none;
@@ -266,8 +279,11 @@ li {
   margin: 0 10px;
 }
 @media (prefers-color-scheme: dark) {
-  .title   { color: white; }
-  .card{border: solid 1px white;}
-
+  .title {
+    color: white;
+  }
+  .card {
+    border: solid 1px white;
+  }
 }
 </style>

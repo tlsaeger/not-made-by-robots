@@ -49,6 +49,7 @@ export default {
     modules: [
       '@nuxt/image',
       '@nuxt/content',
+      'modules/twitter'
       // '@nuxtjs/cloudinary'
     ],
     content: {
