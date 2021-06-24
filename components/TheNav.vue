@@ -6,6 +6,7 @@
         <nuxt-link :to="{path:'/', hash:'#tutorials'}" class="nav-links">Tutorials</nuxt-link>
         <nuxt-link to="/#wissenswertes" class="nav-links">Wissenswertes</nuxt-link>
         <nuxt-link :to="{path:'/', hash:'#tools'}" class="nav-links">Tools</nuxt-link>
+        <nuxt-link :to="{path:'/', hash:'#news'}" class="nav-links">News</nuxt-link>
     </div>
 </template>
 <style scoped>

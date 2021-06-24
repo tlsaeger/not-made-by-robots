@@ -80,15 +80,21 @@
       </div>
     </section>
     <section class="fifth_section">
-      <h2 class="section-title" id="News">
+      <h2 class="section-title" id="news">
         News
       </h2>
       <div class="text-block-wrapper text-block-wrapper-mini">
-        <ul>
-          <li v-for="tweet in tweets" :key="tweet.id">
-            {{ tweet.text }}
-          </li>
-        </ul>
+        <transition  v-for="tweet in tweets" :key="tweet.id" name="fade">
+        <a :href="`https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`" target="_blank" class="card card-mini">
+   
+            <img  class="preview-image preview-image-mini" v-if="'media' in tweet.entities" :src="tweet.entities.media[0].media_url_https" alt="">
+           <p> {{ tweetText(tweet.text) }}</p>
+           <div class="tweet-details">
+           <p class="user">By @{{tweet.user.name}} {{convertDate(tweet.created_at)}}</p>
+           <p class="date"></p>
+           </div>
+        </a>
+        </transition>
       </div>
     </section>
   </div>
@@ -126,6 +132,15 @@ export default {
         block: "start",
         inline: "nearest"
       });
+    },
+    tweetText: function(text){
+       let urlRegex = /(https?:\/\/[^\s]+)/g;
+       return text.replace(urlRegex, "");
+    },
+    convertDate(tdate){
+    let system_date = new Date(Date.parse(tdate));
+        system_date = Date.parse(tdate.replace(/( \+)/, ' UTC$1'))
+      return system_date
     }
   },
   async asyncData({ $content, params, error }) {
@@ -210,6 +225,10 @@ export default {
 .card-mini {
   width: 25%;
   padding: 0;
+  margin: 0.5em;
+}
+.tweet-details{
+  font-size: 0.7em;
 }
 .tag {
   font-size: 0.5em;

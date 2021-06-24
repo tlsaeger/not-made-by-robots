@@ -10,13 +10,14 @@ const client = Twitter({
     access_token_secret: process.env.ACCESS_TOKEN_SECRET
 })
 
-const endpoint = 'statuses/user_timeline'
+const endpoint = 'statuses/home_timeline'
 const params = {
-    screen_name: 't00may',
-    include_rts: false
+    // screen_name: 'runwayml',
+    include_rts: false,
+    exclude_replies: true
 }
 const callback = (error, tweets, response) => {
-	if (!error) fs.outputJSON('./tweets/tweets.json', tweets.slice(0, 5), { spaces: 4 })
+	if (!error) fs.outputJSON('./tweets/tweets.json', tweets.slice(0,50), {spaces: 4})
 }
 
 export default function NuxtTwitter(config) {
