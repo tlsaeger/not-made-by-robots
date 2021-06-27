@@ -16,7 +16,7 @@ In unserem simplen Beispiel, wollen wir eine Bildeerkennung trainieren, die Äpf
 
 ### **2. Trainieren**
 
-Um das Model jetzt zu trainieren, klicke einfach auf den Knopf «Train Model», behalte das Browserfenster offen und warte ab bis das Training abgeschlossen ist. Tipp: Wenn du Wissen willst, was unter der Haube los ist, klick auf «Advanced» → «Under the Hood»
+Um das Model jetzt zu trainieren, klicke einfach auf den Knopf «Train Model», behalte das Browserfenster offen und warte ab bis das Training abgeschlossen ist. Tipp: Wenn du Wissen willst, was unter der Haube los ist, klick auf «Advanced» → «Under the Hood» 
 
 ### **3. Testen** 
 
