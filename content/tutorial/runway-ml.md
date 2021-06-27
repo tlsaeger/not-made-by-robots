@@ -1,5 +1,5 @@
 ---
-title: ZRunway ML
+title: Runway ML
 date: 2021-06-14T09:40:34.073Z
 description: "Runway ML ist eine einfach Art, Modelle zu trainieren "
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1624277358/Tutorials/Runway_header-01_hweqdl.png
