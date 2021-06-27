@@ -88,10 +88,12 @@
         <a :href="`https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`" target="_blank" class="card card-mini">
    
             <img  class="preview-image preview-image-mini" v-if="'media' in tweet.entities" :src="tweet.entities.media[0].media_url_https" alt="">
+            <div class="desc-text-wrapper">
            <p> {{ tweetText(tweet.text) }}</p>
            <div class="tweet-details">
            <p class="user">By @{{tweet.user.name}} {{convertDate(tweet.created_at)}}</p>
            <p class="date"></p>
+           </div>
            </div>
         </a>
         </transition>
@@ -138,9 +140,27 @@ export default {
        return text.replace(urlRegex, "");
     },
     convertDate(tdate){
-    let system_date = new Date(Date.parse(tdate));
-        system_date = Date.parse(tdate.replace(/( \+)/, ' UTC$1'))
-      return system_date
+    let systemDate = new Date(Date.parse(tdate));
+        systemDate = Date.parse(tdate.replace(/( \+)/, ' UTC$1'))
+    let userDate = new Date().getTime()
+    let diff = Math.floor((userDate - systemDate) / 1000);
+  if (diff <= 1) {return 'just now';}
+  if (diff < 20) {return diff + ' seconds ago';}
+  if (diff < 40) {return 'half a minute ago';}
+  if (diff < 60) {return 'less than a minute ago';}
+  if (diff <= 90) {return 'one minute ago';}
+  if (diff <= 3540) {return Math.round(diff / 60) + ' minutes ago';}
+  if (diff <= 5400) {return '1 hour ago';}
+  if (diff <= 86400) {return Math.round(diff / 3600) + ' hours ago';}
+  if (diff <= 129600) {return '1 day ago';}
+  if (diff < 604800) {return Math.round(diff / 86400) + ' days ago';}
+  if (diff <= 777600) {return '1 week ago';}
+  systemDate = new Date(systemDate);
+  let day = systemDate.getDate()
+  let month = systemDate.getMonth()
+  let hours = systemDate.getHours()
+  let minutes = (systemDate.getMinutes()<10?'0':'') + systemDate.getMinutes()
+  return `on ${day}.${month}. ${hours}:${minutes}`;
     }
   },
   async asyncData({ $content, params, error }) {
