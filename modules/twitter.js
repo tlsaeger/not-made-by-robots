@@ -12,7 +12,7 @@ const client = Twitter({
 
 const endpoint = 'statuses/home_timeline'
 const params = {
-    // screen_name: 'runwayml',
+    // screen_name: 'runwayml' ,
     include_rts: false,
     exclude_replies: true
 }
