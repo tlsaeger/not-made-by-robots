@@ -8,102 +8,16 @@
       </p>
       <a @click="scrollToEl('tutorials')" class="arrow">↓</a>
     </section>
-    <section class="second_section">
-      <h2 class="section-title" id="tutorials">
-        Tutorials
-      </h2>
-      <div class="text-block-wrapper">
-        <transition
-          name="fade"
-          v-for="tutorial in tutorials"
-          :key="tutorial.slug"
-        >
-          <NuxtLink :to="'tutorial/' + tutorial.slug" class="card">
-            <nuxt-img class="preview-image" :src="tutorial.image" />
-
-            <h3>{{ tutorial.title }}</h3>
-            <p class="body-text">{{ tutorial.description }} ↗︎</p>
-          </NuxtLink>
-        </transition>
-      </div>
-    </section>
-    <section class="third_section">
-      <h2 class="section-title" id="wissenswertes">
-        Wissenswertes
-      </h2>
-      <div class="text-block-wrapper">
-        <transition
-          name="fade"
-          v-for="wissenpost in wissen"
-          :key="wissenpost.slug"
-        >
-          <NuxtLink :to="'wissen/' + wissenpost.slug" class="card">
-            <nuxt-img class="preview-image" :src="wissenpost.image" />
-
-            <h3>{{ wissenpost.title }}</h3>
-            <p class="body-text">{{ wissenpost.description }} ↗︎</p>
-          </NuxtLink>
-        </transition>
-      </div>
-    </section>
-    <section class="fourth_section">
-      <h2 class="section-title" id="tools">
-        Tools
-      </h2>
-      <div class="text-block-wrapper text-block-wrapper-mini">
-        <transition
-          name="fade"
-          v-for="ressource in ressourcen"
-          :key="ressource.slug"
-        >
-          <a :href="ressource.link" target="_blank" class="card card-mini">
-            <nuxt-img
-              class="preview-image preview-image-mini"
-              :src="ressource.image"
-            />
-            <div class="desc-text-wrapper">
-              <h3>{{ ressource.title }}</h3>
-              <p class="body-text">{{ ressource.description }} ↗︎</p>
-              <div class="tag-container">
-                <div
-                  v-for="tag in ressource.tags"
-                  :key="tag"
-                  class="tag"
-                  :class="tag"
-                >
-                  {{ tag }}
-                </div>
-              </div>
-            </div>
-          </a>
-        </transition>
-      </div>
-    </section>
-    <section class="fifth_section">
-      <h2 class="section-title" id="news">
-        News
-      </h2>
-      <div class="text-block-wrapper text-block-wrapper-mini">
-        <transition  v-for="tweet in tweets" :key="tweet.id" name="fade">
-        <a :href="`https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`" target="_blank" class="card card-mini">
-   
-            <img  class="preview-image preview-image-mini" v-if="'media' in tweet.entities" :src="tweet.entities.media[0].media_url_https" alt="">
-            <div class="desc-text-wrapper">
-           <p> {{ tweetText(tweet.text) }}</p>
-           <div class="tweet-details">
-           <p class="user">By @{{tweet.user.name}} {{convertDate(tweet.created_at)}}</p>
-           <p class="date"></p>
-           </div>
-           </div>
-        </a>
-        </transition>
-      </div>
-    </section>
+    <TheTutorials />
+    <TheWissen />
+    <TheTools />
+    <TheNews />
   </div>
 </template>
 
 <script>
-import tweets from "@/tweets/tweets";
+
+
 export default {
   head() {
     return {
@@ -123,65 +37,29 @@ export default {
     };
   },
   data() {
-    return { tweets };
-  },
-  methods: {
-    scrollToEl: function(element) {
-      let scroll = document.getElementById(element);
-      console.log(scroll);
-      scroll.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"
-      });
-    },
-    tweetText: function(text){
-       let urlRegex = /(https?:\/\/[^\s]+)/g;
-       return text.replace(urlRegex, "");
-    },
-    convertDate(tdate){
-    let systemDate = new Date(Date.parse(tdate));
-        systemDate = Date.parse(tdate.replace(/( \+)/, ' UTC$1'))
-    let userDate = new Date().getTime()
-    let diff = Math.floor((userDate - systemDate) / 1000);
-  if (diff <= 1) {return 'just now';}
-  if (diff < 20) {return diff + ' seconds ago';}
-  if (diff < 40) {return 'half a minute ago';}
-  if (diff < 60) {return 'less than a minute ago';}
-  if (diff <= 90) {return 'one minute ago';}
-  if (diff <= 3540) {return Math.round(diff / 60) + ' minutes ago';}
-  if (diff <= 5400) {return '1 hour ago';}
-  if (diff <= 86400) {return Math.round(diff / 3600) + ' hours ago';}
-  if (diff <= 129600) {return '1 day ago';}
-  if (diff < 604800) {return Math.round(diff / 86400) + ' days ago';}
-  if (diff <= 777600) {return '1 week ago';}
-  systemDate = new Date(systemDate);
-  let day = systemDate.getDate()
-  let month = systemDate.getMonth()
-  let hours = systemDate.getHours()
-  let minutes = (systemDate.getMinutes()<10?'0':'') + systemDate.getMinutes()
-  return `on ${day}.${month}. ${hours}:${minutes}`;
-    }
-  },
-  async asyncData({ $content, params, error }) {
-    let tutorials;
-    let wissen;
-    let ressourcen;
-    try {
-      tutorials = await $content("tutorial", params.slug).fetch();
-      wissen = await $content("wissen", params.slug).fetch();
-      ressourcen = await $content("ressourcen", params.slug).fetch();
-      // OR const article = await $content(`articles/${params.slug}`).fetch()
-    } catch (e) {
-      error({ message: "Blog Post not found" });
-    }
-
     return {
-      tutorials,
-      wissen,
-      ressourcen
-    };
-  }
+    }
+  },
+  
+  // async asyncData({ $content, params, error }) {
+  //   let tutorials;
+  //   let wissen;
+  //   let ressourcen;
+  //   try {
+  //     tutorials = await $content("tutorial", params.slug).fetch();
+  //     wissen = await $content("wissen", params.slug).fetch();
+  //     ressourcen = await $content("ressourcen", params.slug).fetch();
+  //     // OR const article = await $content(`articles/${params.slug}`).fetch()
+  //   } catch (e) {
+  //     error({ message: "Blog Post not found" });
+  //   }
+
+  //   return {
+  //     tutorials,
+  //     wissen,
+  //     ressourcen
+  //   };
+  // }
 };
 </script>
 
@@ -247,9 +125,14 @@ export default {
   padding: 0;
   margin: 0.5em;
 }
-.tweet-details{
-  font-size: 0.7em;
+
+.filter {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  cursor: pointer;
 }
+
 .tag {
   font-size: 0.5em;
   border: solid 1px #63e93a;
@@ -260,23 +143,39 @@ export default {
   border-radius: 50em;
   margin: 0.3em;
   transition: 0.1s;
+  /* text-transform: capitalize; */
 }
+.filter-element {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
 .tag:hover {
   background-color: #63e93a;
   color: #000;
   transition: 0.1s;
 }
-.No-Code {
+.no-code,
+.low-code,
+.high-code {
   border: solid 1px #a169e6;
   color: #a169e6;
 }
-.No-Code:hover {
+.no-code:hover,
+.low-code:hover,
+.high-code:hover,
+.no-code.active{
   background-color: #a169e6;
   color: black;
 }
-
-.No-Code:hover {
-  background-color: #a169e6;
+.kostenlos,
+.kostenpflichtig {
+  border: solid 1px #12d7f1;
+  color: #12d7f1;
+}
+.kostenlos:hover,
+.kostenpflichtig:hover {
+  background-color: #12d7f1;
   color: black;
 }
 .tag-container {
@@ -291,9 +190,7 @@ export default {
   font-size: 1.6em;
   line-height: 110%;
 }
-/* .card > h3{
-  padding-left: 1em;
-} */
+
 .card:hover {
   box-shadow: 5px 2px 10px #a169e6;
   transform: scale(1.01);

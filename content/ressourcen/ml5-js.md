@@ -6,7 +6,6 @@ description: "ml5.js ist eine einfache JavaScript Bibliothek, die sich zur
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1624366398/Tools/Screenshot_2021-06-22_at_14-46-07_ml5js_Friendly_Machine_Learning_For_The_Web_dqkl3z.png
 link: https://ml5js.org/
 tags:
-  - No-Code
-  - Beginner
-  - Weiteres
+  - high-code
+  - fortgeschrittene
 ---
