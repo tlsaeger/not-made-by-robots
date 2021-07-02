@@ -7,5 +7,5 @@ image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1624367766/Tools/Scree
 link: https://runwayml.com/
 tags:
   - low-code
-  - anfänger
+  - beginner
 ---

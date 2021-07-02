@@ -151,7 +151,7 @@ export default {
   cursor: pointer;
 }
 
-.tag:hover {
+.tag:hover, .tag.active {
   background-color: #63e93a;
   color: #000;
   transition: 0.1s;
@@ -161,13 +161,17 @@ export default {
 .high-code {
   border: solid 1px #a169e6;
   color: #a169e6;
+  transition: .2s;
 }
 .no-code:hover,
 .low-code:hover,
 .high-code:hover,
-.no-code.active{
+.no-code.active,
+.low-code.active,
+.high-code.active {
   background-color: #a169e6;
   color: black;
+  transition: .2s;
 }
 .kostenlos,
 .kostenpflichtig {
@@ -175,7 +179,9 @@ export default {
   color: #12d7f1;
 }
 .kostenlos:hover,
-.kostenpflichtig:hover {
+.kostenpflichtig:hover,
+.kostenlos.active,
+.kostenpflichtig.active {
   background-color: #12d7f1;
   color: black;
 }
