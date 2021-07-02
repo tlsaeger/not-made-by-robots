@@ -8,9 +8,9 @@
       </p>
       <a @click="scrollToEl('tutorials')" class="arrow">↓</a>
     </section>
-    <TheTutorials />
-    <TheWissen />
-    <TheTools />
+    <TheTutorials :tutorials='tutorials'> </TheTutorials>
+    <TheWissen :wissen='wissen'> </TheWissen>
+    <TheTools :ressourcen='ressourcen'> </TheTools>
     <TheNews />
   </div>
 </template>
@@ -19,6 +19,7 @@
 
 
 export default {
+
   head() {
     return {
       script: [
@@ -41,25 +42,25 @@ export default {
     }
   },
   
-  // async asyncData({ $content, params, error }) {
-  //   let tutorials;
-  //   let wissen;
-  //   let ressourcen;
-  //   try {
-  //     tutorials = await $content("tutorial", params.slug).fetch();
-  //     wissen = await $content("wissen", params.slug).fetch();
-  //     ressourcen = await $content("ressourcen", params.slug).fetch();
-  //     // OR const article = await $content(`articles/${params.slug}`).fetch()
-  //   } catch (e) {
-  //     error({ message: "Blog Post not found" });
-  //   }
+  async asyncData({ $content, params, error }) {
+    let tutorials;
+    let wissen;
+    let ressourcen;
+    try {
+      tutorials = await $content("tutorial", params.slug).fetch();
+      wissen = await $content("wissen", params.slug).fetch();
+      ressourcen = await $content("ressourcen", params.slug).fetch();
+      // OR const article = await $content(`articles/${params.slug}`).fetch()
+    } catch (e) {
+      error({ message: "Blog Post not found" });
+    }
 
-  //   return {
-  //     tutorials,
-  //     wissen,
-  //     ressourcen
-  //   };
-  // }
+    return {
+      tutorials,
+      wissen,
+      ressourcen
+    };
+  }
 };
 </script>
 

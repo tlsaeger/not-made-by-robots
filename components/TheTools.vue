@@ -46,6 +46,12 @@
 <script>
 import filterValues from "@/static/filterValues";
 export default {
+      props: {
+    ressourcen: {
+      type: Array,
+      required: true
+    }
+  },
     data () {
         return {
     filterValues: filterValues.filterValues,
@@ -65,19 +71,5 @@ export default {
       }
     },
   },
-   async asyncData({ $content, params, error }) {
-    let ressourcen;
-    try {
-      ressourcen = await $content("ressourcen", params.slug).fetch();
-      console.log(ressourcen)
-      // OR const article = await $content(`articles/${params.slug}`).fetch()
-    } catch (e) {
-      error({ message: "Blog Post not found" });
-    }
-
-    return {
-      ressourcen
-    };
-  }
 }
 </script>
