@@ -33,8 +33,8 @@
       </div>
     </div>
     <!-- //TODO Add animation -->
-    <transition-group tag="div" name="scale" class="text-block-wrapper text-block-wrapper-mini">
-        <div v-if="noContent" class="allfilters">Keine Inhalte mehr verfügbar. <br> Bitte entferne ein paar Filter!</div>
+    <transition-group tag="div" name="scale" class="text-block-wrapper text-block-wrapper-mini ressourcen-wrapper">
+        <div v-if="noContent" class="allfilters" key="noContent">Keine Inhalte mehr verfügbar. <br> Bitte entferne ein paar Filter!</div>
       <div
         v-for="ressource in filteredArray"
         :key="ressource.slug" class="card card-mini"
