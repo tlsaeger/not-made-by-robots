@@ -74,11 +74,13 @@ export default {
   data() {
     return {
       filterValues: filterValues.filterValues,
-      filteredArray: []
+      filteredArray: this.ressourcen
     };
   },
   methods: {
+    //filter array based on clicked buttons
     filtering(e, group) {
+      let activeValues = [];
       this.filteredArray = [];
       let groupList = document.getElementsByClassName(group);
       if (e.currentTarget.classList.contains("active")) {
@@ -91,25 +93,24 @@ export default {
           e.currentTarget.classList.add("active");
         }
       }
-      //TODO make filter apply to all values
+      const isContainedIn = (a, b) => {
+        for (const v of new Set(a)) {
+          if (
+            !b.some(e => e === v) ||
+            a.filter(e => e === v).length > b.filter(e => e === v).length
+          )
+            return false;
+        }
+        return true;
+      };
+
       let active = document.getElementsByClassName("active");
+      for (let i = 0; i < active.length; i++) {
+        activeValues.push(active[i].innerText);
+      }
       for (let i = 0; i < this.ressourcen.length; i++) {
-        for (let j = 0; j < active.length; j++) {
-          for (let k = 0; k < this.ressourcen[i].tags.length; k++) {
-            if (
-              this.ressourcen[i].tags[k] === active[j].innerText &&
-              !this.filteredArray.includes(this.ressourcen[i])
-            ) {
-              this.filteredArray.push(this.ressourcen[i]);
-            }
-          }
-          //   for (let i = 0; i < this.ressourcen.length; i++) {
-          //     for(let j = 0; j < this.ressourcen[i].tags.length; j++)
-          //     if (filterValue === this.ressourcen[i].tags[j] &&! this.filterActive) {
-          //       this.filteredArray.push(this.ressourcen[i]);
-          //       this.addClass('active');
-          //     }
-          //   }
+        if (isContainedIn(activeValues, this.ressourcen[i].tags)) {
+          this.filteredArray.push(this.ressourcen[i]);
         }
       }
     }
