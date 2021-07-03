@@ -32,13 +32,14 @@
         {{ filterValue }}
       </div>
     </div>
-    <div class="text-block-wrapper text-block-wrapper-mini">
-      <transition
-        name="fade"
+    <!-- //TODO Add animation -->
+    <transition-group tag="div" name="scale" class="text-block-wrapper text-block-wrapper-mini">
+        <div v-if="noContent" class="allfilters">Keine Inhalte mehr verfügbar. <br> Bitte entferne ein paar Filter!</div>
+      <div
         v-for="ressource in filteredArray"
-        :key="ressource.slug"
+        :key="ressource.slug" class="card card-mini"
       >
-        <a :href="ressource.link" target="_blank" class="card card-mini">
+        <a :href="ressource.link" target="_blank" >
           <nuxt-img
             class="preview-image preview-image-mini"
             :src="ressource.image"
@@ -58,13 +59,14 @@
             </div>
           </div>
         </a>
-      </transition>
-    </div>
+      </div>
+    </transition-group>
   </section>
 </template>
 <script>
 import filterValues from "@/static/filterValues";
 export default {
+    transition: 'scale',
   props: {
     ressourcen: {
       type: Array,
@@ -74,11 +76,11 @@ export default {
   data() {
     return {
       filterValues: filterValues.filterValues,
-      filteredArray: this.ressourcen
+      filteredArray: this.ressourcen,
+      noContent: false,
     };
   },
   methods: {
-    //filter array based on clicked buttons
     filtering(e, group) {
       let activeValues = [];
       this.filteredArray = [];
@@ -92,7 +94,8 @@ export default {
           groupList[i].classList.remove("active");
           e.currentTarget.classList.add("active");
         }
-      }
+      }  
+
       const isContainedIn = (a, b) => {
         for (const v of new Set(a)) {
           if (
@@ -113,8 +116,32 @@ export default {
           this.filteredArray.push(this.ressourcen[i]);
         }
       }
+            if(this.filteredArray.length === 0){
+          this.noContent = true;
+      } 
+      else{
+          this.noContent = false;
+      }
     }
   }
 };
 </script>
-<style scoped></style>
+<style scoped>
+
+.scale-enter-active {
+  animation: fade-in 0.5s;
+}
+.scale-leave-active {
+  animation: fade-in 0.5s reverse;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+</style>

@@ -102,7 +102,7 @@ export default {
   justify-content: center;
 }
 .text-block-wrapper-mini {
-  justify-content: space-between;
+  justify-content: left;
   padding: 0 7em;
 }
 .section-title {
