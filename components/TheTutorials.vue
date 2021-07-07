@@ -8,7 +8,7 @@
       <div @click="scrollSlideshow('prev')" class="prev arrow"></div>
     </div>
     <div class="slide-wrapper" id="slide-wrapper">
-      <img class="test-video slide" src="~/assets/img/videocall_gesture.gif">
+      <!-- <img class="test-video slide" src="~/assets/img/videocall_gesture.gif"> -->
       <transition
         name="fade"
         v-for="tutorial in tutorials"
@@ -30,7 +30,7 @@
 export default {
   data () {
     return {
-      counter: 0,
+      counter: 1,
     }
   },
   methods: {
@@ -43,10 +43,10 @@ export default {
         inline: "center",
         block: "center"
       });
-     if(direction === 'next' && this.counter < this.tutorials.length){
+     if(direction === 'next' && this.counter < this.tutorials.length -1){
       this.counter++;
      }
-     else if(direction === 'next' && this.counter  >= this.tutorials.length){
+     else if(direction === 'next' && this.counter  >= this.tutorials.length -1){
        this.counter = 0;
      }
      else if(direction === 'prev' && this.counter > 0){
