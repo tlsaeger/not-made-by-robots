@@ -1,9 +1,31 @@
 <template>
   <div>
-    <TheNav />
+    <TheBurger @burgerIsClicked="burgerIsClicked"/>
+    <transition
+        name="burger"
+      >
+    <TheNav @burgerIsClicked="burgerIsClicked" v-if="burgerClicked" />
+    </transition>
     <Nuxt />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      burgerClicked: false,
+    };
+  },
+  methods:{
+    burgerIsClicked(value){
+      console.log("reciving" + value)
+      this.burgerClicked = value;
+    }
+  }
+
+}
+</script>
 
 <style>
 @import url("https://use.typekit.net/wbf0hbb.css");
@@ -40,7 +62,6 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
-  padding: .3em 0;
 }
 h1,h2,h3,p{
   margin: 0;
@@ -117,5 +138,12 @@ line-height: 120%;
   .nuxt-content p{
     border: solid 1px white;
   }
+}
+/* TODO better animation */
+.burger-enter-active, .burger-leave-active {
+  transition: opacity .5s;
+}
+.burger-enter, .burger-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

@@ -42,11 +42,10 @@ export default {
 
   async asyncData({ $content, params, error }) {
     let tutorials;
-    let wissen;
+   
     let ressourcen;
     try {
       tutorials = await $content("tutorial", params.slug).fetch();
-      wissen = await $content("wissen", params.slug).fetch();
       ressourcen = await $content("ressourcen", params.slug).fetch();
       // OR const article = await $content(`articles/${params.slug}`).fetch()
     } catch (e) {
@@ -55,7 +54,6 @@ export default {
 
     return {
       tutorials,
-      wissen,
       ressourcen
     };
   }
@@ -80,18 +78,6 @@ export default {
 }
 .subline {
   font-size: 2em;
-}
-/* .arrow {
-  position: absolute;
-  bottom: 1em;
-  left: 48%;
-  font-size: 3em;
-  transition: 0.2s;
-} */
-.arrow:hover {
-  transform: scale(1.1);
-  transform: translateY(10px);
-  transition: 0.2s;
 }
 .text-block-wrapper {
   display: flex;
