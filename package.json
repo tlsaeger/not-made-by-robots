@@ -15,7 +15,7 @@
     "nuxt": "^2.15.6",
     "p5": "^0.10.2",
     "remark-unwrap-images": "^2.1.0",
-    "vue-p5": "^0.8.4"
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@nuxt/image": "^0.4.14",

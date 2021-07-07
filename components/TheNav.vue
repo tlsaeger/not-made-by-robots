@@ -5,10 +5,20 @@
         ><nuxt-link to='/' class="icon">🤖</nuxt-link> </transition>
         <nuxt-link :to="{path:'/', hash:'#tutorials'}" class="nav-links">Tutorials</nuxt-link>
         <nuxt-link to="/#wissenswertes" class="nav-links">Wissenswertes</nuxt-link>
-        <nuxt-link :to="{path:'/', hash:'#tools'}" class="nav-links">Tools</nuxt-link>
+        <a  @click="scrollToEl('tools')" class="nav-links">Tools</a>
         <nuxt-link :to="{path:'/', hash:'#news'}" class="nav-links">News</nuxt-link>
     </div>
 </template>
+<script>
+export default {
+    methods:{
+        scrollToEl: function(el) {
+            const elToScroll = document.querySelector(el);
+            elToScroll.scrollIntoView();
+    }
+}
+}
+</script>
 <style scoped>
 .nav-wrapper{
     display: flex;
@@ -22,7 +32,7 @@
     border: solid 1px black;
     padding-left: 1.5em;
     padding-right:1.5em ;
-    z-index: 99;
+    z-index: 999;
 }
 .nav-links{
     font-size: 1.5em;

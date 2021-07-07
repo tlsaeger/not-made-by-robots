@@ -1,25 +1,24 @@
 <template>
   <div class="home">
     <!-- <TheP5JS /> -->
-    <section class="first_section">
+    <!-- <section class="first_section">
       <h1 class="title"><span class="not">Not</span> Made <br />By Robots</h1>
       <p class="subline body-text">
         A Toolkit for Artificial Intelligence in Design
       </p>
-      <a @click="scrollToEl('tutorials')" class="arrow">↓</a>
-    </section>
-    <TheTutorials :tutorials='tutorials'> </TheTutorials>
-    <TheWissen :wissen='wissen'> </TheWissen>
-    <TheTools :ressourcen='ressourcen'> </TheTools>
-    <TheNews />
+      <a @click="scrollToEl('tutorials')" class="arrow">↓</a> -->
+    <!-- </section> -->
+    <TheTutorials :tutorials="tutorials"> </TheTutorials>
+    <!-- <TheWissen :wissen="wissen"> </TheWissen>
+    <TheTools :ressourcen="ressourcen"> </TheTools>
+    <TheNews /> -->
   </div>
 </template>
 
 <script>
-
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
-
   head() {
     return {
       script: [
@@ -38,10 +37,9 @@ export default {
     };
   },
   data() {
-    return {
-    }
+    return {};
   },
-  
+
   async asyncData({ $content, params, error }) {
     let tutorials;
     let wissen;
@@ -151,7 +149,8 @@ export default {
   cursor: pointer;
 }
 
-.tag:hover, .tag.active {
+.tag:hover,
+.tag.active {
   background-color: #63e93a;
   color: #000;
   transition: 0.1s;
@@ -161,7 +160,7 @@ export default {
 .high-code {
   border: solid 1px #a169e6;
   color: #a169e6;
-  transition: .2s;
+  transition: 0.2s;
 }
 .no-code:hover,
 .low-code:hover,
@@ -171,7 +170,7 @@ export default {
 .high-code.active {
   background-color: #a169e6;
   color: black;
-  transition: .2s;
+  transition: 0.2s;
 }
 .kostenlos,
 .kostenpflichtig {
@@ -221,6 +220,8 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
+
+
 @media (prefers-color-scheme: dark) {
   .title {
     color: white;
