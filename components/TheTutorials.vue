@@ -8,7 +8,7 @@
       <div @click="scrollSlideshow('prev')" class="prev arrow"></div>
     </div>
     <div class="slide-wrapper" id="slide-wrapper">
-      <img class="test-video" src="~/assets/img/videocall_gesture.gif">
+      <img class="test-video slide" src="~/assets/img/videocall_gesture.gif">
       <transition
         name="fade"
         v-for="tutorial in tutorials"
@@ -36,14 +36,18 @@ export default {
   methods: {
     scrollSlideshow(direction) {
          const slideElement = document.getElementsByClassName('slide');
+         console.log(slideElement);
     console.log(this.counter)
    slideElement[this.counter].scrollIntoView({
         behavior: "smooth",
         inline: "center",
         block: "center"
       });
-     if(direction === 'next' && this.counter < this.tutorials.length - 1){
+     if(direction === 'next' && this.counter < this.tutorials.length){
       this.counter++;
+     }
+     else if(direction === 'next' && this.counter  >= this.tutorials.length){
+       this.counter = 0;
      }
      else if(direction === 'prev' && this.counter > 0){
        this.counter--;
@@ -90,8 +94,8 @@ right: 0;
 .prev {
     left: 0;
 }
-.test-video {
+/* .test-video {
   width: 100vw;
-  height: 100vh;
-}
+  height: 100%;
+} */
 </style>

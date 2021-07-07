@@ -81,13 +81,13 @@ export default {
 .subline {
   font-size: 2em;
 }
-.arrow {
+/* .arrow {
   position: absolute;
   bottom: 1em;
   left: 48%;
   font-size: 3em;
   transition: 0.2s;
-}
+} */
 .arrow:hover {
   transform: scale(1.1);
   transform: translateY(10px);
