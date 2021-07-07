@@ -29,18 +29,6 @@ export default {
 
 <style>
 @import url("https://use.typekit.net/wbf0hbb.css");
-@font-face {
-  font-family: 'terminal-regular';
-  src: url(~/assets/fonts/terminal-grotesque-webfont.ttf) format("truetype");
-}
-@font-face {
-  font-family: 'terminal-open';
-  src: url(~/assets/fonts/terminal-grotesque_open.otf) format("opentype");
-}
-@font-face {
-  font-family: 'EB-Garamond';
-  src: url(~/assets/fonts/EBGaramond-VariableFont_wght.ttf) format("truetype");
-}
 *{
   font-family: neue-haas-unica, sans-serif;
   font-weight: 500;
