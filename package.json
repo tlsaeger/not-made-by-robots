@@ -9,10 +9,12 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.12.17",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/cloudinary": "^1.0.3-beta-4",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.6",
+    "micromatch": "^4.0.4",
+    "nuxt": "^2.13.3",
     "p5": "^0.10.2",
     "remark-unwrap-images": "^2.1.0",
     "vue-slick-carousel": "^1.0.6"
