@@ -7,7 +7,7 @@ image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1624272574/Tutorials/h
 ---
 ### **0. Intro**
 
-Techable Machine ist ein vom Google Creative Lab entwickelte Plattform, die es dir ermöglicht ganz einfach dein eigenes Neuronales Netzwerk zu trainieren. Alles was du dafür brauchst, ist ein Computer und im besten Fall eine Webcam.
+Techable Machine ist ein vom Google Creative Lab entwickelte Plattform, die es dir ermöglicht ganz einfach dein eigenes Neuronales Netzwerk zu trainieren. Alles was du dafür brauchst, ist ein Computer und im besten Fall eine Webcam. Suspendisse maximus leo libero. Nunc viverra lacus id lacus suscipit fermentum. Pellentesque sollicitudin eros quam, sit amet ullamcorper velit tempor et. Nunc vel quam imperdiet, posuere mi a, aliquam libero. Vestibulum venenatis rhoncus augue quam.
 
 ### **1. Daten sammeln** 
 
