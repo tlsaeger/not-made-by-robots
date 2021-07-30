@@ -4,7 +4,7 @@
     <transition
         name="burger"
       >
-    <TheNav @burgerIsClicked="burgerIsClicked" v-if="burgerClicked" />
+    <TheNav @burgerIsClicked="burgerIsClicked" @pageClicked="pageIsClicked" v-if="burgerClicked" />
     </transition>
     <Nuxt />
   </div>
@@ -19,6 +19,9 @@ export default {
   },
   methods:{
     burgerIsClicked(value){
+      this.burgerClicked = value;
+    },
+    pageIsClicked(value){
       console.log("reciving" + value)
       this.burgerClicked = value;
     }

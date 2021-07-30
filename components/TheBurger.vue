@@ -1,8 +1,14 @@
 <template>
   <div class="burger">
-    <p class="burger-item">Not Made by Robots</p>
-          
-    <img @click="burgerClicked" src="~assets/img/bars-solid.svg" class="burger-item burger-icon">
+    <nuxt-link to="/" class="burger-item nav-title">Not Made <br> By Robots</nuxt-link>
+    <transition name="page">
+    <p class="burger-item page-index">{{ pageName }}</p>
+    </transition>
+    <img
+      @click="burgerClicked"
+      src="~assets/img/bars-solid.svg"
+      class="burger-item burger-icon"
+    />
   </div>
 </template>
 
@@ -10,8 +16,26 @@
 export default {
   data() {
     return {
-      burger: ""
+      burger: "",
     };
+  },
+  computed: {
+    pageName() {
+    let count = 0;
+     let pageIndexName = this.$route.path;
+     for (let i = 0; i < pageIndexName.length; i++) {
+       if(pageIndexName.charAt(i) === "/"){
+         count++;
+       }
+     }
+     if (count === 1) {
+       pageIndexName =  pageIndexName.replace("/", " ");
+     }
+     else if(count > 1){
+       pageIndexName = pageIndexName.replace( /\/.*?\//, '' );
+     }
+         return pageIndexName;
+  }
   },
   methods: {
     burgerClicked() {
@@ -34,8 +58,6 @@ export default {
   align-items: center;
   background-color: rgb(10, 10, 10);
   border: solid 1px white;
-  -webkit-box-shadow: 0px 8px 7px 0px rgba(0,0,0,0.3); 
-box-shadow: 0px 8px 7px 0px rgba(0, 0, 0, 0.3);
 }
 .burger-item {
   font-size: 2.5em;
@@ -43,11 +65,14 @@ box-shadow: 0px 8px 7px 0px rgba(0, 0, 0, 0.3);
 }
 .burger-icon {
   cursor: pointer;
-  color: lightblue;
-  fill: lightblue;
   height: 1.5em;
 }
-
-
-
+.page-index {
+  text-transform: uppercase;
+  align-self: center;
+}
+.nav-title{
+  font-size: 1.2em;
+  line-height: 100%;
+}
 </style>

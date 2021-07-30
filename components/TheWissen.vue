@@ -1,15 +1,13 @@
 <template>
-  <section class="third_section">
-    <h2 class="section-title" id="wissenswertes">
-      Wissenswertes
-    </h2>
+<div>
+  <section class="third_section section">
     <div class="text-block-wrapper">
       <transition
         name="fade"
         v-for="wissenpost in wissen"
         :key="wissenpost.slug"
       >
-        <NuxtLink :to="'wissen/' + wissenpost.slug" class="card">
+        <NuxtLink :to="'wissen/' + wissenpost.slug" class="card shadow shadow-hover">
           <nuxt-img class="preview-image" :src="wissenpost.image" />
 
           <h3>{{ wissenpost.title }}</h3>
@@ -17,7 +15,10 @@
         </NuxtLink>
       </transition>
     </div>
+    
   </section>
+  <TheFooter />
+</div>
 </template>
 <script>
 export default {

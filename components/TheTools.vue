@@ -1,8 +1,5 @@
 <template>
-  <section class="fourth_section">
-    <h2 class="section-title" id="tools">
-      Tools
-    </h2>
+  <section class="fourth_section section">
     <div class="filter">
       <div
         class="filter-element code tag"

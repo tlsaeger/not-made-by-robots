@@ -1,8 +1,5 @@
 <template>
   <section class="second_section">
-    <!-- <h2 class="section-title" id="tutorials">
-      Tutorials
-    </h2> -->
     <div class="arrowrapper">
           <div @click="scrollSlideshow('next')" class="next arrow">{{counter}}</div>
       <div @click="scrollSlideshow('prev')" class="prev arrow"></div>

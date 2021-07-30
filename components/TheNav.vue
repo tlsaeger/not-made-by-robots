@@ -20,7 +20,7 @@
       </div>
     </nuxt-link>
     <nuxt-link to="/news" class="nav-links" v-if="navOpen"
-      ><div class="nav-burger" @click="burgerClicked">
+      ><div class="nav-burger" @click="burgerClicked()">
         <p class="nav-text">News</p>
       </div></nuxt-link
     >
@@ -98,23 +98,21 @@ export default {
 .nav-text {
   font-size: 4em;
 }
-.nav-links:hover{
+.nav-links:hover .nav-text{
   transition: 0.2s;
-  font-size: 1.2em;
-  /* background-color: lightblue; */
+  transform: skew(-10deg);
 }
-
 .icon {
   font-size: 1.5em;
   justify-self: flex-start;
   margin-right: auto;
 }
-.moveUp-enter-active, .moveUp-leave-active {
+/* .moveUp-enter-active, .moveUp-leave-active {
    transition: .5s;
 }
-.moveUp-enter, .moveUp-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transform: translateY(-100%);
-}
+.moveUp-enter, .moveUp-leave-to  {
+  transform: scale(1);
+} */
 /* @media (prefers-color-scheme: dark) {
   .nav-wrapper {
     background-color: black;

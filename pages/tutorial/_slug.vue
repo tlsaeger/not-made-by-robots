@@ -1,7 +1,7 @@
 <template>
   <div class="detail-page-main">
     <h2 class="post-title" >{{ post.title }}</h2>
-    <nuxt-img class="header-image"  :src="post.image" />
+    <nuxt-img class="header-image shadow"  :src="post.image" />
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
     <!-- <p v-for="abschnitte in post.body.children.children" :key="abschnitte.value">{{ abschnitte }}</p> -->
@@ -39,18 +39,5 @@ export default {
   padding-top: 2em;
   font-size: 2em;
 }
-.header-image{
-   border: solid 1px black;
-  box-shadow: 5px 3px 3px #a169e6;
-  width: 65%;
-  /* height: 10%; */
-  border-radius: 0.5em;
-  object-fit: contain;
-  transition: 0.2s;
-}
-@media (prefers-color-scheme: dark) {
-.header-image{
-   border: solid 1px white;
-}
-}
+
 </style>

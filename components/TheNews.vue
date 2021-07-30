@@ -1,8 +1,5 @@
 <template>
-  <section class="fifth_section">
-    <h2 class="section-title" id="news">
-      News
-    </h2>
+  <section class="fifth_section section">
     <div class="text-block-wrapper text-block-wrapper-mini">
       <transition v-for="tweet in tweets" :key="tweet.id" name="fade">
         <a
