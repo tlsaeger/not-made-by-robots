@@ -1,6 +1,6 @@
 <template>
   <div class="burger">
-    <nuxt-link to="/" class="burger-item nav-title">Not Made <br> By Robots</nuxt-link>
+    <nuxt-link to="/" class="burger-item nav-title"><span class="letter-spacing"><span class="italic">Not</span> Made</span> <br> By Robots</nuxt-link>
     <transition name="page">
     <p class="burger-item page-index">{{ pageName }}</p>
     </transition>
@@ -66,6 +66,8 @@ export default {
 .burger-icon {
   cursor: pointer;
   height: 1.5em;
+  width: 1.5em;
+  padding: 0.2em;
 }
 .page-index {
   text-transform: uppercase;
@@ -74,5 +76,13 @@ export default {
 .nav-title{
   font-size: 1.2em;
   line-height: 100%;
+}
+.italic {
+  font-style: italic;
+  padding: 0;
+}
+.letter-spacing {
+  letter-spacing: 0.01em;
+  padding: 0;
 }
 </style>
