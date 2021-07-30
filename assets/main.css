@@ -35,6 +35,9 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
+p{
+  color: #b171ff;
+}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
@@ -119,15 +122,7 @@ p {
   opacity: 0;
   transform: translate3d(0, 15px, 0);
 }
-/* @media (prefers-color-scheme: dark) {
-  body   { background-color: black; }
-  *{
-    color: #bb86fc
-  }
-  .nuxt-content p{
-    border: solid 1px white;
-  }
-} */
+
 /* TODO better animation */
 .burger-enter-active,
 .burger-leave-active {
@@ -242,7 +237,7 @@ p {
 .tag:hover,
 .tag.active {
   background-color: #63e93a;
-  color: #000;
+  color: rgb(10, 10, 10);
   transition: 0.1s;
 }
 .no-code,
@@ -259,7 +254,6 @@ p {
 .low-code.active,
 .high-code.active {
   background-color: #a169e6;
-  color: black;
   transition: 0.2s;
 }
 .kostenlos,
@@ -272,7 +266,6 @@ p {
 .kostenlos.active,
 .kostenpflichtig.active {
   background-color: #12d7f1;
-  color: black;
 }
 .tag-container {
   display: flex;
@@ -294,4 +287,31 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+}
+.footer-wrapper {
+  clear: both;
+  position: relative;
+  margin: 0 -2.6em -2.6em -2.6em;
+  width: 100%;
+  background-color: rgb(10,10,10);
+  display: flex;
+}
+
+@media (prefers-color-scheme: light) {
+  *{
+    color: #a169e6;
+  }
+  body{
+    background-color: rgb(236, 236, 236);
+  }
+  .tag, .footer-wrapper{
+    background-color: rgb(245,245,245);
+  }
+  .tag:hover{
+    color: rgb(245,245,245)
+  }
+  .card, .header-image, .nuxt-content p{
+    background-color: rgb(245,245,245);
+    border: 1px solid rgb(19, 19, 19);
+  }
 }

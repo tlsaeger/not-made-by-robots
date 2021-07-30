@@ -1,7 +1,7 @@
 <template>
   <div class="burger">
     <nuxt-link to="/" class="burger-item nav-title"><span class="letter-spacing"><span class="italic">Not</span> Made</span> <br> By Robots</nuxt-link>
-    <transition name="page">
+    <transition name="burger">
     <p class="burger-item page-index">{{ pageName }}</p>
     </transition>
     <img
@@ -85,4 +85,11 @@ export default {
   letter-spacing: 0.01em;
   padding: 0;
 }
+@media (prefers-color-scheme: light) {
+  .burger {
+    background-color: rgb(245,245,245);
+     border: solid 1px black;
+  }
+}
+
 </style>

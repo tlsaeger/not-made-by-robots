@@ -63,7 +63,7 @@ export default {
 <style scoped>
 .nav-wrapper {
   padding: 0;
-  background-color: rgb(10,10,10);
+  background-color: rgb(19,19,19);
   display: grid;
   justify-content: flex-end;
   text-transform: uppercase;
@@ -113,10 +113,11 @@ export default {
 .moveUp-enter, .moveUp-leave-to  {
   transform: scale(1);
 } */
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   .nav-wrapper {
-    background-color: black;
-    border: 1px solid white;
+    background-color: rgb(245,245,245);
   }
-} */
+  .nav-links{border: solid 1px rgb(19,19,19);
+  }
+}
 </style>
