@@ -8,7 +8,7 @@
       <div @click="scrollSlideshow('prev')" class="prev arrow"></div>
     </div>
     <div class="slide-wrapper" id="slide-wrapper">
-      <!-- <img class="test-video slide" src="~/assets/img/videocall_gesture.gif"> -->
+      <img class="test-video slide" src="~/assets/img/videocall_gesture.gif">
       <transition
         name="fade"
         v-for="tutorial in tutorials"
@@ -80,11 +80,11 @@ export default {
   transition: 0.2s;
 }
 .arrow {
-  background-color: blue;
+  /* background-color: blue; */
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 2em;
+  width: 10%;
   z-index: 99;
   cursor: e-resize
 }

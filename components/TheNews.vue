@@ -10,7 +10,7 @@
             `https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
           "
           target="_blank"
-          class="card card-mini"
+          class="card card-mini shadow shadow-hover"
         >
           <img
             class="preview-image preview-image-mini"

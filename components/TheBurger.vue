@@ -1,8 +1,8 @@
 <template>
   <div class="burger">
-    <p class="burger-item">Not Made By Robots</p>
+    <p class="burger-item">Not Made by Robots</p>
           
-    <p @click="burgerClicked" class="burger-item burger-icon">{{ burger }}</p>
+    <img @click="burgerClicked" src="~assets/img/bars-solid.svg" class="burger-item burger-icon">
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      burger: "🍔"
+      burger: ""
     };
   },
   methods: {
@@ -29,16 +29,23 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  padding:0 3em;
-  z-index: 99;
+  z-index: 999;
   justify-content: space-between;
+  align-items: center;
+  background-color: rgb(10, 10, 10);
+  border: solid 1px white;
+  -webkit-box-shadow: 0px 8px 7px 0px rgba(0,0,0,0.3); 
+box-shadow: 0px 8px 7px 0px rgba(0, 0, 0, 0.3);
 }
 .burger-item {
-  font-size: 1.5em;
+  font-size: 2.5em;
+  line-height: 50%;
 }
 .burger-icon {
-  font-size: 2em;
   cursor: pointer;
+  color: lightblue;
+  fill: lightblue;
+  height: 1.5em;
 }
 
 
