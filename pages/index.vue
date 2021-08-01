@@ -62,13 +62,4 @@ export default {
 
 <style>
 
-
-@media (prefers-color-scheme: dark) {
-  .title {
-    color: white;
-  }
-  .card {
-    border: solid 1px white;
-  }
-}
 </style>
