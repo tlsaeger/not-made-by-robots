@@ -7,8 +7,9 @@
             `https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
           "
           target="_blank"
-          class="card card-mini shadow shadow-hover"
+          class="card card-mini shadow shadow-hover news-card"
         >
+        <!-- <video class="preview-image preview-image-mini" v-if="'media' in tweet.entities && 'video_info' in tweet.extended_entities.media[0]" :src="tweet.extended_entities.media[0].video_info.variants[2].url" :type="tweet.extended_entities.media[0].video_info.variants[2].content_type" autoplay muted loop >  </video> -->
           <img
             class="preview-image preview-image-mini"
             v-if="'media' in tweet.entities"
@@ -16,7 +17,7 @@
             alt=""
           />
           <div class="desc-text-wrapper">
-            <p>{{ tweetText(tweet.text) }}</p>
+            <p>{{ tweetText(tweet.full_text) }}</p>
             <div class="tweet-details">
               <p class="user">
                 By @{{ tweet.user.name }} {{ convertDate(tweet.created_at) }}

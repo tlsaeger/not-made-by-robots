@@ -14,7 +14,9 @@ const endpoint = 'statuses/home_timeline'
 const params = {
     // screen_name: 'runwayml' ,
     include_rts: false,
-    exclude_replies: true
+    exclude_replies: true,
+    tweet_mode:'extended',
+    count: 200
 }
 const callback = (error, tweets, response) => {
 	if (!error) fs.outputJSON('./tweets/tweets.json', tweets.slice(0,50), {spaces: 4})
