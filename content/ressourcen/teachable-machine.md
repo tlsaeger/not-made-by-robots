@@ -8,4 +8,5 @@ link: https://teachablemachine.withgoogle.com/
 tags:
   - no-code
   - beginner
+  - kostenlos
 ---

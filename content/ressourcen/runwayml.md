@@ -8,4 +8,6 @@ link: https://runwayml.com/
 tags:
   - low-code
   - beginner
+  - kostenlos
+  - kostenpflichtig
 ---
