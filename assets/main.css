@@ -123,61 +123,68 @@ p {
   transform: translate3d(0, 15px, 0);
 }
 
-/* TODO better animation */
-.burger-enter-active,
-.burger-leave-active {
-  transition: 0.5s;
-}
-.burger-enter,
-.burger-leave-to {
-  transform: translateX(100%) translateY(-100%) scale(0) ;
-}
-
-/* Animations */
-
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.5s;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-}
-
-
-
-.card {
+ .card {
   border: solid 1px white;
-  background-color: rgb(10, 10, 10);
   width: 80%;
-  max-height: 10%;
+  background-color: rgb(10, 10, 10);
   margin-bottom: 1em;
   padding: 0;
   border-radius: 0.5em;
+  height: 30%;
   cursor: pointer;
   transition: 0.2s;
-}
-.card a {
+} 
+  /* .card a {
   padding: 0;
-}
+} */
 .card-mini {
   width: 25%;
-  padding: 0;
+  /* padding: 0.3em; */
   margin: 0.5em;
 }
-
-.preview-image {
+.desc-text-wrapper > h3  {
+  font-size: 1.6em;
+  line-height: 110%;
   padding: 0;
-  width: 100%;
-  height: 30%;
+}
+
+.desc-text-wrapper > p{
+  padding: 0.3em;
+}
+.preview-image {
   object-fit: cover;
+  padding: 0;
   border-radius: 0.5em 0.5em 0 0;
-  display: block;
+  width: 100%;
+  overflow: hidden;
+  max-height: 35vh;
 }
 .preview-image-mini {
   padding: 0;
   width: 100%;
   border-radius: 0.5em 0.5em 0 0;
+}
+.news-card{
+  /* display: flex; */
+  /* margin: 0; */
+  grid-gap: 1em;
+  border: none;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* height: 20%; */
+
+}
+.news-card > .desc-text-wrapper > p {
+  font-size: 1em;
+}
+.news-card > img {
+   max-height: 20vh;
+}
+.tweet-details{
+  padding: 0;
+  margin: 0;
+}
+.user{
+  padding-left: 0.3em;
 }
 
 .first_section {
@@ -271,14 +278,7 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
-.desc-text-wrapper {
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.desc-text-wrapper > h3 {
-  font-size: 1.6em;
-  line-height: 110%;
-}
+
 
 ul {
   list-style-type: none;
@@ -295,6 +295,27 @@ li {
   width: 100%;
   background-color: rgb(10,10,10);
   display: flex;
+}
+
+/* TODO better animation */
+.burger-enter-active,
+.burger-leave-active {
+  transition: 0.5s;
+}
+.burger-enter,
+.burger-leave-to {
+  transform: translateX(100%) translateY(-100%) scale(0) ;
+}
+
+/* Animations */
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
 
 @media (prefers-color-scheme: light) {

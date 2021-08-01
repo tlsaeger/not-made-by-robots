@@ -96,11 +96,12 @@ export default {
   height: 100%;
 }
 .nav-text {
-  font-size: 4em;
+  transition: 0.2s;
+ font-size: 4em;
 }
 .nav-links:hover .nav-text{
   transition: 0.2s;
-  transform: skew(-10deg);
+  transform: scale(1.1);
 }
 .icon {
   font-size: 1.5em;

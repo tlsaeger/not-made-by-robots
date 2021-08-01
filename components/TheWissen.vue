@@ -9,9 +9,10 @@
       >
         <NuxtLink :to="'wissen/' + wissenpost.slug" class="card shadow shadow-hover">
           <nuxt-img class="preview-image" :src="wissenpost.image" />
-
+          <div class="desc-text-wrapper">
           <h3>{{ wissenpost.title }}</h3>
           <p class="body-text">{{ wissenpost.description }} ↗︎</p>
+          </div>
         </NuxtLink>
       </transition>
     </div>
