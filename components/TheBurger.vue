@@ -2,7 +2,7 @@
   <div class="burger">
     <nuxt-link to="/" class="burger-item nav-title"><span class="letter-spacing"><span class="italic">Not</span> Made</span> <br> By Robots</nuxt-link>
     <transition name="burger">
-    <p class="burger-item page-index">{{ pageName }}</p>
+    <h3 class="burger-item page-index">{{ pageName }}</h3>
     </transition>
     <img
       @click="burgerClicked"
@@ -34,6 +34,7 @@ export default {
      else if(count > 1){
        pageIndexName = pageIndexName.replace( /\/.*?\//, '' );
      }
+     pageIndexName = pageIndexName.replaceAll("-", " ");
          return pageIndexName;
   }
   },
@@ -57,7 +58,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(10, 10, 10);
-  border: solid 1px white;
+  border: solid 1px rgb(245,245,245);
 }
 .burger-item {
   font-size: 2.5em;
@@ -70,8 +71,11 @@ export default {
   padding: 0.2em;
 }
 .page-index {
-  text-transform: uppercase;
+  text-transform: capitalize;
   align-self: center;
+  font-weight: 400;
+font-style: normal;
+font-size: 3.2em;
 }
 .nav-title{
   font-size: 1.2em;
@@ -88,7 +92,7 @@ export default {
 @media (prefers-color-scheme: light) {
   .burger {
     background-color: rgb(245,245,245);
-     border: solid 1px black;
+     border: solid 1px rgb(10,10,10);
   }
 }
 

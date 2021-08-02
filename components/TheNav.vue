@@ -5,23 +5,23 @@
     <transition name="moveUp"   v-on:after-leave="afterLeave"> 
       <nuxt-link to="/" class="nav-links" v-if="navOpen"   
         ><div  class="nav-burger" @click="burgerClicked">
-          <p class="nav-text">Tutorials</p>
+          <h3 class="nav-text">Tutorials</h3>
         </div></nuxt-link
       >
     </transition>
     <nuxt-link to="/wissen" class="nav-links" v-if="navOpen"
       ><div class="nav-burger" @click="burgerClicked">
-        <p class="nav-text">Wissen</p>
+        <h3 class="nav-text">Wissen</h3>
       </div></nuxt-link
     >
     <nuxt-link to="/tools" class="nav-links" v-if="navOpen"
       ><div class="nav-burger" @click="burgerClicked">
-        <p class="nav-text">Tools</p>
+        <h3 class="nav-text">Tools</h3>
       </div>
     </nuxt-link>
     <nuxt-link to="/news" class="nav-links" v-if="navOpen"
       ><div class="nav-burger" @click="burgerClicked()">
-        <p class="nav-text">News</p>
+        <h3 class="nav-text">News</h3>
       </div></nuxt-link
     >
   </div>
@@ -66,7 +66,7 @@ export default {
   background-color: rgb(19,19,19);
   display: grid;
   justify-content: flex-end;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background-color: none;
   position: fixed;
   top: 0;
@@ -74,7 +74,7 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  border: solid 1px black;
+  border: solid 1px rgb(10,10,10);
   z-index: 999;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -82,7 +82,7 @@ export default {
 }
 .nav-links {
   opacity: 1;
-  border: solid 1px white;
+  border: solid 1px rgb(245,245,245);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,11 +97,12 @@ export default {
 }
 .nav-text {
   transition: 0.2s;
- font-size: 4em;
+  font-size: 4em;
 }
 .nav-links:hover .nav-text{
   transition: 0.2s;
   transform: scale(1.1);
+  /* font-weight: 600; */
 }
 .icon {
   font-size: 1.5em;

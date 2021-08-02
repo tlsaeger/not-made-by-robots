@@ -71,7 +71,7 @@ export default {
 }
 .slide {
   min-width: 100%;
-  border: solid 1px black;
+  border: solid 1px rgb(10,10,10);
   height: 100%;
   cursor: pointer;
   transition: 0.2s;
