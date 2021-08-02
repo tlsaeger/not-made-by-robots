@@ -8,6 +8,7 @@ link: http://kaggle.com
 tags:
   - tool
   - tutorial
+  - fortgeschritten
   - kostenlos
   - kostenpflichtig
 ---
