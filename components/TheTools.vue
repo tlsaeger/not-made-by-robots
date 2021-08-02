@@ -32,11 +32,8 @@
     <!-- //TODO Add animation -->
     <transition-group tag="div" name="scale" mode="in-out" class="text-block-wrapper text-block-wrapper-mini ressourcen-wrapper">
         <div v-if="noContent" class="allfilters" key="noContent">Keine Inhalte mehr verfügbar. <br> Bitte entferne ein paar Filter!</div>
-      <div
-        v-for="ressource in filteredArray"
-        :key="ressource.slug" class="card card-mini shadow shadow-hover"
-      >
-        <a :href="ressource.link" target="_blank" >
+
+        <a v-for="ressource in filteredArray" :href="ressource.link" :key="ressource.slug" class="card card-mini shadow shadow-hover" target="_blank" >
           <nuxt-img
             class="preview-image preview-image-mini"
             :src="ressource.image"
@@ -56,7 +53,6 @@
             </div>
           </div>
         </a>
-      </div>
     </transition-group>
   </section>
 </template>
@@ -106,7 +102,7 @@ export default {
 
       let active = document.getElementsByClassName("active");
       for (let i = 0; i < active.length; i++) {
-        activeValues.push(active[i].innerText);
+        activeValues.push(active[i].innerText.toLowerCase());
       }
       for (let i = 0; i < this.ressourcen.length; i++) {
         if (isContainedIn(activeValues, this.ressourcen[i].tags)) {
