@@ -87,6 +87,8 @@ export default {
   font-weight: 400;
 font-style: normal;
 font-size: 3.2em;
+padding-right: 1.3em;
+padding-top: 0.1em;
 }
 .nav-title{
   font-size: 1.2em;

@@ -103,9 +103,16 @@ p {
 }
 .nuxt-content img {
   background-color: rgb(10, 10, 10);
-  width: 65%;
+  width: 100%;
   transition: 0.2s;
   object-fit: contain;
+  padding: 0;
+}
+.nuxt-content h3 > a {
+  display: none;
+}
+.nuxt-content h3 {
+  padding-left: 0;
 }
 .header-image{
   margin-top: 3em;
@@ -217,6 +224,7 @@ p {
   height: 100%;
   flex-wrap: wrap;
   cursor: pointer;
+  margin-bottom: 1em;
 }
 
 .tag {
@@ -243,20 +251,20 @@ p {
   color: rgb(10, 10, 10);
   transition: 0.1s;
 }
-.no-code,
-.low-code,
-.high-code {
-  border: solid 1px #a169e6;
-  color: #a169e6;
+.person,
+.tool,
+.tutorial {
+  border: solid 1px #F876C1;
+  color: #F876C1;
   transition: 0.2s;
 }
-.no-code:hover,
-.low-code:hover,
-.high-code:hover,
-.no-code.active,
-.low-code.active,
-.high-code.active {
-  background-color: #a169e6;
+.person:hover,
+.tool:hover,
+.tutorial:hover,
+.person.active,
+.tool.active,
+.tutorial.active {
+  background-color: #F876C1;
   transition: 0.2s;
 }
 .kostenlos,
@@ -331,18 +339,18 @@ li {
     background-color: #52d72b;
   }
 
-.no-code,
-.low-code,
-.high-code {
+.person,
+.tool,
+.tutorial {
   border: solid 1px #8134df;
   color: #8134df;
 }
-.no-code:hover,
-.low-code:hover,
-.high-code:hover,
-.no-code.active,
-.low-code.active,
-.high-code.active {
+.person:hover,
+.tool:hover,
+.tutorial:hover,
+.person.active,
+.tool.active,
+.tutorial.active {
   background-color: #8134df;
 }
 

@@ -2,10 +2,10 @@
   <section class="fourth_section section">
     <div class="filter">
       <div
-        class="filter-element code tag"
+        class="filter-element kind tag"
         :class="[filterValue]"
-        @click="filtering($event, 'code')"
-        v-for="filterValue in filterValues.code"
+        @click="filtering($event, 'kind')"
+        v-for="filterValue in filterValues.kind"
         :key="filterValue"
       >
         {{ filterValue }}

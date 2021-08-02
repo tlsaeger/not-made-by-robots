@@ -7,7 +7,7 @@ description: "lobe ist eine kostenlose Möglichkeit eigene ML Modelle zu
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1625060454/Tools/Screenshot_2021-06-30_at_15-38-34_Lobe_Machine_Learning_Made_Easy_sa3j3z.png
 link: https://www.lobe.ai
 tags:
-  - no-code
+  - tool
   - beginner
   - kostenlos
 ---

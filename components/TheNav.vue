@@ -14,9 +14,9 @@
         <h3 class="nav-text">Wissen</h3>
       </div></nuxt-link
     >
-    <nuxt-link to="/tools" class="nav-links" v-if="navOpen"
+    <nuxt-link to="/ressourcen" class="nav-links" v-if="navOpen"
       ><div class="nav-burger" @click="burgerClicked">
-        <h3 class="nav-text">Tools</h3>
+        <h3 class="nav-text">Ressourcen</h3>
       </div>
     </nuxt-link>
     <nuxt-link to="/news" class="nav-links" v-if="navOpen"
@@ -73,12 +73,13 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
+  /* width: 100%; */
   border: solid 1px rgb(10,10,10);
   z-index: 999;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   /* opacity: 0; */
+  height: -webkit-fill-available;
 }
 .nav-links {
   opacity: 1;
@@ -92,12 +93,13 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%;
   height: 100%;
+  height: -webkit-fill-available; */
 }
 .nav-text {
   transition: 0.2s;
-  font-size: 4em;
+  font-size: 5em;
 }
 .nav-links:hover .nav-text{
   transition: 0.2s;
