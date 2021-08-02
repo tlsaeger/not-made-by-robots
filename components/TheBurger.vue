@@ -6,8 +6,13 @@
     </transition>
     <img
       @click="burgerClicked"
-      src="~assets/img/bars-solid.svg"
-      class="burger-item burger-icon"
+      src="~assets/img/bars-solid-dark.svg"
+      class="burger-item burger-icon dark-burger"
+    />
+    <img
+      @click="burgerClicked"
+      src="~assets/img/bars-solid-light.svg"
+      class="burger-item burger-icon light-burger"
     />
   </div>
 </template>
@@ -70,6 +75,12 @@ export default {
   width: 1.5em;
   padding: 0.2em;
 }
+.light-burger {
+  display: none;
+}
+.dark-burger {
+  display: inline;
+}
 .page-index {
   text-transform: capitalize;
   align-self: center;
@@ -94,6 +105,12 @@ font-size: 3.2em;
     background-color: rgb(245,245,245);
      border: solid 1px rgb(10,10,10);
   }
+  .light-burger {
+  display: inline;
+}
+.dark-burger {
+  display: none;
+}
 }
 
 </style>
