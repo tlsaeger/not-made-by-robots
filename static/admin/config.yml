@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: main
   repo: tlsager/not-made-by-robots # Branch to update (optional; defaults to master)
 
 media_folder: assets/img
@@ -52,7 +52,7 @@ collections:
     folder: "content/ressourcen"
     format: "frontmatter"
     create: true
-    slug: "{{slug}}" 
+    slug: "{{slug}}"
     preview_path: "ressourcen/{{slug}}"
     editor:
       preview: false
