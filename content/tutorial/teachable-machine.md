@@ -27,7 +27,7 @@ Ist das Training abgeschlossen, können wir nun die Erkennung testen. Halte dazu
 
 ### **4. Was haben wir gelernt?**
 
-In diesem erstem sehr einfachen Beispiel stecken schon eine Menge an Grundlegenden Prinzipen des ML's Wir nutzen hier ein Neuronales Netzwerk und das so genannte Supervised Learning, weitere Infos dazu findest du auf der nächsten Seite oder auf loremaipsum.design 
+In diesem erstem sehr einfachen Beispiel stecken schon eine Menge an Grundlegenden Prinzipen des ML's Wir nutzen hier ein Neuronales Netzwerk und das so genannte [Supervised Learning](/wissen/supervised-learning), weitere Infos dazu findest du auf der nächsten Seite oder auf loremaipsum.design 
 
 Außerdem sehen wir wie wichtig es ist diverse Daten zu haben, da sonst eine gelbe Stelle das Apfels manchmal als Banane erkannt wurde. Vielleicht konnten wir beobachten, dass der Apfel oder die Bananen nicht immer zu 100% erkannt wurde. Hier zeigt sich, dass diese Model keine Intelligenz zu Grunde liegt. Es rät einfach nur sehr gut, mit einer Wahrscheinlichkeit von 99% ist das ein Apfel. 
 
