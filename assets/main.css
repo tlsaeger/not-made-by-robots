@@ -81,6 +81,12 @@ p {
   transition: 0.2s;
 }
 /*pages*/
+.edit-link{
+  background-color: rgb(10, 10, 10);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
 .section-title {
   padding: 1em 0 0.5em 0;
   font-size: 4em;
@@ -293,12 +299,14 @@ li {
   margin: 0 10px;
 }
 .footer-wrapper {
-  clear: both;
-  position: relative;
-  margin: 0 -2.6em -2.6em -2.6em;
-  width: 100%;
-  background-color: rgb(10,10,10);
+  background-color: rgb(10, 10, 10);
   display: flex;
+    height: 5em;
+    width: 100vw;
+    margin-left: -3em;
+    margin-bottom: -5em;
+    align-items: center;
+  
 }
 
 /* TODO better animation */
@@ -370,4 +378,9 @@ li {
     background-color: rgb(245,245,245);
     border: 1px solid rgb(19, 19, 19);
   }
+  .edit-link{
+    background-color: rgb(245,245,245);
+  }
+  .footer-wrapper{
+  background-color: rgb(245,245,245);}
 }
