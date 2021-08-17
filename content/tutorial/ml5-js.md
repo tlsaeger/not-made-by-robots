@@ -1,5 +1,5 @@
 ---
-title: Unschlagbares Schere, Stein Papier
+title: Unschlagbares Schere Stein Papier
 date: 2021-06-14T10:37:52.839Z
 description: "Baue ein unschlagbares Schere, Stein, Papier. Nutze zwei
   ML-Modelle völlig kostenlos. "
