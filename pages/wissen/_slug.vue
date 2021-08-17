@@ -1,11 +1,12 @@
 <template>
   <div class="detail-page-main">
+    <a :href="'https://github.com/tlsaeger/not-made-by-robots/blob/main/content' + this.$route.path +'.md'" class="edit-link" target="_blank">Seite Bearbeiten</a>
     <h2 class="post-title" >{{ post.title }}</h2>
     <nuxt-img class="header-image shadow"  :src="post.image" />
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
+    
     <!-- <p v-for="abschnitte in post.body.children.children" :key="abschnitte.value">{{ abschnitte }}</p> -->
-
   </div>
 </template>
 
@@ -29,6 +30,7 @@ export default {
 };
 </script>
 <style scoped>
+
 .detail-page-main{
   display: flex;
   flex-direction: column;

@@ -1,5 +1,6 @@
 <template>
   <section class="fourth_section section">
+        <a :href="'https://github.com/tlsaeger/not-made-by-robots/blob/main/content' + this.$route.path +''" class="edit-link" target="_blank">Seite Bearbeiten</a>
     <div class="filter">
       <div
         class="filter-element kind tag"

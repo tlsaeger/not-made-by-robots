@@ -1,5 +1,6 @@
 <template>
   <div class="detail-page-main">
+        <a :href="'https://github.com/tlsaeger/not-made-by-robots/blob/main/content' + this.$route.path +'.md'" class="edit-link" target="_blank">Seite Bearbeiten</a>
     <h2 class="post-title" >{{ post.title }}</h2>
     <nuxt-img class="header-image shadow"  :src="post.image" />
     <!-- <p>{{ post.description }}</p> -->
