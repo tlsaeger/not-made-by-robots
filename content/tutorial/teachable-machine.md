@@ -1,5 +1,5 @@
 ---
-title: Teachable Machine
+title: Zoom Background 3000
 date: 2021-06-14T08:37:02.478Z
 description: "Lerne mit Teachable Machine, wie du deine eigene Bilderkennung
   trainieren kannst. Ganz ohne Coding! "
