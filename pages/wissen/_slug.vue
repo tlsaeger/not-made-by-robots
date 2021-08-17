@@ -39,5 +39,10 @@ export default {
   padding-top: 2em;
   font-size: 2em;
 }
-
+.header-image{
+    object-fit: cover;
+    overflow: hidden;
+    max-height: 35vh;
+    padding: 0;
+}
 </style>
