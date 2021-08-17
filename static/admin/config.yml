@@ -52,7 +52,7 @@ collections:
     folder: "content/ressourcen"
     format: "frontmatter"
     create: true
-    slug: "{{slug}}"
+    slug: "{{slug}}" 
     preview_path: "ressourcen/{{slug}}"
     editor:
       preview: false
