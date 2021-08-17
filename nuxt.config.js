@@ -28,13 +28,16 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/main.css'],
+  css: ['~/assets/main.css',
+  'node_modules/@splidejs/splide/dist/css/splide.min.css'],
+
 
   
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/slick.js',
+    '~plugins/splide',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

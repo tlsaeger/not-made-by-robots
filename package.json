@@ -12,6 +12,7 @@
     "@babel/preset-env": "^7.12.17",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/cloudinary": "^1.0.3-beta-4",
+    "@splidejs/vue-splide": "^0.3.5",
     "core-js": "^3.9.1",
     "micromatch": "^4.0.4",
     "nuxt": "^2.15.8",
