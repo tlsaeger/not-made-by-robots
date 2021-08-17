@@ -17,7 +17,7 @@
         <NuxtLink :to="'tutorial/' + tutorial.slug" class="slide">
           <nuxt-img class="slider-image" :src="tutorial.image" />
 
-          <h3>{{ tutorial.title }}</h3>
+          <h3 class="preview-title">{{ tutorial.title }}</h3>
           <p class="body-text">{{ tutorial.description }} ↗︎</p>
         </NuxtLink>
           </splide-slide>
@@ -85,14 +85,18 @@ export default {
 }
 .slide {
   width: 100vw;
-  height: 100%;
   cursor: pointer;
   object-fit: contain;
   transition: 0.2s;
 }
 .slider-image {
   width: 100%;
+   height: 100vh;
   object-fit: contain;
+  overflow: hidden;
+}
+.preview-title{
+  padding-left:0 ;
 }
 .arrow {
   /* background-color: blue; */
