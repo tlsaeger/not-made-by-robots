@@ -18,7 +18,7 @@
     </div>
     
   </section>
-  <TheFooter />
+
 </div>
 </template>
 <script>
