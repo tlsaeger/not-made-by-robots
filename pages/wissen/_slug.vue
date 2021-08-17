@@ -5,7 +5,8 @@
     <nuxt-img class="header-image shadow"  :src="post.image" />
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
-    <nuxt-link v-if="post.tutorial_link" :to="'/tutorial/'+ refrence_tutorial">
+    <h2>Hands-On</h2>
+          <nuxt-link v-if="post.tutorial_link" :to="'/tutorial/'+ refrence_tutorial">
    {{post.tutorial_link}}
     </nuxt-link>
     <!-- <p v-for="abschnitte in post.body.children.children" :key="abschnitte.value">{{ abschnitte }}</p> --> 
