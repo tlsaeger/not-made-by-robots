@@ -7,6 +7,7 @@
     <TheNav @burgerIsClicked="burgerIsClicked" @pageClicked="pageIsClicked" v-if="burgerClicked" />
     </transition>
     <Nuxt />
+    <TheFooter />
   </div>
 </template>
 
