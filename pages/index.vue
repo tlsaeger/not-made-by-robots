@@ -12,11 +12,11 @@
     <!-- <TheWissen :wissen="wissen"> </TheWissen>
     <TheTools :ressourcen="ressourcen"> </TheTools>
     <TheNews /> -->
+
   </div>
 </template>
 
 <script>
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
   head() {

@@ -30,7 +30,6 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "GitHub-URL", name: "github", widget: "string" }
   - name: "wissen"
     label: "Wissen"
     folder: "content/wissen"
@@ -46,7 +45,6 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "GitHub-URL", name: "github", widget: "string" }
   - name: "ressourcen"
     label: "Ressourcen"
     folder: "content/ressourcen"
@@ -62,5 +60,4 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "GitHub-URL", name: "github", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["news"] }
