@@ -3,7 +3,7 @@ title: Zoom Background 3000
 date: 2021-06-14T08:37:02.478Z
 description: "Lerne mit Teachable Machine, wie du deine eigene Bilderkennung
   trainieren kannst. Ganz ohne Coding! "
-image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1625677056/Tutorials/videocall_gesture_rnxkal.gif
+image: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1629733860/Tutorials/Zoom_Background_3000_-_HD_720p_ejhluz.mp4
 ---
 ### **0. Intro**
 
