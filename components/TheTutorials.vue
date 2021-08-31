@@ -15,7 +15,7 @@
   <splide-slide>
 
         <NuxtLink :to="'tutorial/' + tutorial.slug" class="slide">
-          <nuxt-img class="slider-image" :src="tutorial.image" />
+          <video class="slider-image" :src="tutorial.image" autoplay loop muted>  </video>
 
           <h3 class="preview-title">{{ tutorial.title }}</h3>
           <p class="body-text">{{ tutorial.description }} ↗︎</p>

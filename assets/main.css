@@ -128,6 +128,7 @@ p {
   border-radius: 0.5em;
   object-fit: contain;
   transition: 0.2s;
+  padding: 0;
 }
 .slide-bottom-enter-active,
 .slide-bottom-leave-active {
