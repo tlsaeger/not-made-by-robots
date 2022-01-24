@@ -6,25 +6,29 @@
       </div>
       <div @click="scrollSlideshow('prev')" class="prev arrow"></div>
     </div> -->
-          <splide :options="options">
+    <splide :options="options">
       <transition
         name="fade"
         v-for="tutorial in tutorials"
         :key="tutorial.slug"
       >
-  <splide-slide>
-
-        <NuxtLink :to="'tutorial/' + tutorial.slug" class="slide">
-          <video class="slider-image" :src="tutorial.image" autoplay loop muted>  </video>
-
-          <h3 class="preview-title">{{ tutorial.title }}</h3>
-          <p class="body-text">{{ tutorial.description }} ↗︎</p>
-        </NuxtLink>
-          </splide-slide>
-
+        <splide-slide>
+          <NuxtLink :to="'tutorial/' + tutorial.slug" class="slide">
+            <video
+              class="slider-image"
+              :src="tutorial.image"
+              autoplay
+              loop
+              muted
+            ></video>
+            <div class="tutorial-text-wrapper">
+              <h3 class="preview-title">{{ tutorial.title }}</h3>
+              <p class="body-text">{{ tutorial.description }} ↗︎</p>
+            </div>
+          </NuxtLink>
+        </splide-slide>
       </transition>
-  </splide>
-
+    </splide>
   </section>
 </template>
 
@@ -37,7 +41,7 @@ export default {
     return {
       counter: 1,
       options: {
-        rewind : true,
+        rewind: true
       }
     };
   },
@@ -76,6 +80,9 @@ export default {
 };
 </script>
 <style scoped>
+.second_section {
+  margin-top: -1.7em;
+}
 .slide-wrapper {
   position: relative;
   display: flex;
@@ -91,12 +98,12 @@ export default {
 }
 .slider-image {
   width: 100%;
-   height: 100vh;
+  height: 100vh;
   object-fit: contain;
   overflow: hidden;
 }
-.preview-title{
-  padding-left:0 ;
+.preview-title {
+  padding-left: 0;
 }
 .arrow {
   /* background-color: blue; */
@@ -113,8 +120,10 @@ export default {
 .prev {
   left: 0;
 }
-/* .test-video {
-  width: 100vw;
-  height: 100%;
-} */
+.tutorial-text-wrapper {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  bottom: 0;
+  z-index: 99;
+}
 </style>
