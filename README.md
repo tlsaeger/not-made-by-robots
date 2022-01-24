@@ -1,4 +1,4 @@
-# nuxt-netlify
+# Not Made by Robots
 
 ## Build Setup
 
