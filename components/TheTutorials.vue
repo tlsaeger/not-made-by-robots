@@ -46,7 +46,15 @@ export default {
       counter: 1,
       videoHovering: false,
       options: {
-        rewind: true
+        rewind: true,
+        autoHeight: true,
+        autotransition: true,
+        speed: 500,
+        gap: "0px",
+        arrows: "slider",
+        autoplay: true,
+        pauseOnHover: true,
+        resetProgress: false
       }
     };
   },
