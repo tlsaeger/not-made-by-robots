@@ -90,3 +90,6 @@ sw.*
 *.swp
 #Twitter JSON
 tweets/ 
+
+# Local Netlify folder
+.netlify
