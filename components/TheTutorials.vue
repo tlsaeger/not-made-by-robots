@@ -15,16 +15,20 @@
         <splide-slide>
           <NuxtLink :to="'tutorial/' + tutorial.slug" class="slide">
             <video
+              @mouseover="videoHovering = true"
+              @mouseleave="videoHovering = false"
               class="slider-image"
               :src="tutorial.image"
               autoplay
               loop
               muted
             ></video>
-            <div class="tutorial-text-wrapper">
-              <h3 class="preview-title">{{ tutorial.title }}</h3>
-              <p class="body-text">{{ tutorial.description }} ↗︎</p>
-            </div>
+            <transition name="moveUp">
+              <div class="tutorial-text-wrapper" v-if="videoHovering">
+                <h3 class="preview-title">{{ tutorial.title }}</h3>
+                <p class="body-text">{{ tutorial.description }} ↗︎</p>
+              </div>
+            </transition>
           </NuxtLink>
         </splide-slide>
       </transition>
@@ -40,6 +44,7 @@ export default {
   data() {
     return {
       counter: 1,
+      videoHovering: false,
       options: {
         rewind: true
       }
@@ -125,5 +130,13 @@ export default {
   background-color: rgba(0, 0, 0, 0.9);
   bottom: 0;
   z-index: 99;
+}
+.moveUp-enter-active,
+.moveUp-leave-active {
+  transition: opacity 0.5s;
+  transform: translateX(0);
+}
+.moveUp-enter, .moveUp-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
