@@ -1,13 +1,17 @@
 <template>
   <div class="burger">
-    <nuxt-link to="/" class="burger-item nav-title"><span class="letter-spacing"><span class="italic">Not</span> Made</span> <br> By Robots</nuxt-link>
+    <nuxt-link to="/" class="burger-item nav-title"
+      ><span class="letter-spacing"><span class="italic">Not</span> Made</span>
+      <br />
+      By Robots</nuxt-link
+    >
     <transition name="burger">
-    <h3 class="burger-item page-index">{{ pageName }}</h3>
+      <h3 class="burger-item page-index">{{ pageName }}</h3>
     </transition>
     <img
       @click="burgerClicked"
       src="~assets/img/bars-solid-dark.svg"
-      class="burger-item burger-icon dark-burger"
+      class="burger-item burger-icon dark-burger test"
     />
     <img
       @click="burgerClicked"
@@ -21,27 +25,26 @@
 export default {
   data() {
     return {
-      burger: "",
+      burger: ""
     };
   },
   computed: {
     pageName() {
-    let count = 0;
-     let pageIndexName = this.$route.path;
-     for (let i = 0; i < pageIndexName.length; i++) {
-       if(pageIndexName.charAt(i) === "/"){
-         count++;
-       }
-     }
-     if (count === 1) {
-       pageIndexName =  pageIndexName.replace("/", " ");
-     }
-     else if(count > 1){
-       pageIndexName = pageIndexName.replace( /\/.*?\//, '' );
-     }
-     pageIndexName = pageIndexName.replaceAll("-", " ");
-         return pageIndexName;
-  }
+      let count = 0;
+      let pageIndexName = this.$route.path;
+      for (let i = 0; i < pageIndexName.length; i++) {
+        if (pageIndexName.charAt(i) === "/") {
+          count++;
+        }
+      }
+      if (count === 1) {
+        pageIndexName = pageIndexName.replace("/", " ");
+      } else if (count > 1) {
+        pageIndexName = pageIndexName.replace(/\/.*?\//, "");
+      }
+      pageIndexName = pageIndexName.replaceAll("-", " ");
+      return pageIndexName;
+    }
   },
   methods: {
     burgerClicked() {
@@ -63,7 +66,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(10, 10, 10);
-  border: solid 1px rgb(245,245,245);
+  border: solid 1px rgb(245, 245, 245);
 }
 .burger-item {
   font-size: 2.5em;
@@ -85,12 +88,12 @@ export default {
   text-transform: capitalize;
   align-self: center;
   font-weight: 400;
-font-style: normal;
-font-size: 3.2em;
-padding-right: 1.3em;
-padding-top: 0.1em;
+  font-style: normal;
+  font-size: 3.2em;
+  padding-right: 1.3em;
+  padding-top: 0.1em;
 }
-.nav-title{
+.nav-title {
   font-size: 1.2em;
   line-height: 100%;
 }
@@ -104,15 +107,14 @@ padding-top: 0.1em;
 }
 @media (prefers-color-scheme: light) {
   .burger {
-    background-color: rgb(245,245,245);
-     border: solid 1px rgb(10,10,10);
+    background-color: rgb(245, 245, 245);
+    border: solid 1px rgb(10, 10, 10);
   }
   .light-burger {
-  display: inline;
+    display: inline;
+  }
+  .dark-burger {
+    display: none;
+  }
 }
-.dark-burger {
-  display: none;
-}
-}
-
 </style>
