@@ -54,7 +54,8 @@ export default {
         arrows: "slider",
         autoplay: true,
         pauseOnHover: true,
-        resetProgress: false
+        resetProgress: false,
+        pagination: false
       }
     };
   },
@@ -146,5 +147,8 @@ export default {
 }
 .moveUp-enter, .moveUp-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+splide__arrow--prev {
+  background-image: url("/assets/outline_arrow_forward_black_24dp.png");
 }
 </style>
