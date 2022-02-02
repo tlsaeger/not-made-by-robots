@@ -1,5 +1,5 @@
 * {
-  font-family: degular-text,sans-serif;
+  font-family: degular-text, sans-serif;
   font-weight: 500;
   font-style: normal;
   color: #b171ff;
@@ -35,12 +35,13 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-h1,h2,h3 {
-font-family: degular,sans-serif;
-font-weight: 400;
-font-style: normal;
+h1,
+h2,
+h3 {
+  font-family: degular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
@@ -68,7 +69,7 @@ a {
 p {
   line-height: 120%;
 }
-.section{
+.section {
   margin-top: 3em;
 }
 .shadow .nuxt-content p {
@@ -81,17 +82,28 @@ p {
   transition: 0.2s;
 }
 /*pages*/
-.edit-link{
+.edit-link-wrapper {
   background-color: rgb(10, 10, 10);
+  border-radius: 0.5em;
   position: fixed;
   bottom: 0;
   right: 0;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  z-index: 99999;
+  border: solid 1px white;
+  cursor: pointer;
+}
+.contribution-icon {
+  border: solid 1px #8134df;
+  border-radius: 0.5em;
 }
 .section-title {
   padding: 1em 0 0.5em 0;
   font-size: 4em;
 }
-.post-title{
+.post-title {
   display: none;
 }
 .nuxt-content p {
@@ -102,7 +114,7 @@ p {
   border-radius: 0.5em;
   transition: 0.2s;
   margin-bottom: 3em;
-  border: solid 1px rgb(245,245,245);
+  border: solid 1px rgb(245, 245, 245);
 }
 .nuxt-content a {
   font-style: italic;
@@ -120,10 +132,10 @@ p {
 .nuxt-content h3 {
   padding-left: 0;
 }
-.header-image{
+.header-image {
   margin-top: 3em;
   background-color: rgb(10, 10, 10);
-  border: solid 1px rgb(245,245,245);
+  border: solid 1px rgb(245, 245, 245);
   width: 80vw;
   border-radius: 0.5em;
   object-fit: contain;
@@ -140,8 +152,8 @@ p {
   transform: translate3d(0, 15px, 0);
 }
 
- .card {
-  border: solid 1px rgb(245,245,245);
+.card {
+  border: solid 1px rgb(245, 245, 245);
   width: 80%;
   background-color: rgb(10, 10, 10);
   margin-bottom: 1em;
@@ -150,8 +162,8 @@ p {
   height: 30%;
   cursor: pointer;
   transition: 0.2s;
-} 
-  /* .card a {
+}
+/* .card a {
   padding: 0;
 } */
 .card-mini {
@@ -159,14 +171,14 @@ p {
   /* padding: 0.3em; */
   margin: 0.5em;
 }
-.desc-text-wrapper > h3  {
+.desc-text-wrapper > h3 {
   font-size: 1.6em;
   line-height: 110%;
   padding: 0.2em;
   margin-top: 0;
 }
 
-.desc-text-wrapper > p{
+.desc-text-wrapper > p {
   padding: 0.3em;
 }
 .preview-image {
@@ -187,13 +199,13 @@ p {
   font-size: 1em;
 }
 .news-card > img {
-   max-height: 20vh;
+  max-height: 20vh;
 }
-.tweet-details{
+.tweet-details {
   padding: 0;
   margin: 0;
 }
-.user{
+.user {
   padding-left: 0.5em;
 }
 
@@ -220,6 +232,7 @@ p {
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 .text-block-wrapper-mini {
   justify-content: space-between;
@@ -261,8 +274,8 @@ p {
 .person,
 .tool,
 .tutorial {
-  border: solid 1px #F876C1;
-  color: #F876C1;
+  border: solid 1px #f876c1;
+  color: #f876c1;
   transition: 0.2s;
 }
 .person:hover,
@@ -271,7 +284,7 @@ p {
 .person.active,
 .tool.active,
 .tutorial.active {
-  background-color: #F876C1;
+  background-color: #f876c1;
   transition: 0.2s;
 }
 .kostenlos,
@@ -290,7 +303,6 @@ p {
   flex-wrap: wrap;
 }
 
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -302,12 +314,11 @@ li {
 .footer-wrapper {
   background-color: rgb(10, 10, 10);
   display: flex;
-    height: 5em;
-    width: 100vw;
-    margin-left: -3em;
-    margin-bottom: -5em;
-    align-items: center;
-  
+  height: 5em;
+  width: 100vw;
+  margin-left: -3em;
+  margin-bottom: -5em;
+  align-items: center;
 }
 
 /* TODO better animation */
@@ -317,7 +328,7 @@ li {
 }
 .burger-enter,
 .burger-leave-to {
-  transform: translateX(100%) translateY(-100%) scale(0) ;
+  transform: translateX(100%) translateY(-100%) scale(0);
 }
 
 /* Animations */
@@ -332,56 +343,61 @@ li {
 }
 
 @media (prefers-color-scheme: light) {
-  *{
+  * {
     color: #8134df;
   }
-  body{
+  body {
     background-color: rgb(236, 236, 236);
   }
-  .tag, .footer-wrapper{
-    background-color: rgb(245,245,245);
+  .tag,
+  .footer-wrapper {
+    background-color: rgb(245, 245, 245);
     color: #52d72b;
     border: solid 1px #52d72b;
   }
-  .tag:hover, .tag.active{
-    color: rgb(245,245,245);
+  .tag:hover,
+  .tag.active {
+    color: rgb(245, 245, 245);
     background-color: #52d72b;
   }
 
-.person,
-.tool,
-.tutorial {
-  border: solid 1px #8134df;
-  color: #8134df;
-}
-.person:hover,
-.tool:hover,
-.tutorial:hover,
-.person.active,
-.tool.active,
-.tutorial.active {
-  background-color: #8134df;
-}
+  .person,
+  .tool,
+  .tutorial {
+    border: solid 1px #8134df;
+    color: #8134df;
+  }
+  .person:hover,
+  .tool:hover,
+  .tutorial:hover,
+  .person.active,
+  .tool.active,
+  .tutorial.active {
+    background-color: #8134df;
+  }
 
-.kostenlos,
-.kostenpflichtig {
-  border: solid 1px #00ceea;;
-  color: #00ceea;
-}
-.kostenlos:hover,
-.kostenpflichtig:hover,
-.kostenlos.active,
-.kostenpflichtig.active {
-  background-color: #00ceea;
-}
+  .kostenlos,
+  .kostenpflichtig {
+    border: solid 1px #00ceea;
+    color: #00ceea;
+  }
+  .kostenlos:hover,
+  .kostenpflichtig:hover,
+  .kostenlos.active,
+  .kostenpflichtig.active {
+    background-color: #00ceea;
+  }
 
-  .card, .header-image, .nuxt-content p{
-    background-color: rgb(245,245,245);
+  .card,
+  .header-image,
+  .nuxt-content p {
+    background-color: rgb(245, 245, 245);
     border: 1px solid rgb(19, 19, 19);
   }
-  .edit-link{
-    background-color: rgb(245,245,245);
+  .edit-link {
+    background-color: rgb(245, 245, 245);
   }
-  .footer-wrapper{
-  background-color: rgb(245,245,245);}
+  .footer-wrapper {
+    background-color: rgb(245, 245, 245);
+  }
 }
