@@ -11,7 +11,7 @@
     <img
       @click="burgerClicked"
       src="~assets/img/bars-solid-dark.svg"
-      class="burger-item burger-icon dark-burger test"
+      class="burger-item burger-icon dark-burger"
     />
     <img
       @click="burgerClicked"
