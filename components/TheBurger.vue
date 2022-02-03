@@ -91,11 +91,12 @@ export default {
   font-style: normal;
   font-size: 3.2em;
   padding-right: 1.3em;
-  padding-top: 0.1em;
+  padding-bottom: 0.2em;
 }
 .nav-title {
   font-size: 1.2em;
   line-height: 100%;
+  padding-left: 1em;
 }
 .italic {
   font-style: italic;
