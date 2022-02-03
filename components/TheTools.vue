@@ -1,6 +1,26 @@
 <template>
   <section class="fourth_section section">
-        <a :href="'https://github.com/tlsaeger/not-made-by-robots/blob/main/content' + this.$route.path +''" class="edit-link" target="_blank">Seite Bearbeiten</a>
+    <div class="edit-link-wrapper">
+      <a
+        :href="
+          'https://github.com/tlsaeger/not-made-by-robots/tree/main/content' +
+            this.$route.path
+        "
+        class="edit-link"
+        target="_blank"
+        >Seite Bearbeiten
+      </a>
+      <p
+        @click="showContribution = !showContribution"
+        class="contribution-icon"
+      >
+        ?
+      </p>
+    </div>
+    <TheContributionInfo
+      v-if="this.showContribution"
+      @closePanel="closingPanel"
+    />
     <div class="filter">
       <div
         class="filter-element kind tag"
@@ -31,36 +51,50 @@
       </div>
     </div>
     <!-- //TODO Add animation -->
-    <transition-group tag="div" name="scale" mode="in-out" class="text-block-wrapper text-block-wrapper-mini ressourcen-wrapper">
-        <div v-if="noContent" class="allfilters" key="noContent">Keine Inhalte mehr verfügbar. <br> Bitte entferne ein paar Filter!</div>
+    <transition-group
+      tag="div"
+      name="scale"
+      mode="in-out"
+      class="text-block-wrapper text-block-wrapper-mini ressourcen-wrapper"
+    >
+      <div v-if="noContent" class="allfilters" key="noContent">
+        Keine Inhalte mehr verfügbar. <br />
+        Bitte entferne ein paar Filter!
+      </div>
 
-        <a v-for="ressource in filteredArray" :href="ressource.link" :key="ressource.slug" class="card card-mini shadow shadow-hover" target="_blank" >
-          <nuxt-img
-            class="preview-image preview-image-mini"
-            :src="ressource.image"
-          />
-          <div class="desc-text-wrapper">
-            <h3>{{ ressource.title }}</h3>
-            <p class="body-text">{{ ressource.description }} ↗︎</p>
-            <div class="tag-container">
-              <div
-                v-for="tag in ressource.tags"
-                :key="tag"
-                class="tag"
-                :class="tag"
-              >
-                {{ tag }}
-              </div>
+      <a
+        v-for="ressource in filteredArray"
+        :href="ressource.link"
+        :key="ressource.slug"
+        class="card card-mini shadow shadow-hover"
+        target="_blank"
+      >
+        <nuxt-img
+          class="preview-image preview-image-mini"
+          :src="ressource.image"
+        />
+        <div class="desc-text-wrapper">
+          <h3>{{ ressource.title }}</h3>
+          <p class="body-text">{{ ressource.description }} ↗︎</p>
+          <div class="tag-container">
+            <div
+              v-for="tag in ressource.tags"
+              :key="tag"
+              class="tag"
+              :class="tag"
+            >
+              {{ tag }}
             </div>
           </div>
-        </a>
+        </div>
+      </a>
     </transition-group>
   </section>
 </template>
 <script>
 import filterValues from "@/static/filterValues";
 export default {
-    transition: 'scale',
+  transition: "scale",
   props: {
     ressourcen: {
       type: Array,
@@ -72,18 +106,19 @@ export default {
       filterValues: filterValues.filterValues,
       filteredArray: this.ressourcen,
       noContent: false,
+      showContribution: false
     };
   },
-  beforeMount(){
-  let array = this.filteredArray;
-   for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+  beforeMount() {
+    let array = this.filteredArray;
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
     }
 
-  return array;
+    return array;
   },
   methods: {
     filtering(e, group) {
@@ -99,7 +134,7 @@ export default {
           groupList[i].classList.remove("active");
           e.currentTarget.classList.add("active");
         }
-      }  
+      }
 
       const isContainedIn = (a, b) => {
         for (const v of new Set(a)) {
@@ -121,18 +156,16 @@ export default {
           this.filteredArray.push(this.ressourcen[i]);
         }
       }
-            if(this.filteredArray.length === 0){
-          this.noContent = true;
-      } 
-      else{
-          this.noContent = false;
+      if (this.filteredArray.length === 0) {
+        this.noContent = true;
+      } else {
+        this.noContent = false;
       }
     }
   }
 };
 </script>
 <style scoped>
-
 .scale-enter-active {
   animation: fade-in 0.5s;
 }

@@ -36,6 +36,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      showContribution: false
+    };
+  },
   async asyncData({ $content, params, error }) {
     let post;
     try {

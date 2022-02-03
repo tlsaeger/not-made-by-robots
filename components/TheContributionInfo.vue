@@ -5,10 +5,11 @@
         Mit einem Klick auf »Seite bearbeiten kannst du die Seite bearbeiten.
         Dafür wirst du auf GitHub weitergeleitet, dort liegt der Code der Seite.
         Über einen Klick auf das Stift Icon kannst du die Inhalte dieser Seite
-        anpassen und verbessern. Dafür musst du dich einmal bei GitHub anmelden.
-        Wenn die Änderung von uns genehmigt wirst, hast du so deine aller Erste
-        »Contribution« in der Open Source Welt geleistet. Danke für Deine
-        Mithilfe
+        anpassen und verbessern. Über »Add File« fügst du einen neuen Eintrag
+        hinzu. Dafür musst du dich einmal bei GitHub anmelden. Über »Commit New
+        File« sendest du uns die die Änderung, wenn diese von uns genehmigt
+        wird, hast du so deine aller Erste »Contribution« in der Open Source
+        Welt geleistet. Danke für Deine Mithilfe
       </p>
     </div>
   </div>
@@ -29,6 +30,7 @@ export default {};
   width: 15%;
   font-size: 0.8em;
   z-index: 99;
+  padding: 0.3em;
 }
 .overlay {
   background-color: rgba(0, 0, 0, 0.342);

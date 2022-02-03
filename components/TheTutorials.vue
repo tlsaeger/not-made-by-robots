@@ -47,7 +47,8 @@ export default {
       videoHovering: false,
       options: {
         rewind: true,
-        autoHeight: true,
+        autoHeight: false,
+        height: "100vh",
         autotransition: true,
         speed: 500,
         gap: "0px",
@@ -55,7 +56,8 @@ export default {
         autoplay: true,
         pauseOnHover: true,
         resetProgress: false,
-        pagination: false
+        pagination: false,
+        easing: "ease"
       }
     };
   },
@@ -136,9 +138,14 @@ export default {
 }
 .tutorial-text-wrapper {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(10, 10, 10);
+  border: solid 1px white;
+  border-radius: 0.5em;
+  padding: 0.8em;
   bottom: 0;
   z-index: 99;
+  width: 90%;
+  margin: 0 0.5em;
 }
 .moveUp-enter-active,
 .moveUp-leave-active {
