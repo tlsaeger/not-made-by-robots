@@ -38,11 +38,14 @@ export default {
         }
       }
       if (count === 1) {
-        pageIndexName = pageIndexName.replace("/", " ");
+        pageIndexName = pageIndexName.replace("/", "");
       } else if (count > 1) {
         pageIndexName = pageIndexName.replace(/\/.*?\//, "");
       }
       pageIndexName = pageIndexName.replaceAll("-", " ");
+      if (pageIndexName === "") {
+        pageIndexName = "Tutorials";
+      }
       return pageIndexName;
     }
   },
