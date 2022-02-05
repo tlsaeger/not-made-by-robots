@@ -24,7 +24,7 @@
               muted
             ></video>
             <transition name="moveUp">
-              <div class="tutorial-text-wrapper" v-if="videoHovering">
+              <div class="tutorial-text-wrapper">
                 <h3 class="preview-title">{{ tutorial.title }}</h3>
                 <p class="body-text">{{ tutorial.description }} ↗︎</p>
               </div>
@@ -120,6 +120,8 @@ export default {
 }
 .preview-title {
   padding-left: 0;
+  font-size: 1.8em;
+  padding-bottom: 0.3em;
 }
 .arrow {
   /* background-color: blue; */
@@ -144,8 +146,13 @@ export default {
   padding: 0.8em;
   bottom: 0;
   z-index: 99;
-  width: 90%;
+  width: 45%;
   margin: 0 0.5em;
+  transition: 0.4s;
+}
+.tutorial-text-wrapper:hover {
+  transform: scale(1.01) translateY(-0.5em) translateX(0.3em);
+  transition: 0.4s;
 }
 .moveUp-enter-active,
 .moveUp-leave-active {
