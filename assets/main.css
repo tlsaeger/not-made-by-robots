@@ -30,6 +30,7 @@ p {
   margin-block-start: 0em;
   margin-block-end: 0em;
   line-height: 80%;
+  /* padding: 0.3em; */
   /* margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0px;
@@ -98,7 +99,7 @@ p {
   flex-direction: row;
   height: auto;
   z-index: 99999;
-  border: solid 1px white;
+  border: solid 1px rgb(245, 245, 245);
   cursor: pointer;
   padding: 0.3em;
   gap: 0.3em;
@@ -114,15 +115,21 @@ p {
 .post-title {
   display: none;
 }
+.nuxt-content {
+  background-color: rgb(10, 10, 10);
+  margin: 0.3em 7rem;
+  border-radius: 0.5em;
+  border: solid 1px rgb(245, 245, 245);
+  padding: 1em 0;
+}
 .nuxt-content p {
   background-color: rgb(10, 10, 10);
-  width: 80vw;
+  width: 70%;
   height: 10%;
-  padding: 1em;
   border-radius: 0.5em;
   transition: 0.2s;
-  margin-bottom: 3em;
-  border: solid 1px rgb(245, 245, 245);
+  margin-bottom: 0.8em;
+  /* border: solid 1px rgb(245, 245, 245); */
 }
 .nuxt-content a {
   font-style: italic;
@@ -141,14 +148,16 @@ p {
   padding-left: 0;
 }
 .header-image {
-  margin-top: 3em;
+  margin-top: 4.3em;
+  margin-bottom: 0.5em;
   background-color: rgb(10, 10, 10);
   border: solid 1px rgb(245, 245, 245);
-  width: 80vw;
+  width: 80%;
   border-radius: 0.5em;
   object-fit: contain;
   transition: 0.2s;
   padding: 0;
+  border: solid 1px white;
 }
 .slide-bottom-enter-active,
 .slide-bottom-leave-active {
