@@ -26,7 +26,14 @@
             <transition name="moveUp">
               <div class="tutorial-text-wrapper">
                 <h3 class="preview-title">{{ tutorial.title }}</h3>
-                <p class="body-text">{{ tutorial.description }} ↗︎</p>
+                <p class="body-text">{{ tutorial.preview }} ↗︎</p>
+                <p
+                  v-if="tutorial.level"
+                  class="level tag medi-tag"
+                  :class="tutorial.level"
+                >
+                  {{ tutorial.level }}
+                </p>
               </div>
             </transition>
           </NuxtLink>
@@ -121,7 +128,7 @@ export default {
 .preview-title {
   padding-left: 0;
   font-size: 1.8em;
-  padding-bottom: 0.3em;
+  padding-bottom: 0.2em;
 }
 .arrow {
   /* background-color: blue; */
@@ -143,12 +150,15 @@ export default {
   background-color: rgba(10, 10, 10);
   border: solid 1px white;
   border-radius: 0.5em;
-  padding: 0.8em;
+  padding: 0.3em;
   bottom: 0;
   z-index: 99;
   width: 45%;
   margin: 0 0.5em;
   transition: 0.4s;
+}
+.medi-tag {
+  margin-top: 0.8em;
 }
 .tutorial-text-wrapper:hover {
   transform: scale(1.01) translateY(-0.5em) translateX(0.3em);

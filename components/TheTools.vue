@@ -80,7 +80,7 @@
             <div
               v-for="tag in ressource.tags"
               :key="tag"
-              class="tag"
+              class="tag mini-tag"
               :class="tag"
             >
               {{ tag }}

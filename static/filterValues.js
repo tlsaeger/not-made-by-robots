@@ -1,7 +1,7 @@
 export default {
   filterValues: {
     kind: ["person", "tool", "tutorial"],
-    level: ["beginner", "fortgeschritten"],
+    level: ["no-code", "low-code", "high-code"],
     preis: ["kostenlos", "kostenpflichtig"]
   }
 };
