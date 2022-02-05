@@ -192,14 +192,15 @@ p {
   margin: 0.5em;
 }
 .desc-text-wrapper > h3 {
-  font-size: 1.6em;
-  line-height: 110%;
-  padding: 0.2em;
+  font-size: 1.5em;
+  line-height: 1;
+  padding: 0.1em 0.2em;
   margin-top: 0;
+  padding-bottom: 0;
 }
-
 .desc-text-wrapper > p {
   padding: 0.3em;
+  font-size: 0.8em;
 }
 .preview-image {
   object-fit: cover;
@@ -271,7 +272,7 @@ p {
 .tag {
   background-color: rgb(10, 10, 10);
   font-size: 0.5em;
-  border: solid 1px #63e93a;
+  border: solid 0.07em #63e93a;
   color: #63e93a;
   width: fit-content;
   padding: 0.1em 0.3em;
@@ -281,6 +282,9 @@ p {
   transition: 0.1s;
   text-transform: capitalize;
   line-height: 1.2;
+}
+.mini-tag {
+  border-width: 0.08em;
 }
 .filter-element {
   font-size: 1.2em;
@@ -296,7 +300,7 @@ p {
 .person,
 .tool,
 .tutorial {
-  border: solid 1px #f876c1;
+  border-color: #f876c1;
   color: #f876c1;
   transition: 0.2s;
 }
@@ -315,7 +319,7 @@ p {
 }
 .kostenlos,
 .kostenpflichtig {
-  border: solid 1px #12d7f1;
+  border-color: #12d7f1;
   color: #12d7f1;
 }
 .kostenlos:hover,

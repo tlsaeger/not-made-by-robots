@@ -30,6 +30,7 @@
       loop
       muted
     ></video>
+    <p class="nuxt-content post-descritption">{{ post.description }}</p>
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
     <!-- <p v-for="abschnitte in post.body.children.children" :key="abschnitte.value">{{ abschnitte }}</p> -->

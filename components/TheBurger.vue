@@ -72,7 +72,7 @@ export default {
   border: solid 1px rgb(245, 245, 245);
 }
 .burger-item {
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 50%;
 }
 .burger-icon {
@@ -92,14 +92,14 @@ export default {
   align-self: center;
   font-weight: 400;
   font-style: normal;
-  font-size: 3.2em;
+  font-size: 2.3em;
   padding-right: 1.3em;
   padding-bottom: 0.2em;
 }
 .nav-title {
   font-size: 1.2em;
   line-height: 100%;
-  padding-left: 1em;
+  padding-left: 0.4em;
 }
 .italic {
   font-style: italic;
