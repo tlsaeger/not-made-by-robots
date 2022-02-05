@@ -28,8 +28,16 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Preview", name: "preview", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Image", name: "image", widget: "image" }
+      - { label: "Wissen", name: "wissen_link", widget: "string" }
+      - {
+          label: "Level",
+          name: "level",
+          widget: "select",
+          options: ["low-code", "no-code", "high-code"],
+        }
   - name: "wissen"
     label: "Wissen"
     folder: "content/wissen"
