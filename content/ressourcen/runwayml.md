@@ -7,7 +7,8 @@ image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1624367766/Tools/Scree
 link: https://runwayml.com/
 tags:
   - tool
-  - beginner
+  - no-code
+  - low-code
   - kostenlos
   - kostenpflichtig
 ---

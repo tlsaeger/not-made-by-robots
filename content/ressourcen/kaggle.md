@@ -8,7 +8,9 @@ link: http://kaggle.com
 tags:
   - tool
   - tutorial
-  - fortgeschritten
+  - low-code
+  - no-code
+  - high-code
   - kostenlos
   - kostenpflichtig
 ---

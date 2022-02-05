@@ -115,6 +115,7 @@ p {
 .post-title {
   display: none;
 }
+
 .nuxt-content {
   background-color: rgb(10, 10, 10);
   margin: 0.3em 7rem;
@@ -122,14 +123,16 @@ p {
   border: solid 1px rgb(245, 245, 245);
   padding: 1em 0;
 }
+.post-descritption {
+  padding-left: 2.3em;
+  /* margin: 0 1em; */
+}
 .nuxt-content p {
   background-color: rgb(10, 10, 10);
   width: 70%;
-  height: 10%;
   border-radius: 0.5em;
   transition: 0.2s;
   margin-bottom: 0.8em;
-  /* border: solid 1px rgb(245, 245, 245); */
 }
 .nuxt-content a {
   font-style: italic;
@@ -262,6 +265,7 @@ p {
   flex-wrap: wrap;
   cursor: pointer;
   margin-bottom: 1em;
+  justify-content: center;
 }
 
 .tag {
@@ -270,15 +274,16 @@ p {
   border: solid 1px #63e93a;
   color: #63e93a;
   width: fit-content;
-  padding: 0.2em 0.5em;
+  padding: 0.1em 0.3em;
   text-align: center;
   border-radius: 50em;
-  margin: 0.3em;
+  margin: 0.3em 0.2em;
   transition: 0.1s;
   text-transform: capitalize;
+  line-height: 1.2;
 }
 .filter-element {
-  font-size: 1.5em;
+  font-size: 1.2em;
   cursor: pointer;
 }
 
@@ -294,6 +299,10 @@ p {
   border: solid 1px #f876c1;
   color: #f876c1;
   transition: 0.2s;
+}
+.filter-element.tutorial,
+.filter-element.high-code {
+  margin-right: 0.8em;
 }
 .person:hover,
 .tool:hover,

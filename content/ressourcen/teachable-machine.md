@@ -7,6 +7,6 @@ image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1624367570/Tools/Scree
 link: https://teachablemachine.withgoogle.com/
 tags:
   - tool
-  - beginner
+  - no-code
   - kostenlos
 ---

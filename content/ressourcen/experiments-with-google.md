@@ -6,6 +6,7 @@ image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1627899618/Tools/Scree
 link: https://experiments.withgoogle.com
 tags:
   - tutorial
-  - beginner
+  - no-code
+  - low-code
   - kostenlos
 ---

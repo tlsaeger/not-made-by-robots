@@ -69,4 +69,9 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["news"] }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "select",
+          options: ["low-code", "no-code", "high-code"],
+        }
