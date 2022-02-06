@@ -13,4 +13,10 @@ tags:
   - high-code
   - kostenlos
   - kostenpflichtig
+level:
+  - low-code
+  - high-code
+  - no-code
+  - wissen
+  - tool
 ---
