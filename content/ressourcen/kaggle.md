@@ -19,4 +19,5 @@ level:
   - no-code
   - wissen
   - tool
+  - kostenlos
 ---
