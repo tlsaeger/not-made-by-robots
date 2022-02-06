@@ -2,23 +2,39 @@
   <transition name="fade">
     <div class="nav-wrapper" id="nav-wrapper">
       <transition name="moveUp" v-on:after-leave="afterLeave">
-        <nuxt-link to="/" class="nav-links" v-if="navOpen"
-          ><div class="nav-burger" @click="burgerClicked">
+        <nuxt-link
+          to="/"
+          class="nav-links"
+          v-if="navOpen"
+          @click="burgerClicked()"
+          ><div class="nav-burger" @click="burgerClicked()">
             <h3 class="nav-text">Tutorials</h3>
           </div></nuxt-link
         >
       </transition>
-      <nuxt-link to="/wissen" class="nav-links" v-if="navOpen"
-        ><div class="nav-burger" @click="burgerClicked">
+      <nuxt-link
+        to="/wissen"
+        class="nav-links"
+        v-if="navOpen"
+        @click="burgerClicked()"
+        ><div class="nav-burger" @click="burgerClicked()">
           <h3 class="nav-text">Wissen</h3>
         </div></nuxt-link
       >
-      <nuxt-link to="/ressourcen" class="nav-links" v-if="navOpen"
-        ><div class="nav-burger" @click="burgerClicked">
+      <nuxt-link
+        to="/ressourcen"
+        class="nav-links"
+        v-if="navOpen"
+        @click="burgerClicked()"
+        ><div class="nav-burger" @click="burgerClicked()">
           <h3 class="nav-text">Ressourcen</h3>
         </div>
       </nuxt-link>
-      <nuxt-link to="/news" class="nav-links" v-if="navOpen"
+      <nuxt-link
+        to="/news"
+        class="nav-links"
+        v-if="navOpen"
+        @click="burgerClicked()"
         ><div class="nav-burger" @click="burgerClicked()">
           <h3 class="nav-text">News</h3>
         </div></nuxt-link
@@ -79,7 +95,6 @@ export default {
 .nav-links {
   opacity: 1;
   border: solid 1px rgb(245, 245, 245);
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,9 +107,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%;
+  width: 100%;
   height: 100%;
-  height: -webkit-fill-available; */
 }
 .nav-text {
   transition: 0.2s;
