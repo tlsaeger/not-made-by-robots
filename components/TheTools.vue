@@ -57,37 +57,50 @@
       mode="in-out"
       class="text-block-wrapper text-block-wrapper-mini ressourcen-wrapper"
     >
-      <div v-if="noContent" class="allfilters" key="noContent">
-        Keine Inhalte mehr verfügbar. <br />
-        Bitte entferne ein paar Filter!
-      </div>
-
-      <a
-        v-for="ressource in filteredArray"
-        :href="ressource.link"
-        :key="ressource.slug"
-        class="card card-mini shadow shadow-hover"
-        target="_blank"
+      <div
+        v-if="noContent"
+        class="allfilters no-content-placeholder card card-mini"
+        key="noContent"
       >
-        <nuxt-img
+        <img
+          src="/assets/sad_image.jpg"
+          alt="sad-dog"
           class="preview-image preview-image-mini"
-          :src="ressource.image"
         />
         <div class="desc-text-wrapper">
-          <h3>{{ ressource.title }}</h3>
-          <p class="body-text">{{ ressource.description }} ↗︎</p>
-          <div class="tag-container">
-            <div
-              v-for="tag in ressource.tags"
-              :key="tag"
-              class="tag mini-tag"
-              :class="tag"
-            >
-              {{ tag }}
+          <p class="body-text">
+            Keine Inhalte mehr verfügbar. <br />
+            Bitte entferne ein paar Filter!
+          </p>
+        </div>
+      </div>
+
+      <div
+        v-for="ressource in filteredArray"
+        :key="ressource.slug"
+        class="card card-mini shadow shadow-hover"
+      >
+        <a v-if="ressource.link" :href="ressource.link" target="_blank">
+          <nuxt-img
+            class="preview-image preview-image-mini"
+            :src="ressource.image"
+          />
+          <div class="desc-text-wrapper">
+            <h3>{{ ressource.title }}</h3>
+            <p class="body-text">{{ ressource.description }} ↗︎</p>
+            <div class="tag-container">
+              <div
+                v-for="tag in ressource.level"
+                :key="tag"
+                class="tag mini-tag"
+                :class="tag"
+              >
+                {{ tag }}
+              </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     </transition-group>
   </section>
 </template>
@@ -99,6 +112,14 @@ export default {
     ressourcen: {
       type: Array,
       required: true
+    },
+    wissen: {
+      type: Array,
+      required: true
+    },
+    tutorials: {
+      type: Array,
+      required: true
     }
   },
   data() {
@@ -106,10 +127,26 @@ export default {
       filterValues: filterValues.filterValues,
       filteredArray: this.ressourcen,
       noContent: false,
-      showContribution: false
+      showContribution: false,
+      myWissen: this.wissen,
+      myTutorials: this.tutorials
     };
   },
+
   beforeMount() {
+    function addLinkandTag(myArray) {
+      let element;
+      for (element of myArray) {
+        element.link = element.path;
+        console.log(element);
+      }
+      return myArray;
+    }
+    this.myWissen = addLinkandTag(this.myWissen);
+    this.myTutorials = addLinkandTag(this.myTutorials);
+
+    this.filteredArray = this.filteredArray.concat(this.myWissen);
+    this.filteredArray = this.filteredArray.concat(this.myTutorials);
     let array = this.filteredArray;
     for (var i = array.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
@@ -117,9 +154,9 @@ export default {
       array[i] = array[j];
       array[j] = temp;
     }
-
     return array;
   },
+
   methods: {
     filtering(e, group) {
       let activeValues = [];
@@ -152,7 +189,7 @@ export default {
         activeValues.push(active[i].innerText.toLowerCase());
       }
       for (let i = 0; i < this.ressourcen.length; i++) {
-        if (isContainedIn(activeValues, this.ressourcen[i].tags)) {
+        if (isContainedIn(activeValues, this.ressourcen[i].level)) {
           this.filteredArray.push(this.ressourcen[i]);
         }
       }
@@ -166,6 +203,10 @@ export default {
 };
 </script>
 <style scoped>
+/* .no-content-text {
+  text-align: left;
+  padding: 1rem;
+} */
 .scale-enter-active {
   animation: fade-in 0.5s;
 }
