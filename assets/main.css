@@ -97,8 +97,8 @@ p {
   background-color: rgb(10, 10, 10);
   border-radius: 0.5em;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 0.3em;
+  right: 0.3em;
   display: flex;
   flex-direction: row;
   height: auto;
@@ -221,6 +221,7 @@ p {
 .preview-image-mini {
   padding: 0;
   width: 100%;
+  max-height: 7em;
   border-radius: 0.5em 0.5em 0 0;
 }
 
@@ -360,10 +361,12 @@ li {
   height: 5em;
   width: 100vw;
   padding-left: 1em;
+  padding-right: 1em;
   align-items: center;
   gap: 1em;
   position: relative;
   bottom: 0;
+  justify-content: space-between;
 }
 
 /* TODO better animation */
@@ -385,6 +388,15 @@ li {
 .page-enter,
 .page-leave-to {
   opacity: 0;
+}
+
+.contribution-up-enter-active,
+.contribution-up-leave-active {
+  transition: transform 0.5s;
+}
+.contribution-up-enter,
+.contribution-up-leave-to {
+  transform: translateY(100%) translateX(100%) scale(0);
 }
 
 @media (prefers-color-scheme: light) {
