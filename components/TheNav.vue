@@ -1,48 +1,45 @@
 <template>
-<transition name="fade">
-  <div class="nav-wrapper" id="nav-wrapper"
-  > 
-    <transition name="moveUp"   v-on:after-leave="afterLeave"> 
-      <nuxt-link to="/" class="nav-links" v-if="navOpen"   
-        ><div  class="nav-burger" @click="burgerClicked">
-          <h3 class="nav-text">Tutorials</h3>
+  <transition name="fade">
+    <div class="nav-wrapper" id="nav-wrapper">
+      <transition name="moveUp" v-on:after-leave="afterLeave">
+        <nuxt-link to="/" class="nav-links" v-if="navOpen"
+          ><div class="nav-burger" @click="burgerClicked">
+            <h3 class="nav-text">Tutorials</h3>
+          </div></nuxt-link
+        >
+      </transition>
+      <nuxt-link to="/wissen" class="nav-links" v-if="navOpen"
+        ><div class="nav-burger" @click="burgerClicked">
+          <h3 class="nav-text">Wissen</h3>
         </div></nuxt-link
       >
-    </transition>
-    <nuxt-link to="/wissen" class="nav-links" v-if="navOpen"
-      ><div class="nav-burger" @click="burgerClicked">
-        <h3 class="nav-text">Wissen</h3>
-      </div></nuxt-link
-    >
-    <nuxt-link to="/ressourcen" class="nav-links" v-if="navOpen"
-      ><div class="nav-burger" @click="burgerClicked">
-        <h3 class="nav-text">Ressourcen</h3>
-      </div>
-    </nuxt-link>
-    <nuxt-link to="/news" class="nav-links" v-if="navOpen"
-      ><div class="nav-burger" @click="burgerClicked()">
-        <h3 class="nav-text">News</h3>
-      </div></nuxt-link
-    >
-  </div>
-</transition>
+      <nuxt-link to="/ressourcen" class="nav-links" v-if="navOpen"
+        ><div class="nav-burger" @click="burgerClicked">
+          <h3 class="nav-text">Ressourcen</h3>
+        </div>
+      </nuxt-link>
+      <nuxt-link to="/news" class="nav-links" v-if="navOpen"
+        ><div class="nav-burger" @click="burgerClicked()">
+          <h3 class="nav-text">News</h3>
+        </div></nuxt-link
+      >
+    </div>
+  </transition>
 </template>
 <script>
 export default {
-
-  data () {
+  data() {
     return {
       navOpen: true,
-      afterNav: true,
-  }
+      afterNav: true
+    };
   },
-  transition:{
-        afterLeave(el) {
-      console.log(el)
+  transition: {
+    afterLeave(el) {
+      console.log(el);
     }
   },
   methods: {
-
     //     scrollToEl: function(el) {
     //         const elToScroll = document.querySelector(el);
     //         elToScroll.scrollIntoView();
@@ -50,20 +47,18 @@ export default {
     burgerClicked() {
       // this.navOpen = false;
       this.$emit("burgerIsClicked", false);
-      
     },
-       afterLeave: function(){
-         console.log("afterLEave")
-        this.afterNav = false;
+    afterLeave: function() {
+      console.log("afterLEave");
+      this.afterNav = false;
     }
-
   }
 };
 </script>
 <style scoped>
 .nav-wrapper {
   padding: 0;
-  background-color: rgb(19,19,19);
+  background-color: rgb(19, 19, 19);
   display: grid;
   justify-content: flex-end;
   /* text-transform: uppercase; */
@@ -74,7 +69,7 @@ export default {
   bottom: 0;
   left: 0;
   /* width: 100%; */
-  border: solid 1px rgb(10,10,10);
+  border-bottom: solid 1px rgb(10, 10, 10);
   z-index: 999;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -83,11 +78,15 @@ export default {
 }
 .nav-links {
   opacity: 1;
-  border: solid 1px rgb(245,245,245);
+  border: solid 1px rgb(245, 245, 245);
+
   display: flex;
   justify-content: center;
   align-items: center;
-   transition: 0.2s;
+  transition: 0.2s;
+}
+.nav-link:hover {
+  border-radius: 0.5em;
 }
 .nav-burger {
   display: flex;
@@ -101,7 +100,7 @@ export default {
   transition: 0.2s;
   font-size: 5em;
 }
-.nav-links:hover .nav-text{
+.nav-links:hover .nav-text {
   transition: 0.2s;
   transform: scale(1.1);
   /* font-weight: 600; */
@@ -119,9 +118,10 @@ export default {
 } */
 @media (prefers-color-scheme: light) {
   .nav-wrapper {
-    background-color: rgb(245,245,245);
+    background-color: rgb(245, 245, 245);
   }
-  .nav-links{border: solid 1px rgb(19,19,19);
+  .nav-links {
+    border: solid 1px rgb(19, 19, 19);
   }
 }
 </style>
