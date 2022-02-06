@@ -11,4 +11,10 @@ tags:
   - low-code
   - kostenlos
   - kostenpflichtig
+level:
+  - low-code
+  - no-code
+  - tool
+  - kostenlos
+  - kostenpflichtig
 ---
