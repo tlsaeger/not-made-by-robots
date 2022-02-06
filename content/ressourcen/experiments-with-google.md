@@ -9,4 +9,11 @@ tags:
   - no-code
   - low-code
   - kostenlos
+level:
+  - tutorial
+  - wissen
+  - kostenlos
+  - tool
+  - no-code
+  - low-code
 ---
