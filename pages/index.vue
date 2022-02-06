@@ -1,38 +1,15 @@
 <template>
   <div class="home">
-    <!-- <TheP5JS /> -->
-    <!-- <section class="first_section">
-      <h1 class="title"><span class="not">Not</span> Made <br />By Robots</h1>
-      <p class="subline body-text">
-        A Toolkit for Artificial Intelligence in Design
-      </p>
-      <a @click="scrollToEl('tutorials')" class="arrow">↓</a> -->
-    <!-- </section> -->
     <TheTutorials :tutorials="tutorials"> </TheTutorials>
-    <!-- <TheWissen :wissen="wissen"> </TheWissen>
-    <TheTools :ressourcen="ressourcen"> </TheTools>
-    <TheNews /> -->
-
   </div>
 </template>
 
 <script>
-
 export default {
   head() {
     return {
       script: [
         { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
-      ],
-      script: [
-        {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/p5.js/[p5_version]/p5.js"
-        }
-      ],
-      script: [
-        {
-          src: "https://unpkg.com/ml5@latest/dist/ml5.min.js"
-        }
       ]
     };
   },
@@ -42,7 +19,7 @@ export default {
 
   async asyncData({ $content, params, error }) {
     let tutorials;
-   
+
     let ressourcen;
     try {
       tutorials = await $content("tutorial", params.slug).fetch();
@@ -60,6 +37,4 @@ export default {
 };
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -25,7 +25,7 @@
     <h2 class="post-title">{{ post.title }}</h2>
     <video
       class="header-image shadow"
-      :src="post.image"
+      :src="post.video"
       autoplay
       loop
       muted
