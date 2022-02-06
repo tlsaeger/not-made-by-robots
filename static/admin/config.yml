@@ -33,10 +33,19 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Wissen", name: "wissen_link", widget: "string" }
       - {
-          label: "Level",
-          name: "level",
+          label: "Tag",
+          name: "tag",
           widget: "select",
-          options: ["low-code", "no-code", "high-code"],
+          options:
+            [
+              "tutorial",
+              "wissen",
+              "low-code",
+              "no-code",
+              "high-code",
+              "kostenlos",
+              "kostenpflichtig",
+            ],
         }
   - name: "wissen"
     label: "Wissen"
@@ -54,6 +63,21 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Tutorial", name: "tutorial_link", widget: "string" }
+      - {
+          label: "Tag",
+          name: "tag",
+          widget: "select",
+          options:
+            [
+              "tutorial",
+              "wissen",
+              "low-code",
+              "no-code",
+              "high-code",
+              "kostenlos",
+              "kostenpflichtig",
+            ],
+        }
   - name: "ressourcen"
     label: "Ressourcen"
     folder: "content/ressourcen"

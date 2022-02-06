@@ -3,7 +3,12 @@ title: Zoom Background 3000
 date: 2021-06-14T08:37:02.478Z
 description: "Lerne mit Teachable Machine, wie du deine eigene Bilderkennung
   trainieren kannst. Ganz ohne Coding! Wir bauen uns eine Kamera die auf Gesten reagiert, damit kannst du deine Freunde darauf hinweisen, dass sie auf »Mute« sind."
-image: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1629733860/Tutorials/Zoom_Background_3000_-_HD_720p_ejhluz.mp4
+video: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1629733860/Tutorials/Zoom_Background_3000_-_HD_720p_ejhluz.mp4
+image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644154511/Tutorials/Screenshot_2022-02-06_at_14-33-01_Zoom_Background_3000_-_HD_720p_ejhluz_mp4_tbcwap.png
+level:
+  - tutorial
+  - low-code
+  - kostenlos
 ---
 
 ### **0. Intro**

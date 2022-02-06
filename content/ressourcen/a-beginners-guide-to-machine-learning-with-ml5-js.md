@@ -6,7 +6,7 @@ description: "In diesem Video wird ein einfacher Einstieg in die JS-Bibliothek
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644146075/Tools/Tutorial/maxresdefault-3_hxfwzu.jpg
 link: https://www.youtube.com/watch?v=jmznx0Q1fP0
 level:
-  - low-code
   - tutorial
+  - low-code
   - kostenlos
 ---

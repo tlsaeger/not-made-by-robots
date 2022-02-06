@@ -6,19 +6,24 @@ description: "Mit einem Gebirgs-Pinsel verschneite Gipfel zaubern und mit dem
   lässt sich auf eine Leinwand malen, das besondere die Farben repräsentieren
   Dinge wie Gestein, Wasser oder Wolken. Im Zusammenspiel kreieren sie so ein
   prächtiges Landschaftsbild auf das Bob Ross stolz gewesen wäre. Seit Ende 2021
-  lassen sich außerdem auch Landschaften per Text erstellen. "
+  lassen sich außerdem auch Landschaften per Text erstellen."
 preview: Mit einem Gebirgs-Pinsel verschneite Gipfel zaubern und mit dem
   See-Pinsel verfeinern, all das kann Nvidias GauGAN. Jetzt entdecken!
-image: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1643031727/Tutorials/GauGAN/GauGAN_xukkni.mp4
+video: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1643031727/Tutorials/GauGAN/GauGAN_xukkni.mp4
+image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644154582/Tutorials/Screenshot_2022-01-18_at_09.38.54_b2qkbj.png
 wissen_link: Generative Adversarial Networks
-level: no-code
+level:
+  - tutorial
+  - no-code
+  - kostenlos
 ---
+
 1. Öffne die Seite [](http://gaugan.org/gaugan2/)<http://gaugan.org/gaugan2/> in deinem Browser. Wir empfehlen Firefox oder Chrome.
 2. Die Webseite ist sehr groß und kann bei kleinen Bildschirmen gerne mal über den Rand herausragen. Zoom dann einfach ein bisschen aus der Seite heraus. In Chrome funktioniert dies über den Menüpunkt »Darstellung«.
 3. Die Seite sollte ca. so aussehen:
 4. ![](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1643030296/Tutorials/GauGAN/Screenshot_2022-01-18_at_09.22.24_pjbzck.png)
 5. Solltest du ein Tutorial angezeigt bekommen, klick auf das kleine Kreuz um es zu beenden.
-6. Scroll auf der Seite ganz nach unten und setze einen Haken bei den »terms and conditions« 
+6. Scroll auf der Seite ganz nach unten und setze einen Haken bei den »terms and conditions«
 7. ![](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1643030296/Tutorials/GauGAN/Screenshot_2022-01-18_at_09.23.06_kthdkj.png)
 8. Scrolle wieder nach oben, du siehst zwei farbige Quadrate, das eine türkis, das andere weiß. Das Türkise ist deine Zeichenfläche, auf dem weißen wir später das fertige Bild gezeigt. Links neben der türkisen Fläche findet du die »Malfarben«, sie sind in unterhschiedliche Kategorien wie »Building«, »Ground«, »Landscape« oder »Plant« unterteilt. Klicke auf eine Kategorie und es sollte sich ein eine weitere Detailebene öffnen. Wähle eine »Farbe« aus.
 9. In der Leiste über dem türkisen Quadrat sollte der Pinsel hellgrau hinterlegt sein, ansonsten klicke ihn an. Nun kannst du nach belieben los zeichnen. Wechsel zwischen den verschiedenen Pinsel.
@@ -36,4 +41,5 @@ level: no-code
 21. ![](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1643030296/Tutorials/GauGAN/gaugan_output__2_yrifpb.png)
 
     »A penguin eating a sandwich«
-22.  Hier fällt auf, dass GauGAN sehr gut darin ist Landschaften zu zeichnen, bei allem anderen aber genauso probiert da irgendwie eine Landschaft draus zu machen.
+
+22. Hier fällt auf, dass GauGAN sehr gut darin ist Landschaften zu zeichnen, bei allem anderen aber genauso probiert da irgendwie eine Landschaft draus zu machen.
