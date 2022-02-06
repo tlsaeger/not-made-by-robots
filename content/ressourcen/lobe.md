@@ -11,4 +11,9 @@ tags:
   - no-code
   - low-code
   - kostenlos
+level:
+  - low-code
+  - no-code
+  - tool
+  - kostenlos
 ---
