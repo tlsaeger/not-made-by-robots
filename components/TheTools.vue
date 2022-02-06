@@ -17,10 +17,12 @@
         ?
       </p>
     </div>
-    <TheContributionInfo
-      v-if="this.showContribution"
-      @closePanel="closingPanel"
-    />
+    <transition name="contribution-up">
+      <TheContributionInfo
+        v-if="this.showContribution"
+        @closePanel="closingPanel"
+      />
+    </transition>
     <div class="filter">
       <div
         class="filter-element kind tag"
@@ -87,7 +89,8 @@
           />
           <div class="desc-text-wrapper">
             <h3>{{ ressource.title }}</h3>
-            <p class="body-text">{{ ressource.description }} ↗︎</p>
+            <p v-if="ressource.preview">{{ ressource.preview }} ↗︎</p>
+            <p v-else class="body-text">{{ ressource.description }} ↗︎</p>
             <div class="tag-container">
               <div
                 v-for="tag in ressource.level"
@@ -158,6 +161,9 @@ export default {
   },
 
   methods: {
+    closingPanel() {
+      this.showContribution = false;
+    },
     filtering(e, group) {
       let activeValues = [];
       this.filteredArray = [];

@@ -9,7 +9,11 @@
         hinzu. Dafür musst du dich einmal bei GitHub anmelden. Über »Commit New
         File« sendest du uns die die Änderung, wenn diese von uns genehmigt
         wird, hast du so deine aller Erste »Contribution« in der Open Source
-        Welt geleistet. Danke für Deine Mithilfe
+        Welt geleistet. Danke für Deine Mithilfe! Weitere Infos findest du
+        <a
+          href="https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github"
+          >hier ↗︎</a
+        >
       </p>
     </div>
   </div>
@@ -22,12 +26,12 @@ export default {};
 <style>
 .contribution-info {
   position: fixed;
-  right: 0;
-  bottom: 3rem;
+  right: 0.3em;
+  bottom: 2.6rem;
   background-color: black;
   border: solid 1px white;
   border-radius: 12px;
-  width: 15%;
+  width: 35%;
   font-size: 0.8em;
   z-index: 99;
   padding: 0.3em;
