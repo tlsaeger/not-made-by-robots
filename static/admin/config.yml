@@ -70,8 +70,20 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Link", name: "link", widget: "string" }
       - {
-          label: "Tags",
-          name: "tags",
+          label: "Level",
+          name: "level",
           widget: "select",
-          options: ["low-code", "no-code", "high-code"],
+          options:
+            [
+              "low-code",
+              "no-code",
+              "high-code",
+              "person",
+              "tool",
+              "tutorial",
+              "wissen",
+              "kostenlos",
+              "kostenpflichtig",
+            ],
+          multiple: true,
         }
