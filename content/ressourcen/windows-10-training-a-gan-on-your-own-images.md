@@ -5,7 +5,7 @@ description: Lerne wie du StyleGAN auf deiner eigenen Windows-Maschine installie
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644146072/Tools/Tutorial/maxresdefault-2_xt9pw7.jpg
 link: https://www.youtube.com/watch?v=BCde68k6KXg
 level:
-  - high-code
   - tutorial
+  - high-code
   - kostenlos
 ---

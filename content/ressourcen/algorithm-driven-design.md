@@ -7,7 +7,7 @@ image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644146087/Tools/Wisse
 link: https://algorithms.design/
 level:
   - wissen
-  - kostenlos
-  - low-code
   - no-code
+  - low-code
+  - kostenlos
 ---

@@ -12,8 +12,8 @@ tags:
 level:
   - tutorial
   - wissen
-  - kostenlos
   - tool
   - no-code
   - low-code
+  - kostenlos
 ---
