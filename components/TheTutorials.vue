@@ -18,7 +18,7 @@
               @mouseover="videoHovering = true"
               @mouseleave="videoHovering = false"
               class="slider-image"
-              :src="tutorial.image"
+              :src="tutorial.video"
               autoplay
               loop
               muted
@@ -27,13 +27,13 @@
               <div class="tutorial-text-wrapper">
                 <h3 class="preview-title">{{ tutorial.title }}</h3>
                 <p class="body-text">{{ tutorial.preview }} ↗︎</p>
-                <p
-                  v-if="tutorial.level"
-                  class="level tag medi-tag"
-                  :class="tutorial.level"
-                >
-                  {{ tutorial.level }}
-                </p>
+                <div class="tag-container">
+                  <div v-for="levels in tutorial.level" :key="levels">
+                    <p class="level tag medi-tag" :class="levels">
+                      {{ levels }}
+                    </p>
+                  </div>
+                </div>
               </div>
             </transition>
           </NuxtLink>
@@ -156,9 +156,12 @@ export default {
   width: 45%;
   margin: 0 0.5em;
   transition: 0.4s;
+  padding-left: 0.3em;
 }
 .medi-tag {
   margin-top: 0.8em;
+  margin-left: -0.3em;
+  margin-right: 0.6em;
 }
 .tutorial-text-wrapper:hover {
   transform: scale(1.01) translateY(-0.5em) translateX(0.3em);
