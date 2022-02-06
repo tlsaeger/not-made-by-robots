@@ -69,7 +69,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(10, 10, 10);
-  border: solid 1px rgb(245, 245, 245);
+  border-bottom: solid 1px rgb(245, 245, 245);
 }
 .burger-item {
   font-size: 2em;
@@ -112,7 +112,7 @@ export default {
 @media (prefers-color-scheme: light) {
   .burger {
     background-color: rgb(245, 245, 245);
-    border: solid 1px rgb(10, 10, 10);
+    border-bottom: solid 1px rgb(10, 10, 10);
   }
   .light-burger {
     display: inline;
