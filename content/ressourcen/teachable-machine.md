@@ -9,4 +9,8 @@ tags:
   - tool
   - no-code
   - kostenlos
+level:
+  - no-code
+  - tool
+  - kostenlos
 ---
