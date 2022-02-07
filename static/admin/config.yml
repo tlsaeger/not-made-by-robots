@@ -31,7 +31,12 @@ collections:
       - { label: "Preview", name: "preview", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Wissen", name: "wissen_link", widget: "string" }
+      - {
+          label: "Wissen",
+          name: "wissen_link",
+          widget: "string",
+          required: false,
+        }
       - {
           label: "Tag",
           name: "tag",
@@ -62,7 +67,12 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Tutorial", name: "tutorial_link", widget: "string" }
+      - {
+          label: "Tutorial",
+          name: "tutorial_link",
+          widget: "string",
+          requiered: false,
+        }
       - {
           label: "Tag",
           name: "tag",
@@ -99,13 +109,13 @@ collections:
           widget: "select",
           options:
             [
-              "low-code",
-              "no-code",
-              "high-code",
               "person",
               "tool",
               "tutorial",
               "wissen",
+              "low-code",
+              "no-code",
+              "high-code",
               "kostenlos",
               "kostenpflichtig",
             ],
