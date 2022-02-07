@@ -51,6 +51,7 @@ collections:
               "kostenlos",
               "kostenpflichtig",
             ],
+          multiple: true,
         }
   - name: "wissen"
     label: "Wissen"
@@ -87,6 +88,7 @@ collections:
               "kostenlos",
               "kostenpflichtig",
             ],
+          multiple: true,
         }
   - name: "ressourcen"
     label: "Ressourcen"
