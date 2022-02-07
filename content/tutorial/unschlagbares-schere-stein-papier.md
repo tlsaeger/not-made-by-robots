@@ -10,7 +10,10 @@ description: "Baue ein unschlagbares Schere, Stein, Papier. Nutze zwei
 preview: "Baue ein unschlagbares Schere, Stein, Papier. Nutze zwei ML-Modelle
   völlig kostenlos. "
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644154511/Tutorials/Screenshot_2022-02-06_at_14-33-01_Zoom_Background_3000_-_HD_720p_ejhluz_mp4_tbcwap.png
-tag: tutorial
+tag:
+  - tutorial
+  - high-code
+  - kostenlos
 video: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1629733860/Tutorials/Zoom_Background_3000_-_HD_720p_ejhluz.mp4
 ---
 
