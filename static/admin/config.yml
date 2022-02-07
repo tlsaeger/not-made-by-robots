@@ -35,12 +35,12 @@ collections:
       - {
           label: "Wissen",
           name: "wissen_link",
-          widget: "string",
+          widget: "list",
           required: false,
         }
       - {
-          label: "Tag",
-          name: "tag",
+          label: "Level",
+          name: "level",
           widget: "select",
           options:
             [
@@ -72,12 +72,12 @@ collections:
       - {
           label: "Tutorial",
           name: "tutorial_link",
-          widget: "string",
+          widget: "list",
           requiered: false,
         }
       - {
-          label: "Tag",
-          name: "tag",
+          label: "Level",
+          name: "level",
           widget: "select",
           options:
             [
