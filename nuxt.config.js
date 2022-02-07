@@ -5,17 +5,6 @@ export default {
     }
   },
 
-  colorMode: {
-    preference: "light", // default value of $colorMode.preference
-    fallback: "light", // fallback value if not system preference found
-    hid: "nuxt-color-mode-script",
-    globalName: "__NUXT_COLOR_MODE__",
-    componentName: "ColorScheme",
-    classPrefix: "",
-    classSuffix: "-mode",
-    storageKey: "nuxt-color-mode"
-  },
-
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -92,6 +81,13 @@ export default {
     "modules/twitter"
     // '@nuxtjs/cloudinary'
   ],
+  content: {
+    markdown: {
+      prism: {
+        theme: "~/assets/prism-atom-dark.css"
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
