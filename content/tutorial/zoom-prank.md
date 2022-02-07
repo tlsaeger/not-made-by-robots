@@ -12,12 +12,10 @@ tag:
   - low-code
   - kostenlos
 ---
-
 1. Befolge die Anweisung aus dem verlinkten Beispiel "**[Bananen und Äpfel](/tutorial/banenen-und-aepfel)**" soweit, dass du einen Link generiert hast. Diesen brauchen wir im Folgenden. Trainiere dabei eine Klasse mit deiner geheimen Geste, z.B. eine Hand macht ein Peace-Zeichen etc. Nenne diese »geheim«. Die andere Klasse trainierst du mit allem anderen, wie du gerade auf deinem Stuhl herum sitzt oder auch mal nicht da bist etc. nenne diese »leer«
-
-1) Wir benutzen um unseren Code zu schreiben den p5 Web-Editor, eine Einführung in diesen findest du hier:
+2. Wir benutzen um unseren Code zu schreiben den p5 Web-Editor, eine Einführung in diesen findest du hier:
    Den Gesamten Code findest du übrigens auch ganz unten auf der Seite.
-2) Wir verwenden eine Bibliothek mit dem Namen ml5.js, die es uns ermöglicht, das Model aus Teachable Machine weiter zu verwenden und auf deine Geheime Geste zu reagieren. Um diese ansprechen zu können, müsse wir diese Bibliothek zu allererst einmal einbinden. Gehe dazu auf die Datei `index.html` im p5 Web-Editor. Füge die folgende Zeile (bunt) ein:
+3. Wir verwenden eine Bibliothek mit dem Namen ml5.js, die es uns ermöglicht, das Model aus Teachable Machine weiter zu verwenden und auf deine Geheime Geste zu reagieren. Um diese ansprechen zu können, müsse wir diese Bibliothek zu allererst einmal einbinden. Gehe dazu auf die Datei `index.html` im p5 Web-Editor. Füge die folgende Zeile (bunt) ein:
 
 ```jsx
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
@@ -36,7 +34,7 @@ function setup() {
 }
 ```
 
-![Screenshot%202021-10-17%20at%2013.30.30.png](Prank%20Your%20Zoom-Call%206d5875c34a78423bb79520eb9759b6ab/Screenshot202021-10-1720at2013.30.30.png)
+![Screenshot%202021-10-17%20at%2013.30.30.png](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644232719/Tutorials/Zoom-Prank/Screenshot202021-10-1720at2013.30.30_lood7m.png)
 
 1. Wenn wir jetzt den Sketch starten, wird uns der Browser vielleicht fragen ob er auf unserer Kamera zugreifen darf, wir akzeptieren das und sollten uns jetzt unter dem Canvas auf dem Bildschirm sehen können. Damit unser Bild im Canvas gezeigt wird blenden wir es im Setup über `video.hide()` aus und zeichnen es dann in der `draw()` Funktion.
 
@@ -53,7 +51,7 @@ function draw() {
 }
 ```
 
-![Screenshot 2021-10-17 at 13.31.33.png](Prank%20Your%20Zoom-Call%206d5875c34a78423bb79520eb9759b6ab/Screenshot_2021-10-17_at_13.31.33.png)
+![Screenshot 2021-10-17 at 13.31.33.png](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644232719/Tutorials/Zoom-Prank/Screenshot_2021-10-17_at_13.31.33_wwq3dh.png)
 
 1. Nun haben wir unser Webcam-Bild schon mal auf dem Canvas. Als nächstes laden wir das Bild, welches angezeigt werden soll, wenn wir unsere geheime Geste machen. Lade dafür zu allererst das Bild in den p5 Webeditor hoch. (Wenn du kein Bild hast kannst du unter diesem Absatz eins runterladen) Dann nutzen wir die Funktion `preload()` diese wird als allererstes geladen und wir können so sicher sein, dass unser Bild geladen ist wenn wir es brauchen. Wir brauchen dafür eine Variable in die wir das Bild speichern können. Diese definieren wir mit dem Schlüsselwort `let` z.B. `let bild;` außerhalb aller Funktionen. In `preload()` laden wir dann das Bild in die Variable `bild` und zwar mit `loadImage('bild.jpg');`
 
@@ -76,7 +74,7 @@ function draw() {
 }
 ```
 
-![Screenshot 2021-10-17 at 13.37.03.png](Prank%20Your%20Zoom-Call%206d5875c34a78423bb79520eb9759b6ab/Screenshot_2021-10-17_at_13.37.03.png)
+![Screenshot 2021-10-17 at 13.37.03.png](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644232718/Tutorials/Zoom-Prank/Screenshot_2021-10-17_at_13.37.03_zyjrjp.png)
 
 1. Unser Code sieht aktuell wie folgt aus:
 
@@ -192,5 +190,5 @@ function draw() {
 ```
 
 1. Der Code läuft nun über den Browser. Damit wir den Prank aber auch in in Zoom, Teams, Webex oder anderen Videocalls durchführen können, arbeiten wir mit einer virtuellen Webcam von [OBS](https://www.notion.so/Open-Broadcaster-Software-f0dd94f55c4943e78740b55b45ebe1f2). Diese simuliert eine Webcam, die wir in den Cameinstellungen von unserem Porgramm auswählen können. Dafür starten wir OBS und fügen eine neue Videoquelle hinzu, indem wir auf das + unter "Quellen" drücken.
-1. Wir wählen jetzt unter den Quellen die "Fensteraufnahme" aus. Dort suchen wir das geöffnete Browserfenster, in dem unsere p5.js Sketch läuft. Unter Filter fügen wir einen "Zuschneiden/Pad" Filter hinzu und beschneiden das Fenster so, dass nur noch der Kameraauschnitt zu sehen ist. Wenn wir fertig sind, klicken wir auf "Schließen".
-1. Schließlich vergrößern wir den Bildauschnitt durch das Ziehen an den roten Punkten so weit, dass wir den ganzen Bildschirm füllen. Im Anschluss können wir die unter "Virtuelle Kamera starten" die Prankcam starten und in Zoom unter den Kameraeinstellungen als "OBS Virtual Camera" auswählen.
+2. Wir wählen jetzt unter den Quellen die "Fensteraufnahme" aus. Dort suchen wir das geöffnete Browserfenster, in dem unsere p5.js Sketch läuft. Unter Filter fügen wir einen "Zuschneiden/Pad" Filter hinzu und beschneiden das Fenster so, dass nur noch der Kameraauschnitt zu sehen ist. Wenn wir fertig sind, klicken wir auf "Schließen".
+3. Schließlich vergrößern wir den Bildauschnitt durch das Ziehen an den roten Punkten so weit, dass wir den ganzen Bildschirm füllen. Im Anschluss können wir die unter "Virtuelle Kamera starten" die Prankcam starten und in Zoom unter den Kameraeinstellungen als "OBS Virtual Camera" auswählen.
