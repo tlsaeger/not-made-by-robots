@@ -149,7 +149,7 @@ function draw() {
 }
 ```
 
-[Screen Recording 2021-10-17 at 13.47.24.mp4](Prank%20Your%20Zoom-Call%206d5875c34a78423bb79520eb9759b6ab/Screen_Recording_2021-10-17_at_13.47.24.mp4)
+![](https://res.cloudinary.com/dt5cqs0lv/video/upload/v1644232734/Tutorials/Zoom-Prank/Screen_Recording_2021-10-17_at_13.47.24_rhwpwi.mp4)
 
 1. Wir haben es geschafft, dass Bild wird nur dann gezeigt, wenn wir unsere geheime Geste machen. Hier noch einmal der gesamte Code:
 
