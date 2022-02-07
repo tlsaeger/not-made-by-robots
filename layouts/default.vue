@@ -1,10 +1,12 @@
 <template>
   <div>
-    <TheBurger @burgerIsClicked="burgerIsClicked"/>
-    <transition
-        name="burger"
-      >
-    <TheNav @burgerIsClicked="burgerIsClicked" @pageClicked="pageIsClicked" v-if="burgerClicked" />
+    <TheBurger @burgerIsClicked="burgerIsClicked" />
+    <transition name="burger">
+      <TheNav
+        @burgerIsClicked="burgerIsClicked"
+        @pageClicked="pageIsClicked"
+        v-if="burgerClicked"
+      />
     </transition>
     <Nuxt />
     <TheFooter />
@@ -15,23 +17,20 @@
 export default {
   data() {
     return {
-      burgerClicked: false,
+      burgerClicked: false
     };
   },
-  methods:{
-    burgerIsClicked(value){
+  methods: {
+    burgerIsClicked(value) {
       this.burgerClicked = value;
     },
-    pageIsClicked(value){
-      console.log("reciving" + value)
+    pageIsClicked(value) {
       this.burgerClicked = value;
     }
   }
-
-}
+};
 </script>
 
 <style>
 @import url("https://use.typekit.net/wbf0hbb.css");
-
 </style>

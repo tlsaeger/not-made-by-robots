@@ -83,12 +83,8 @@ p {
   margin: 0;
   padding: 0;
 }
-.shadow .nuxt-content p {
-  -webkit-box-shadow: 0px 8px 7px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 8px 7px 0px rgba(0, 0, 0, 0.3);
-}
+
 .shadow-hover:hover {
-  box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.3);
   transform: scale(1.01);
   transition: 0.2s;
 }
@@ -300,6 +296,9 @@ p {
   font-size: 1.2em;
   cursor: pointer;
 }
+.ressourcen-wrapper {
+  min-height: 70vh;
+}
 
 .filter-element.filter-tag:hover,
 .filter-element.filter-tag.active {
@@ -367,9 +366,13 @@ li {
   gap: 1em;
   position: relative;
   bottom: 0;
+  margin-top: 0.5em;
   justify-content: space-between;
+  border-top: solid 1px rgb(245, 245, 245);
 }
-
+.svg-icon-fill {
+  fill: #b171ff;
+}
 /* TODO better animation */
 .burger-enter-active,
 .burger-leave-active {
@@ -407,55 +410,79 @@ li {
   body {
     background-color: rgb(236, 236, 236);
   }
-  .filter-tag,
+  .svg-icon-fill {
+    fill: #8134df;
+  }
+  .edit-link-wrapper {
+    background-color: rgb(245, 245, 245);
+    border: solid 1px rgb(10, 10, 10);
+  }
+  .filter-tag {
+    background-color: rgb(245, 245, 245);
+    border: solid 1px #058022;
+    color: #058022;
+  }
   .footer-wrapper {
     background-color: rgb(245, 245, 245);
-    color: #52d72b;
-    border: solid 1px #52d72b;
+    border-top: solid 1px rgb(10, 10, 10);
   }
-  .filter-tag:hover,
-  .filter-tag.active {
+  .filter-element.filter-tag:hover,
+  .filter-element.filter-tag.active {
     color: rgb(245, 245, 245);
-    background-color: #52d72b;
+    background-color: #058022;
+    border: solid 1px #058022;
   }
 
   .person,
   .tool,
-  .tutorial {
+  .tutorial,
+  .wissen {
     border: solid 1px #8134df;
     color: #8134df;
   }
-  .person:hover,
-  .tool:hover,
-  .tutorial:hover,
-  .person.active,
-  .tool.active,
-  .tutorial.active {
+  .filter-element.person:hover,
+  .filter-element.tool:hover,
+  .filter-element.tutorial:hover,
+  .filter-element.wissen:hover,
+  .filter-element.person.active,
+  .filter-element.tool.active,
+  .filter-element.tutorial.active,
+  .filter-element.wissen.active {
     background-color: #8134df;
+    border: solid 1px #8134df;
+    color: rgb(245, 245, 245);
   }
 
   .kostenlos,
   .kostenpflichtig {
-    border: solid 1px #00ceea;
-    color: #00ceea;
+    border: solid 1px #005a70;
+    color: #005a70;
   }
-  .kostenlos:hover,
-  .kostenpflichtig:hover,
-  .kostenlos.active,
-  .kostenpflichtig.active {
-    background-color: #00ceea;
+  .filter-element.kostenlos:hover,
+  .filter-element.kostenpflichtig:hover,
+  .filter-element.kostenlos.active,
+  .filter-element.kostenpflichtig.active {
+    background-color: #005a70;
+    border: solid 1px #005a70;
   }
 
   .card,
   .header-image,
   .nuxt-content p {
     background-color: rgb(245, 245, 245);
-    border: 1px solid rgb(19, 19, 19);
+  }
+  .card,
+  .header-image,
+  .nuxt-content {
+    border: 1px solid rgb(10, 10, 10);
   }
   .edit-link {
     background-color: rgb(245, 245, 245);
   }
   .footer-wrapper {
+    background-color: rgb(245, 245, 245);
+  }
+  .nuxt-content {
     background-color: rgb(245, 245, 245);
   }
 }

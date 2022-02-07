@@ -141,7 +141,6 @@ export default {
       let element;
       for (element of myArray) {
         element.link = element.path;
-        console.log(element);
       }
       return myArray;
     }

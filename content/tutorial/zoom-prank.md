@@ -7,7 +7,7 @@ description: "Ein Zoom-Prank reagiert auf Gesten die du vor der Kamera machst.
 preview: "Lege deine Kolleg:innen rein indem du ihnen einen Zoom-Prank spielst. "
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644232718/Tutorials/Zoom-Prank/Screenshot_2021-10-17_at_13.37.03_zyjrjp.png
 video: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1644232734/Tutorials/Zoom-Prank/Screen_Recording_2021-10-17_at_13.47.24_rhwpwi.mp4
-tag:
+level:
   - tutorial
   - low-code
   - kostenlos

@@ -75,8 +75,6 @@ export default {
   methods: {
     scrollSlideshow(direction) {
       const slideElement = document.getElementsByClassName("slide");
-      console.log(slideElement);
-      console.log(this.counter);
       slideElement[this.counter].scrollIntoView({
         behavior: "smooth",
         inline: "center",
@@ -177,5 +175,12 @@ export default {
 }
 splide__arrow--prev {
   background-image: url("/assets/outline_arrow_forward_black_24dp.png");
+}
+
+@media (prefers-color-scheme: light) {
+  .tutorial-text-wrapper {
+    background-color: rgb(245, 245, 245);
+    border: solid 1px rgb(10, 10, 10);
+  }
 }
 </style>

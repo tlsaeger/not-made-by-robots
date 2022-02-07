@@ -106,4 +106,10 @@ h3 {
 p {
   font-size: 1em;
 }
+@media (prefers-color-scheme: light) {
+  .the-imprint-wrapper {
+    background-color: rgb(245, 245, 245);
+    border: solid 1px rgb(10, 10, 10);
+  }
+}
 </style>

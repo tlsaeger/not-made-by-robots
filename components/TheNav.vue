@@ -51,9 +51,7 @@ export default {
     };
   },
   transition: {
-    afterLeave(el) {
-      console.log(el);
-    }
+    afterLeave(el) {}
   },
   methods: {
     //     scrollToEl: function(el) {
@@ -65,7 +63,6 @@ export default {
       this.$emit("burgerIsClicked", false);
     },
     afterLeave: function() {
-      console.log("afterLEave");
       this.afterNav = false;
     }
   }
