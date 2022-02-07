@@ -301,8 +301,8 @@ p {
   cursor: pointer;
 }
 
-.tag:hover,
-.tag.active {
+.filter-element.tag:hover,
+.filter-element.tag.active {
   background-color: #63e93a;
   color: rgb(10, 10, 10);
   transition: 0.1s;
@@ -319,14 +319,15 @@ p {
 .filter-element.high-code {
   margin-right: 0.8em;
 }
-.person:hover,
-.tool:hover,
-.tutorial:hover,
-.wissen:hover,
-.person.active,
-.tool.active,
-.tutorial.active,
-.wissen.active {
+
+.filter-element.person:hover,
+.filter-element.tool:hover,
+.filter-element.tutorial:hover,
+.filter-element.wissen:hover,
+.filter-element.person.active,
+.filter-element.tool.active,
+.filter-element.tutorial.active,
+.filter-element.wissen.active {
   background-color: #f876c1;
   transition: 0.2s;
 }
@@ -335,10 +336,10 @@ p {
   border-color: #12d7f1;
   color: #12d7f1;
 }
-.kostenlos:hover,
-.kostenpflichtig:hover,
-.kostenlos.active,
-.kostenpflichtig.active {
+.filter-element.kostenlos:hover,
+.filter-element.kostenpflichtig:hover,
+.filter-element.kostenlos.active,
+.filter-element.kostenpflichtig.active {
   background-color: #12d7f1;
 }
 .tag-container {
