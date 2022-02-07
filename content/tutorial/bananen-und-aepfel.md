@@ -19,11 +19,12 @@ tag:
   - no-code
   - kostenlos
 ---
+
 ### **0. Intro**
 
-Techable Machine ist ein vom Google Creative Lab entwickelte Plattform, die es dir ermöglicht ganz einfach dein eigenes Neuronales Netzwerk zu trainieren. Alles was du dafür brauchst, ist ein Computer und im besten Fall eine Webcam. 
+Techable Machine ist ein vom Google Creative Lab entwickelte Plattform, die es dir ermöglicht ganz einfach dein eigenes Neuronales Netzwerk zu trainieren. Alles was du dafür brauchst, ist ein Computer und im besten Fall eine Webcam.
 
-**1. Daten sammeln** 
+### **1. Daten sammeln** 
 
 In unserem simplen Beispiel, wollen wir eine Bildeerkennung trainieren, die Äpfel von Bananen unterscheiden kann. Öffne dazu zu erst die [teachablemachine.withgoogle.com↗︎](http://teachablemachine.withgoogle.com) Klicke auf Get-Stared und wähle das »Image Project«. Hier siehst du jetzt zwei Klassen, in einer Sammeln wir die Daten für den Apfel in der anderen für die Banane. Über den Stift können wir die Klassen entsprechend benennen. Klick dann auf Webcam nimm dein Obst zu Hand und sammle Bilder für den Apfel und Bilder für die Bananen indem du den Knopf »Hold to record« gedrückt hältst. Drehe das Obst dabei um es von allen Seiten und mit allen Entfernungen zur Kamera abzulichten.
 
@@ -45,6 +46,6 @@ In diesem erstem sehr einfachen Beispiel stecken schon eine Menge an Grundlegend
 
 Außerdem sehen wir wie wichtig es ist diverse Daten zu haben, da sonst eine gelbe Stelle das Apfels manchmal als Banane erkannt wurde. Vielleicht konnten wir beobachten, dass der Apfel oder die Bananen nicht immer zu 100% erkannt wurde. Hier zeigt sich, dass diese Model keine Intelligenz zu Grunde liegt. Es rät einfach nur sehr gut, mit einer Wahrscheinlichkeit von 99% ist das ein Apfel.
 
-### **5. Und jetzt?** 
+### **5. Und jetzt?**
 
-Dein Model kannst du jetzt auch in komplexere Code-Umgebungen wie z.B. ml5.js laden und dort auf einen Input reagieren. Siehe das Tutorial »Zoom-Prank«
+Dein Model kannst du jetzt auch in komplexere Code-Umgebungen wie z.B. ml5.js laden und dort auf einen Input reagieren. Siehe das Tutorial [»Zoom-Prank«](/tutorial/zoom-prank)

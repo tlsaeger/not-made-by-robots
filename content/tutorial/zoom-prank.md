@@ -12,8 +12,9 @@ tag:
   - low-code
   - kostenlos
 ---
-1. Befolge die Anweisung aus dem verlinkten Beispiel "**[Bananen und Äpfel](/tutorial/banenen-und-aepfel)**" soweit, dass du einen Link generiert hast. Diesen brauchen wir im Folgenden. Trainiere dabei eine Klasse mit deiner geheimen Geste, z.B. eine Hand macht ein Peace-Zeichen etc. Nenne diese »geheim«. Die andere Klasse trainierst du mit allem anderen, wie du gerade auf deinem Stuhl herum sitzt oder auch mal nicht da bist etc. nenne diese »leer«
-2. Wir benutzen um unseren Code zu schreiben den p5 Web-Editor, eine Einführung in diesen findest du hier:
+
+1. Befolge die Anweisung aus dem verlinkten Beispiel "**[Bananen und Äpfel](/tutorial/bananen-und-aepfel)**" soweit, dass du einen Link generiert hast. Diesen brauchen wir im Folgenden. Trainiere dabei eine Klasse mit deiner geheimen Geste, z.B. eine Hand macht ein Peace-Zeichen etc. Nenne diese »geheim«. Die andere Klasse trainierst du mit allem anderen, wie du gerade auf deinem Stuhl herum sitzt oder auch mal nicht da bist etc. nenne diese »leer«
+2. Wir benutzen um unseren Code zu schreiben den p5 Web-Editor, eine Einführung in diesen findest du [hier](https://www.youtube.com/watch?v=MXs1cOlidWs&ab_channel=TheCodingTrain). \
    Den Gesamten Code findest du übrigens auch ganz unten auf der Seite.
 3. Wir verwenden eine Bibliothek mit dem Namen ml5.js, die es uns ermöglicht, das Model aus Teachable Machine weiter zu verwenden und auf deine Geheime Geste zu reagieren. Um diese ansprechen zu können, müsse wir diese Bibliothek zu allererst einmal einbinden. Gehe dazu auf die Datei `index.html` im p5 Web-Editor. Füge die folgende Zeile (bunt) ein:
 
