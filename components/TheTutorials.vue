@@ -29,7 +29,7 @@
                 <p class="body-text">{{ tutorial.preview }} ↗︎</p>
                 <div class="tag-container">
                   <div v-for="levels in tutorial.level" :key="levels">
-                    <p class="level tag medi-tag" :class="levels">
+                    <p class="level filter-tag medi-tag" :class="levels">
                       {{ levels }}
                     </p>
                   </div>

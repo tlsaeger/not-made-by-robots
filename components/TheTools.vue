@@ -25,7 +25,7 @@
     </transition>
     <div class="filter">
       <div
-        class="filter-element kind tag"
+        class="filter-element kind filter-tag"
         :class="[filterValue]"
         @click="filtering($event, 'kind')"
         v-for="filterValue in filterValues.kind"
@@ -34,7 +34,7 @@
         {{ filterValue }}
       </div>
       <div
-        class="filter-element level tag"
+        class="filter-element level filter-tag"
         :class="[filterValue]"
         @click="filtering($event, 'level')"
         v-for="filterValue in filterValues.level"
@@ -43,7 +43,7 @@
         {{ filterValue }}
       </div>
       <div
-        class="filter-element preis tag"
+        class="filter-element preis filter-tag"
         :class="[filterValue]"
         @click="filtering($event, 'preis')"
         v-for="filterValue in filterValues.preis"
@@ -95,7 +95,7 @@
               <div
                 v-for="tag in ressource.level"
                 :key="tag"
-                class="tag mini-tag"
+                class="filter-tag mini-tag"
                 :class="tag"
               >
                 {{ tag }}
