@@ -12,7 +12,7 @@ description: Lerne mit Teachable Machine, wie du deine eigene Bilderkennung
 preview: Lerne mit Teachable Machine, wie du deine eigene Bilderkennung
   trainieren kannst.
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1623666944/Tutorials/tm_2_fce7lj.png
-video: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1644231852/Tutorials/Teachable%20Machine/Screen_Recording_2022-02-07_at_12.01.33_nr0rld.mp4
+video: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1644232180/Tutorials/Teachable%20Machine/Screen_Recording_2022-02-07_at_12.01.33_fmbfp8.mp4
 wissen_link: supervised-learning
 tag:
   - tutorial
