@@ -3,7 +3,7 @@ level:
   - tutorial
   - low-code
   - kostenlos
-title: Zoom Background 3000
+title: Bananen und Äpfel
 date: 2021-06-14T08:37:02.478Z
 description: Lerne mit Teachable Machine, wie du deine eigene Bilderkennung
   trainieren kannst. Ganz ohne Coding! Wir bauen uns eine Kamera die auf Gesten
@@ -13,9 +13,10 @@ preview: Lerne mit Teachable Machine, wie du deine eigene Bilderkennung
   trainieren kannst.
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1623666944/Tutorials/tm_2_fce7lj.png
 video: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1644231852/Tutorials/Teachable%20Machine/Screen_Recording_2022-02-07_at_12.01.33_nr0rld.mp4
+wissen_link: supervised-learning
 tag:
   - tutorial
-  - low-code
+  - no-code
   - kostenlos
 ---
 ### **0. Intro**
@@ -44,6 +45,6 @@ In diesem erstem sehr einfachen Beispiel stecken schon eine Menge an Grundlegend
 
 Außerdem sehen wir wie wichtig es ist diverse Daten zu haben, da sonst eine gelbe Stelle das Apfels manchmal als Banane erkannt wurde. Vielleicht konnten wir beobachten, dass der Apfel oder die Bananen nicht immer zu 100% erkannt wurde. Hier zeigt sich, dass diese Model keine Intelligenz zu Grunde liegt. Es rät einfach nur sehr gut, mit einer Wahrscheinlichkeit von 99% ist das ein Apfel.
 
-### **5. Weitere Ideen**
+### **5. Und jetzt?** 
 
-Font-Classifier, Integration in ml5.js
+Dein Model kannst du jetzt auch in komplexere Code-Umgebungen wie z.B. ml5.js laden und dort auf einen Input reagieren. Siehe das Tutorial »Zoom-Prank«
