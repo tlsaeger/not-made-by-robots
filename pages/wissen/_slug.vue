@@ -27,9 +27,15 @@
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
     <h2>Hands-On</h2>
-    <nuxt-link v-if="post.tutorial_link" :to="'/tutorial/' + refrence_tutorial">
-      {{ post.tutorial_link }}
-    </nuxt-link>
+    <div v-if="post.tutorial_link" class="hands-on-wrapper">
+      <nuxt-link
+        v-for="post in post.tutorial_link"
+        :key="post"
+        :to="'/tutorial/' + refrence_tutorial"
+      >
+        {{ post.tutorial_link }}
+      </nuxt-link>
+    </div>
     <!-- <p v-for="abschnitte in post.body.children.children" :key="abschnitte.value">{{ abschnitte }}</p> -->
   </div>
 </template>
