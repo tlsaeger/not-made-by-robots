@@ -3,7 +3,8 @@ title: NoseNet mit PoseNet
 date: 2022-02-07T10:27:02.108Z
 preview: "Du träumst davon eine digitale Clownsnase zu haben. Mit dieser
   Anleitung wird es Wirklichkeit. "
-wissen_link: Supervised-Learning
+wissen_link:
+  - supervised-learning
 level:
   - tutorial
   - low-code
