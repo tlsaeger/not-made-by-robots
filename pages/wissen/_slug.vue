@@ -26,17 +26,20 @@
     <nuxt-img class="header-image shadow" :src="post.image" />
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
-    <h2>Hands-On</h2>
-    <div v-if="post.tutorial_link" class="hands-on-wrapper">
+    <h2 class="title-ressources">Hands-On</h2>
+    <div
+      v-if="post.tutorial_link"
+      class="hands-on-wrapper text-block-wrapper text-block-wrapper-mini"
+    >
       <nuxt-link
-        v-for="post in post.tutorial_link"
-        :key="post"
-        :to="'/tutorial/' + refrence_tutorial"
+        class="card card-mini refrence-card"
+        v-for="tutorial in post.tutorial_link"
+        :key="tutorial"
+        :to="'/tutorial/' + tutorial"
       >
-        {{ post.tutorial_link }}
+        {{ tutorialHuman(tutorial) }}
       </nuxt-link>
     </div>
-    <!-- <p v-for="abschnitte in post.body.children.children" :key="abschnitte.value">{{ abschnitte }}</p> -->
   </div>
 </template>
 
@@ -63,8 +66,14 @@ export default {
   computed: {
     refrence_tutorial: function() {
       let updatedLink = this.post.tutorial_link;
-      updatedLink = updatedLink.replaceAll(" ", "-").toLowerCase();
       return updatedLink;
+    }
+  },
+  methods: {
+    tutorialHuman(el) {
+      let humanReadable = el.replaceAll("-", " ");
+      humanReadable = humanReadable.replaceAll("ae", "ä");
+      return humanReadable;
     }
   }
 };

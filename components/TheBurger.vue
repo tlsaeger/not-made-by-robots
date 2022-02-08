@@ -46,6 +46,7 @@ export default {
       if (pageIndexName === "") {
         pageIndexName = "Tutorials";
       }
+      pageIndexName = pageIndexName.replaceAll("ae", "ä");
       return pageIndexName;
     }
   },

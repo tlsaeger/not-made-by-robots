@@ -8,7 +8,6 @@ tutorial_link:
   - bananen-und-aepfel
   - nosenet-mit-posenet
   - zoom-prank
-  - ""
 level:
   - wissen
   - kostenlos

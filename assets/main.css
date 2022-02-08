@@ -197,6 +197,22 @@ p {
   /* padding: 0.3em; */
   margin: 0.5em;
 }
+.refrence-card {
+  padding: 0.3em;
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+.hands-on-wrapper {
+  margin-bottom: 1em;
+}
+.title-ressources {
+  justify-self: left;
+  align-self: flex-start;
+  margin-left: 5em;
+  margin-top: 1em;
+  padding: 0.3em;
+  text-transform: capitalize;
+}
 .desc-text-wrapper > h3 {
   font-size: 1.1em;
   line-height: 1;

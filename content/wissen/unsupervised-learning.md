@@ -7,7 +7,6 @@ description: Beim Unsupervised Learning werden Modelle trainiert ohne das
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1627826626/Wissen/Unsupervised%20Learning.png
 tutorial_link:
   - gaugan-der-landschaftsmaler
-  - ""
 level:
   - wissen
   - kostenlos
