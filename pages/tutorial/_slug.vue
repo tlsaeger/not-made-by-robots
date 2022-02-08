@@ -34,7 +34,20 @@
     <p class="nuxt-content post-descritption">{{ post.description }}</p>
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
-    <!-- <p v-for="abschnitte in post.body.children.children" :key="abschnitte.value">{{ abschnitte }}</p> -->
+    <h2 class="title-ressources">Infos</h2>
+    <div
+      v-if="post.wissen_link"
+      class="hands-on-wrapper text-block-wrapper text-block-wrapper-mini"
+    >
+      <nuxt-link
+        class="card card-mini refrence-card"
+        v-for="tutorial in post.wissen_link"
+        :key="tutorial"
+        :to="'/wissen/' + tutorial"
+      >
+        {{ tutorialHuman(tutorial) }}
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
@@ -61,6 +74,17 @@ export default {
   methods: {
     closingPanel() {
       this.showContribution = false;
+    },
+    tutorialHuman(el) {
+      let humanReadable = el.replaceAll("-", " ");
+      humanReadable = humanReadable.replaceAll("ae", "ä");
+      return humanReadable;
+    }
+  },
+  computed: {
+    refrence_tutorial: function() {
+      let updatedLink = this.post.tutorial_link;
+      return updatedLink;
     }
   }
 };

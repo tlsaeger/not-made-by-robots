@@ -5,7 +5,6 @@ preview: Lerne mit Teachable Machine, wie du deine eigene Bilderkennung
   trainieren kannst.
 wissen_link:
   - supervised-learning
-  - ""
 level:
   - tutorial
   - low-code
