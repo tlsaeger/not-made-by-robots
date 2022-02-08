@@ -4,7 +4,7 @@ date: 2021-07-30T15:36:54.103Z
 description: Beim Unsupervised Learning werden Modelle trainiert ohne das
   gelabeltete Daten vorliegen. Diese Methode eignet sich besonders um Daten zu
   Clustern…
-image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644323090/Wissen/fakes000000-unsupervised-2_kiiuhw.png
+image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1627826626/Wissen/Unsupervised%20Learning.png
 tutorial_link:
   - gaugan-der-landschaftsmaler
 level:
