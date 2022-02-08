@@ -101,7 +101,7 @@ h2 {
 }
 h3 {
   font-size: 2em;
-  margin: 0.3em 0;
+  margin: 0.3em 0 0.1em 0;
 }
 p {
   font-size: 1em;

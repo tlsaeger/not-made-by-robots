@@ -34,19 +34,21 @@
     <p class="nuxt-content post-descritption">{{ post.description }}</p>
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
-    <h2 class="title-ressources">Infos</h2>
-    <div
-      v-if="post.wissen_link"
-      class="hands-on-wrapper text-block-wrapper text-block-wrapper-mini"
-    >
-      <nuxt-link
-        class="card card-mini refrence-card"
-        v-for="tutorial in post.wissen_link"
-        :key="tutorial"
-        :to="'/wissen/' + tutorial"
+    <div class="resourcen-wrapper">
+      <h2 class="title-ressources">Infos</h2>
+      <div
+        v-if="post.wissen_link"
+        class="hands-on-wrapper text-block-wrapper text-block-wrapper-mini"
       >
-        {{ tutorialHuman(tutorial) }}
-      </nuxt-link>
+        <nuxt-link
+          class="card card-mini refrence-card"
+          v-for="tutorial in post.wissen_link"
+          :key="tutorial"
+          :to="'/wissen/' + tutorial"
+        >
+          {{ tutorialHuman(tutorial) }}
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>

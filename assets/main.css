@@ -2,7 +2,7 @@
   font-family: degular-text, sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #b171ff;
+  color: white;
   /* padding: 0.3em; */
 }
 /* body {
@@ -105,7 +105,7 @@ p {
   gap: 0.3em;
 }
 .contribution-icon {
-  border: solid 1px #8134df;
+  border: solid 1px rgb(245, 245, 245);
   border-radius: 0.5em;
 }
 .section-title {
@@ -116,12 +116,19 @@ p {
   display: none;
 }
 
+.nuxt-content-container {
+  display: flex;
+  justify-content: center;
+}
 .nuxt-content {
   background-color: rgb(10, 10, 10);
   margin: 0.3em 7rem;
   border-radius: 0.5em;
   border: solid 1px rgb(245, 245, 245);
   padding: 1em 1em;
+  width: 65%;
+  justify-self: center;
+  align-self: center;
 }
 .post-descritption {
   padding-left: 1.2em;
@@ -134,7 +141,7 @@ p {
 }
 .nuxt-content p {
   background-color: rgb(10, 10, 10);
-  width: 70%;
+  /* width: 70%; */
   border-radius: 0.5em;
   transition: 0.2s;
   margin-bottom: 0.8em;
@@ -148,6 +155,7 @@ p {
   transition: 0.2s;
   object-fit: contain;
   padding: 0;
+  max-height: 70vh;
 }
 .nuxt-content h3 > a {
   display: none;
@@ -177,6 +185,15 @@ p {
   opacity: 0;
   transform: translate3d(0, 15px, 0);
 }
+.resourcen-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 65%;
+}
 
 .card {
   border: solid 1px rgb(245, 245, 245);
@@ -201,14 +218,12 @@ p {
   padding: 0.3em;
   font-size: 1.2em;
   text-transform: capitalize;
+  margin-left: 0;
 }
 .hands-on-wrapper {
   margin-bottom: 1em;
 }
 .title-ressources {
-  justify-self: left;
-  align-self: flex-start;
-  margin-left: 5em;
   margin-top: 1em;
   padding: 0.3em;
   text-transform: capitalize;
@@ -279,7 +294,6 @@ p {
 }
 .text-block-wrapper-mini {
   justify-content: space-between;
-  padding: 0 7em;
 }
 
 .filter {
@@ -376,7 +390,7 @@ li {
   background-color: rgb(10, 10, 10);
   display: flex;
   height: 5em;
-  width: 100vw;
+  width: 100%;
   padding-left: 1em;
   padding-right: 1em;
   align-items: center;
@@ -388,7 +402,7 @@ li {
   border-top: solid 1px rgb(245, 245, 245);
 }
 .svg-icon-fill {
-  fill: #b171ff;
+  fill: white;
 }
 /* TODO better animation */
 .burger-enter-active,
@@ -422,13 +436,13 @@ li {
 
 @media (prefers-color-scheme: light) {
   * {
-    color: #8134df;
+    color: black;
   }
   body {
     background-color: rgb(236, 236, 236);
   }
   .svg-icon-fill {
-    fill: #8134df;
+    fill: black;
   }
   .edit-link-wrapper {
     background-color: rgb(245, 245, 245);
@@ -502,6 +516,9 @@ li {
   .nuxt-content {
     background-color: rgb(245, 245, 245);
   }
+  .contribution-icon {
+    border-color: #000;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -523,6 +540,7 @@ li {
   .nuxt-content {
     margin: 0.5em;
     padding: 0.6em;
+    width: 90%;
   }
   .nuxt-content p {
     width: 100%;

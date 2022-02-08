@@ -26,19 +26,21 @@
     <nuxt-img class="header-image shadow" :src="post.image" />
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
-    <h2 class="title-ressources">Hands-On</h2>
-    <div
-      v-if="post.tutorial_link"
-      class="hands-on-wrapper text-block-wrapper text-block-wrapper-mini"
-    >
-      <nuxt-link
-        class="card card-mini refrence-card"
-        v-for="tutorial in post.tutorial_link"
-        :key="tutorial"
-        :to="'/tutorial/' + tutorial"
+    <div class="resourcen-wrapper">
+      <h2 class="title-ressources">Hands-On</h2>
+      <div
+        v-if="post.tutorial_link"
+        class="hands-on-wrapper text-block-wrapper text-block-wrapper-mini"
       >
-        {{ tutorialHuman(tutorial) }}
-      </nuxt-link>
+        <nuxt-link
+          class="card card-mini refrence-card"
+          v-for="tutorial in post.tutorial_link"
+          :key="tutorial"
+          :to="'/tutorial/' + tutorial"
+        >
+          {{ tutorialHuman(tutorial) }}
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>

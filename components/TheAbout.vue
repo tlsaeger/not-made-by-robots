@@ -5,61 +5,47 @@
         <h2>About</h2>
         <p class="cross">X</p>
       </div>
-      <h3>
-        Angaben gemäß § 5 TMG
-      </h3>
       <p>
-        Tom-Lucas Säger <br />
-        Erika-Mann-Bogen 9 <br />
-        22081 Hamburg
+        Not Made by Robots ist eine Sammlung die es sich zur Aufgabe macht, dass
+        Thema der künstlichen Intelligenz an so viele Künstler:innen und
+        Designschaffende wie möglich heranzutragen. Diese Sammlung gibt dabei
+        einen Einblick in das Thema und sorgt mit einem »Hands-On-Approach«
+        dafür, dass sich jede:r auf einfach Weise die Hände schmutzig machen
+        kann.
       </p>
-      <h3>Kontakt</h3>
+      <br />
+      Die Sammlung bietet vier Kategorien an:
+      <h3>Tutorials</h3>
       <p>
-        E-Mail: mail@tlsaeger.de <br />
-        Webseite: <a href="tlsaeger.de">tlsager.de</a>
+        Hier kannst du »künstliche Intelligenz« ausprobiern. Dir wird ein
+        einfacher Einstieg gegeben außerdem lernst du auch ein bisschen coden.
+        Aber bloß keine Angst!
       </p>
-
-      <h3>Haftung für Inhalte</h3>
+      <h3>News</h3>
       <p>
-        Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf
-        diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8
-        bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet,
-        übermittelte oder gespeicherte fremde Informationen zu überwachen oder
-        nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit
-        hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
-        Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
-        Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
-        Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von
-        entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend
-        entfernen.
+        Was ist los in der Welt von zwischen Design und KI, ein Twitter-Bot
+        versorgt dich täglich mit den Nachrichten der wichtigsten Personen und
+        Institutionen aus dem Bereich AI & Design.
       </p>
-      <h3>Haftung für Links</h3>
+      <h3>Wissen</h3>
       <p>
-        Unser Angebot enthält Links zu externen Websites Dritter, auf deren
-        Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden
-        Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten
-        Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
-        verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der
-        Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte
-        waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente
-        inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete
-        Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden
-        von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+        Hier findest du Hintergrundwissen rund um das Thema, was ist nochmal
+        Supervised Learning, wie funktioniert ein GAN? Bald bist du schlauer!
       </p>
-      <h3>Urheberrecht</h3>
+      <h3>Ressourcen</h3>
       <p>
-        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen
-        Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,
-        Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
-        Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des
-        jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite
-        sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
-        Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden,
-        werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte
-        Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine
-        Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
-        entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden
-        wir derartige Inhalte umgehend entfernen. Quelle: eRecht24
+        Das Thema hat dich gecatcht und du willst loslaufen in die freie Welt
+        der KI, dann findest du hier ein paar gute Startpunkte, von denen du
+        deine Reise beginnen kannst.
+        <br />
+        Not Made by Robots ist eine Master-Arbeit von
+        <a href="https://tlsaeger.de" target="_blank">Tom-Lucas Säger</a>↗︎,
+        entstanden am Department Design der Hochschule für angewandte
+        Wissenschaften Hamburg. Betreut von Prof. Dr. Michaela Diener und Prof.
+        Peter Kabel. In Zusammenarbeit mit dem Forschungsprojekt
+        <a href="https://aixdesign.space" target="_blank">aiXdesign</a>↗︎.
+        <br />
+        Hamburg 2022
       </p>
     </div>
   </div>
@@ -101,10 +87,13 @@ h2 {
 }
 h3 {
   font-size: 2em;
-  margin: 0.3em 0;
+  margin: 0.3em 0 0.1em 0;
 }
 p {
   font-size: 1em;
+}
+a {
+  font-style: italic;
 }
 @media (prefers-color-scheme: light) {
   .the-imprint-wrapper {
