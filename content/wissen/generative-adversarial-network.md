@@ -15,7 +15,7 @@ Generative Adversarial Networks, kurz GAN, sind in der Lage neue Bilder zu gener
 
 ![](https://thispersondoesnotexist.com/image)
 
-Hier kommen die GANs ins Spiel, diese sind in der Lage neue Bilder zu erschaffen. Füttert man sie z.B. mit einem riesigen Datenset von Gesichtern, lernt das Modell was ein Gesicht ausmacht und kann ab einen bestimmten Punkt eigene Gesichter erstellen die für das menschliche Auge verblüffend Real aussehen. 
+Hier kommen die GANs ins Spiel, diese sind in der Lage neue Bilder zu erschaffen. Füttert man sie z.B. mit einem riesigen Datenset von Gesichtern, lernt das Modell was ein Gesicht ausmacht und kann ab einen bestimmten Punkt eigene Gesichter erstellen die für das menschliche Auge verblüffend Real aussehen. (Siehe oben)
 
 Wie machen diese Modelle das? Der Mechanismus dahinter ist sehr interessant und lässt sich am besten mit einem Beispiel aus der Kunstwelt veranschaulichen. Ein Modell übernimmt die Rolle der Kunstfälscher:in (KF) ein anderes das der Kunstkenner:in (KK). Der KK kennt alle Bilder der Welt, bzw. alle Bilder die wir als Datenset reingegeben haben. Der KF weiß gar nichts und beginnt mit einem wilden Pixelhaufen. Zeigt dies dem KK, der sagt zu 99,99% ist das eine Fälschung. Der KF versucht es wieder und wieder, bis irgendwann der KK sagt ok vielleicht zu 95% sicher, dass das eine Fälschung ist. Der KF baut darauf auf, bis er irgendwann ein Bild generiert, dass der KK nicht mehr von original Datensatz unterscheiden kann. 
 
