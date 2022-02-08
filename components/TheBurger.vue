@@ -121,4 +121,15 @@ export default {
     display: none;
   }
 }
+@media only screen and (max-width: 600px) {
+  .page-index {
+    font-size: 1.3em;
+  }
+  .nav-title {
+    font-size: 0.6em;
+  }
+  .burger-icon {
+    font-size: 1.3em;
+  }
+}
 </style>

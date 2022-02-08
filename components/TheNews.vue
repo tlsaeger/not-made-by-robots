@@ -9,7 +9,6 @@
           target="_blank"
           class="card card-mini shadow shadow-hover news-card"
         >
-          <!-- <video class="preview-image preview-image-mini" v-if="'media' in tweet.entities && 'video_info' in tweet.extended_entities.media[0]" :src="tweet.extended_entities.media[0].video_info.variants[2].url" :type="tweet.extended_entities.media[0].video_info.variants[2].content_type" autoplay muted loop >  </video> -->
           <img
             class="preview-image preview-image-mini"
             v-if="'media' in tweet.entities"

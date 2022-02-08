@@ -22,6 +22,7 @@
               autoplay
               loop
               muted
+              playsinline
             ></video>
             <transition name="moveUp">
               <div class="tutorial-text-wrapper">
@@ -181,6 +182,11 @@ splide__arrow--prev {
   .tutorial-text-wrapper {
     background-color: rgb(245, 245, 245);
     border: solid 1px rgb(10, 10, 10);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .tutorial-text-wrapper {
+    width: 90%;
   }
 }
 </style>

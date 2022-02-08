@@ -29,6 +29,7 @@
       autoplay
       loop
       muted
+      playsinline
     ></video>
     <p class="nuxt-content post-descritption">{{ post.description }}</p>
     <!-- <p>{{ post.description }}</p> -->

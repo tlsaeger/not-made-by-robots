@@ -135,4 +135,13 @@ export default {
     border: solid 1px rgb(19, 19, 19);
   }
 }
+@media only screen and (max-width: 600px) {
+  .nav-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .nav-text {
+    font-size: 4.5em;
+  }
+}
 </style>
