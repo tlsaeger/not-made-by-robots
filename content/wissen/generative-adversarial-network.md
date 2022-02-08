@@ -13,7 +13,7 @@ level:
 ---
 Generative Adversarial Networks, kurz GAN, sind in der Lage neue Bilder zu generieren. Einige Machine Learning Modelle sind sehr gut darin Katzen zu erkennen oder von Hunden zu unterscheiden, sie können Krebs erkennen oder Songs identifizieren. Sie können also sehr gut klassifizieren, was sie aber überhaupt nicht können ist neue Dinge auf Grund ihres Wissen erstellen. Sie können zwar einen Hund erkennen, wenn sie einen sehen, nicht aber einen neuen Hund zeichnen. 
 
-![](https://thispersondoesnotexist.com/image)
+![](https://thispersondoesnotexist.com/image "thispersondoesnotexist.com")
 
 Hier kommen die GANs ins Spiel, diese sind in der Lage neue Bilder zu erschaffen. Füttert man sie z.B. mit einem riesigen Datenset von Gesichtern, lernt das Modell was ein Gesicht ausmacht und kann ab einen bestimmten Punkt eigene Gesichter erstellen die für das menschliche Auge verblüffend Real aussehen. (Siehe oben)
 
