@@ -5,7 +5,7 @@ preview: Mit einem Gebirgs-Pinsel verschneite Gipfel zaubern und mit dem
   See-Pinsel verfeinern, all das kann Nvidias GauGAN. Jetzt entdecken!
 wissen_link:
   - generative-adversarial-network
-  - ""
+  - unsupervised-learning
 level:
   - tutorial
   - no-code
