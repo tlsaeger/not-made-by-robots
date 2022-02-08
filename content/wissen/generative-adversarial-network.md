@@ -5,7 +5,9 @@ description: Generative Adersverial Networks, sind Netzwerke, die u.a. »neue«
   Bilder generieren können. Sie bestehen aus zwei Netzwerken die miteinander
   kämpfen…
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1627824313/Wissen/GAN.png
-tutorial_link: gaugan-der-landschaftsmaler
+tutorial_link:
+  - gaugan-der-landschaftsmaler
+  - ""
 level:
   - wissen
   - kostenlos
