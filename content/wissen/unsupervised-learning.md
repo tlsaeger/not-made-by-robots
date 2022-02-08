@@ -4,7 +4,7 @@ date: 2021-07-30T15:36:54.103Z
 description: Beim Unsupervised Learning werden Modelle trainiert ohne das
   gelabeltete Daten vorliegen. Diese Methode eignet sich besonders um Daten zu
   Clustern…
-image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1627826626/Wissen/Unsupervised%20Learning.png
+image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644323090/Wissen/fakes000000-unsupervised-2_kiiuhw.png
 tutorial_link:
   - gaugan-der-landschaftsmaler
 level:
@@ -15,4 +15,4 @@ Beim Unsupervised Learning werden im Gegensatz zum Supervised Learning Daten in 
 
 Unsupervised Learning Modelle eignen sich darum sehr gut zum Clustern von Daten und erkennen von Mustern in diesen. Ein sehr bekanntes Beispiel für ein unsupervised Learning sind die so genannten Generative Adversarial Networks. Diese sind einmal trainiert in der Lage neue Bilder zu generieren. 
 
-![](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644322537/Wissen/fakes000000-unsupervies_1_n2qca8.png)
+![](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644323090/Wissen/fakes000000-unsupervised-2_kiiuhw.png)
