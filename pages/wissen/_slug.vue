@@ -26,7 +26,7 @@
     <nuxt-img class="header-image shadow" :src="post.image" />
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
-    <div class="resourcen-wrapper">
+    <div class="resourcen-wrapper hands-on-wrapper">
       <h2 class="title-ressources">Hands-On</h2>
       <div
         v-if="post.tutorial_link"

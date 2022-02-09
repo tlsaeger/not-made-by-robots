@@ -34,7 +34,7 @@
     <p class="nuxt-content post-descritption">{{ post.description }}</p>
     <!-- <p>{{ post.description }}</p> -->
     <nuxt-content :document="post" />
-    <div class="resourcen-wrapper">
+    <div class="resourcen-wrapper hands-on-wrapper">
       <h2 class="title-ressources">Infos</h2>
       <div
         v-if="post.wissen_link"
