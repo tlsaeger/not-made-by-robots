@@ -12,7 +12,6 @@ wissen_link:
 level:
   - tutorial
   - low-code
-  - high-code
   - kostenlos
 ---
 
