@@ -10,6 +10,7 @@ tags:
   - low-code
   - kostenlos
 level:
+  - tool
   - low-code
   - free
 ---
