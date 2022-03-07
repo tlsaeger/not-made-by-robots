@@ -1,52 +1,49 @@
 ---
-title: Bananen und Äpfel
+title: Apples and Bananas
 date: 2021-06-14T08:37:02.478Z
-preview: Lerne mit Teachable Machine, wie du deine eigene Bilderkennung
-  trainieren kannst.
+preview: Learn how to train your own image recognition with Teachable Machine.
 wissen_link:
   - supervised-learning
 level:
   - tutorial
-  - low-code
-  - kostenlos
+  - no-code
+  - free
 tag:
   - tutorial
   - no-code
   - kostenlos
-description: Lerne mit Teachable Machine, wie du deine eigene Bilderkennung
-  trainieren kannst. Ganz ohne Coding! Wir bauen uns eine Kamera die auf Gesten
-  reagiert, damit kannst du deine Freunde darauf hinweisen, dass sie auf »Mute«
-  sind.
+description: Learn how to train your own image recognition with Teachable
+  Machine. Without any coding! We'll build a camera that reacts to gestures, so
+  you can tell your friends that they're on mute.
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1623666944/Tutorials/tm_2_fce7lj.png
 video: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1644232180/Tutorials/Teachable%20Machine/Screen_Recording_2022-02-07_at_12.01.33_fmbfp8.mp4
 ---
-
 ### **0. Intro**
 
-Techable Machine ist ein vom Google Creative Lab entwickelte Plattform, die es dir ermöglicht ganz einfach dein eigenes Neuronales Netzwerk zu trainieren. Alles was du dafür brauchst, ist ein Computer und im besten Fall eine Webcam.
+Techable Machine is a platform developed by Google Creative Lab that allows you to easily train your own neural network. All you need is a computer and, ideally, a webcam.
 
-### **1. Daten sammeln** 
+### **1. Collecting Data**
 
-In unserem simplen Beispiel, wollen wir eine Bildeerkennung trainieren, die Äpfel von Bananen unterscheiden kann. Öffne dazu zu erst die [teachablemachine.withgoogle.com↗︎](http://teachablemachine.withgoogle.com) Klicke auf Get-Stared und wähle das »Image Project«. Hier siehst du jetzt zwei Klassen, in einer Sammeln wir die Daten für den Apfel in der anderen für die Banane. Über den Stift können wir die Klassen entsprechend benennen. Klick dann auf Webcam nimm dein Obst zu Hand und sammle Bilder für den Apfel und Bilder für die Bananen indem du den Knopf »Hold to record« gedrückt hältst. Drehe das Obst dabei um es von allen Seiten und mit allen Entfernungen zur Kamera abzulichten.
+In our simple example, we want to train an image recogniser that can distinguish apples from bananas. First open the [teachablemachine.withgoogle.com︎](http://teachablemachine.withgoogle.com)[↗︎](http://teachablemachine.withgoogle.com) Click on Get-Started and select the "Image Project". Here you see two classes, we use one for the apple and one for the banana. We can use the pencil to name the classes accordingly. Then click on Webcam, take your fruit and collect images for the apple and images for the banana by holding down the button "Hold to record". Rotate the fruit to take pictures of it from all sides and at all distances from the camera.
 
 ![](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1623666894/Tutorials/tm_1_cjhlll.png)
 
-### **2. Trainieren**
+### **2. Train**
 
-Um das Model jetzt zu trainieren, klicke einfach auf den Knopf »Train Model«, behalte das Browserfenster offen und warte ab bis das Training abgeschlossen ist. Tipp: Wenn du Wissen willst, was unter der Haube los ist, klick auf »Advanced« → »Under the Hood«
+To train the model now, simply click on the "Train Model" button, keep the browser window open and wait for the training to complete. Tip: If you want to know what's going on under the bonnet, click on "Advanced" → "Under the Hood".
 
-### **3. Testen** 
+### **3. Test**
 
-Ist das Training abgeschlossen, können wir nun die Erkennung testen. Halte dazu wieder die Frucht deiner Wahl in die Kamera, unten bekommst du angezeigt wie wahrscheinlich es dein Model findet, dass du diesem einen Apfel oder eine Banane zeigst. Wird der Apfel als Banane klassifiziert, kann es sein, dass deine Daten nicht divers genug waren. Zeigen sie den Apfel aus allen Winkeln und in vielen verschiedenen Positionen? Füge einer Klasse weitere Daten, diversere Daten hinzu und trainiere das Model erneut.
+Once the training is complete, we can now test the recognition. To do this, hold the fruit of your choice in the camera again, and at the bottom you will see how likely your model thinks it is that you are showing it an apple or a banana. If the apple is classified as a banana, your data may not have been diverse enough. Do the images show the apple from all angles and in many different positions? Add more data, more diverse data to a class and train the model again.
 
 ![](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1623666944/Tutorials/tm_2_fce7lj.png)
 
-### **4. Was haben wir gelernt?**
+### **4.** What we have learned**?**
 
-In diesem erstem sehr einfachen Beispiel stecken schon eine Menge an Grundlegenden Prinzipen des ML's Wir nutzen hier ein Neuronales Netzwerk und das so genannte [Supervised Learning](/wissen/supervised-learning), weitere Infos dazu findest du auf der nächsten Seite oder auf loremaipsum.design
+In this first very simple example, there are already a lot of basic principles of ML. We use a neural network and the so-called [supervised learning](/wissen/supervised-learning), you can find more information about this on the [theory page](/wissen/supervised-learning).
 
-Außerdem sehen wir wie wichtig es ist diverse Daten zu haben, da sonst eine gelbe Stelle das Apfels manchmal als Banane erkannt wurde. Vielleicht konnten wir beobachten, dass der Apfel oder die Bananen nicht immer zu 100% erkannt wurde. Hier zeigt sich, dass diese Model keine Intelligenz zu Grunde liegt. Es rät einfach nur sehr gut, mit einer Wahrscheinlichkeit von 99% ist das ein Apfel.
+We also see how important it is to have diverse data, otherwise a yellow part of the apple was sometimes recognised as a banana. Perhaps we could observe that the apple or the banana was not always 100% recognised. This shows that this model is not based on intelligence. It just guesses very well, with a probability of 99% it is an apple.
 
-### **5. Und jetzt?**
+### **5. And now?**
 
-Dein Model kannst du jetzt auch in komplexere Code-Umgebungen wie z.B. ml5.js laden und dort auf einen Input reagieren. Siehe das Tutorial [»Zoom-Prank«](/tutorial/zoom-prank)
+You can now load your model into more complex code environments such as ml5.js and react to an input there. See the tutorial [»Zoom-Prank«](/tutorial/zoom-prank)
