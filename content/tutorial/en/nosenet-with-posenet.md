@@ -1,28 +1,28 @@
 ---
-title: NoseNet mit PoseNet
+title: NoseNet with PoseNet
 date: 2022-02-07T10:27:02.108Z
-preview: "Du träumst davon eine digitale Clownsnase zu haben. Mit dieser
-  Anleitung wird es Wirklichkeit. "
+preview: "You dream of having a digital clown nose. With this guide, it becomes
+  a reality. "
 wissen_link:
   - supervised-learning
 level:
   - tutorial
   - low-code
-  - kostenlos
+  - free
 tag:
   - tutorial
   - low-code
   - kostenlos
-description: "Du träumst davon eine digitale Clownsnase zu haben. Mit dieser
-  Anleitung wird es Wirklichkeit. PoseNet ist darauf trainiert, Körper zu
-  erkennen und einzelne Bereiche zu klassifizieren. Wir machen uns dies zu Nutze
-  und verpassen uns eine rote Clownsnase. "
+description: "You dream of having a digital clown nose. With this guide, it
+  becomes a reality. PoseNet is trained to recognise bodies and classify
+  individual areas. We take advantage of this and give ourselves a red clown
+  nose. "
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644229899/Tutorials/PoseNet%20NoseNet/Screenshot_2022-02-07_at_11.29.25_pcz10f.jpg
 video: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1644229910/Tutorials/PoseNet%20NoseNet/Screen_20Recording_202021-11-15_20at_2017.17.57_g6brm5.mp4
 ---
-2. Wir benutzen um unseren Code zu schreiben den p5 Web-Editor, eine Einführung in diesen findest du [hier](https://www.youtube.com/watch?v=MXs1cOlidWs&ab_channel=TheCodingTrain). \
-   Den Gesamten Code findest du übrigens auch ganz unten auf der Seite.
-3. Wir verwenden eine Bibliothek mit dem Namen ml5.js, die es uns ermöglicht PoseNet zu verwenden. Um diese ansprechen zu können, müsse wir diese Bibliothek zu allererst einmal einbinden. Gehe dazu auf die Datei `index.html` im p5 Web-Editor. Füge die folgende Zeile ein:
+2. We use the p5 web editor to write our code, you can find an introduction to it [here](https://www.youtube.com/watch?v=MXs1cOlidWs&ab_channel=TheCodingTrain). \
+      You can also find the complete code at the bottom of the page.
+3. We use a library called ml5.js, which enables us to use PoseNet. In order to be able to access this library, we must first of all include it. To do this, go to the file `index.html` in the p5 web editor. Insert the following line:
 
 ```jsx
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
@@ -30,7 +30,7 @@ video: https://res.cloudinary.com/dt5cqs0lv/video/upload/v1644229910/Tutorials/P
 <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 ```
 
-1. Haben wir das geschafft, bewegen wir uns fast ausschließlich in der Datei `sketch.js`, wechsle dahin zurück. Zu allererst wollen wir uns selber auf dem Bildschirm sehen. Dazu sprechen wir ersteinmal unserer Webcam an. Füge die folgenden Zeilen der `setup()` Funktion zu und bestimme die Variable `video` außerhalb der Funktion.
+1. Once we have done that, we move almost exclusively in the file `sketch.js`, switch back to that. First of all, we want to see ourselves on the screen. To do this, we first address our webcam. Add the following lines to the `setup()` function and set the variable `video` outside the function.
 
 ```jsx
 let video;
@@ -43,7 +43,7 @@ function setup() {
 
 ![Screenshot%202021-10-17%20at%2013.30.30.png](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644232719/Tutorials/Zoom-Prank/Screenshot202021-10-1720at2013.30.30_lood7m.png)
 
-1. Wenn wir jetzt den Sketch starten, wird uns der Browser vielleicht fragen ob er auf unserer Kamera zugreifen darf, wir akzeptieren das und sollten uns jetzt unter dem Canvas auf dem Bildschirm sehen können. Damit unser Bild im Canvas gezeigt wird blenden wir es im Setup über `video.hide()` aus und zeichnen es dann in der `draw()` Funktion.
+1. When we now start the sketch, the browser may ask us if it can access our camera, we accept this and should now be able to see ourselves under the canvas on the screen. To show our image in the canvas we hide it in the setup via `video.hide()` and then draw it in the `draw()` function.
 
 ```jsx
 function setup() {
@@ -60,8 +60,8 @@ function draw() {
 
 ![Screenshot 2021-10-17 at 13.31.33.png](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644232719/Tutorials/Zoom-Prank/Screenshot_2021-10-17_at_13.31.33_wwq3dh.png)
 
-1. Jetzt ist es Zeit unser PoseNet Model zu laden. Wir gehen die Schritte gleich gemeinsam durch, du findest auch alle Informationen in der Dokumentation von [ml5.js](https://learn.ml5js.org/#/reference/posenet) <https://learn.ml5js.org/#/reference/posenet>
-   Wir beginnen damit das PoseNet Model in eine Variable zu laden. Dazu erstellen wir die Variable poseNet über `let poseNet;` Dann initialisieren wir das `ml5.posenet` im `Setup()`, das Modell will von uns noch zwei weitere Sachen wissen, welches Video soll denn klassifiziert werden und was soll passieren wenn das Modell geladen ist. Als Video nutzen wir unserer Variable `video` und wenn das Model geladen ist soll unsere Funktion `modelLoaded` ausgeführt werden. Die Funktion gibt uns dann über console.log("Model Loaded") zu wissen wann das Model geladen ist:
+1. Now it's time to load our PoseNet model. We'll go through the steps together in a moment, you can also find all the information in the documentation of [ml5.js](https://learn.ml5js.org/#/reference/posenet) <https://learn.ml5js.org/#/reference/posenet>.
+      We start by loading the PoseNet model into a variable. To do this we create the variable poseNet via `let poseNet;` Then we initialise the `ml5.posenet` in `Setup()`, the model wants to know two more things from us, which video should be classified and what should happen when the model is loaded. For the video we use our variable `video` and when the model is loaded our function `modelLoaded` should be executed. The function then tells us via console.log("Model Loaded") when the model is loaded:
 
 ```jsx
 let video;
@@ -85,7 +85,7 @@ function modelLoaded() {
 }
 ```
 
-1. Als nächstes definieren wir, dass immer dann wenn das Model eine neue Pose erkannt hat es die Funktion `gotResults()` ausführt. Die Funktion dazu heißt `poseNet.on("pose", gotResult);`
+1. Next, we define that whenever the model has detected a new pose, it executes the function `gotResults()`. The function is called `poseNet.on("pose", gotResult);`
 
 ```jsx
 function setup() {
@@ -98,7 +98,7 @@ function setup() {
 }
 ```
 
-1. Unserer Posen wollen wir uns wieder speichern und erstellen dazu die Variable poses, da wir aus PoseNet nicht einen Wert herausbekommen, sondern eine Liste an Werten müssen wir die Variable als sogennates Array initialisieren. Wir schreiben: `let poses = [];` Dann können wir die Funktion `gotResults()` erstellen, sie dient dazu die Resultate von PoseNet in der eben erstellten Variablen zu speichern:
+1. We want to save our poses again and create the variable poses, because we don't get a value out of PoseNet, but a list of values, we have to initialise the variable as a so-called array. We write: `let poses = [];` Then we can create the function `gotResults()`, which is used to store the results of PoseNet in the variable we just created:
 
 ```jsx
 let video;
@@ -126,7 +126,7 @@ function gotResults(results) {
 }
 ```
 
-1. Nun wollen wir die Punkte die PoseNet in unserem Video erkannt hat auch auf unserer Körper zeichnen. Zur besseren Übersicht erstellen wir uns eine Funktion mit dem Namen `drawKeypoints()` Wie bereits im vorangegangenen Schritt erwähnt, gibt uns PoseNet eine lange Liste zurück darin unsere 17 Punkte, das ganze für bis zu 5 Personen. Hier mal ein kleiner Ausschnitt aus den Daten, die wir zurückbekommen:
+1. Now we want to draw the points that PoseNet recognised in our video on our bodies. For a better overview we create a function called `drawKeypoints()` As already mentioned in the previous step, PoseNet returns a long list with our 17 points, the whole for up to 5 persons. Here is a small excerpt of the data we get back:
 
 ```jsx
 [
@@ -163,9 +163,9 @@ function gotResults(results) {
 ]
 ```
 
-1. Wir sehen ganz viele Datenpunkt die ähnlich von einem Ordner strukturiert sind. Der oberste Ordner (blau) hat Daten über die gesamte Pose, inklusive eines `"score"` wie sicher sich PoseNet ist, dass da überhaupt eine Person erkannt wurde. Unter dem Schlüsselwort `"key points"` geht dann der nächste Ordner auf, dieser beinhaltet wiederum drei Elemente. Diese haben wieder einen `"score"` sowie einen `"part"` also ein Name z.B. `"nose"` und besonders wichtig die `"x"` und `"y"` `"position"`. Wo sich also unsere Nase befindet. Das ganze gibt es dann auch noch für das linke und rechte Auge und alle restlichen 14 Punkte des Modells.
-2. Zu allererst wollen wir jetzt einmal alle Punkte zeichnen, die uns das Model zurückgibt. Dafür arbeiten wir mit einem `for-loop` dieser wiederholt eine gegeben Aufgabe so oft wir eben wollen. Wir definieren den `for-loop` mit `for (let i = 0; i < poses.length; i++)`. Auf deutsch heißt das erstelle eine Variable `let i = 0` solange i kleine ist als die Anzahl der Posen (`i < poses.length;`) führe den das aus was wir gleich schreiben und dann erhöhe i um eins (`i++`). In unser Ordner Logik sind wollen wir jetzt erstmal auf alle Personen zugreifen die PoseNet erkennt. Dafür speichern wir jede Person in einer neuen Variable `let pose = poses[i].pose` (blau). Dann wiederholen wir das ganze für alle Punkte die erkannt werden in dem wir durch dieses neue Array loopen `for (let j = 0; j < pose.keypoints.length; j++)`, darin wiederum picken wir uns die Keypoints raus und zeichnen an deren X- und Y-Position ein grünen Kreis.\
-   `fill(0, 255, 0); noStroke(); ellipse(keypoint.position.x, keypoint.position.y, 10, 10);` Unsere Funktion sieht dann so aus:
+1. We see many data points structured like a folder. The top folder (blue) has data about the entire pose, including a score of how sure PoseNet is that a person has been recognised. Under the keyword `"key points"` the next folder opens, which again contains three elements. These again have a `"score"` as well as a `"part"`, i.e. a name, e.g. `"nose"`, and most importantly the `"x"` and `"y"` `"position"`. Where our nose is located. This is also available for the left and right eye and all the other 14 points of the model.
+2. First of all, we want to draw all the points that the model returns. For this we work with a `for-loop` which repeats a given task as often as we want. We define the `for-loop` with `for (let i = 0; i < poses.length; i++)`. This means create a variable `let i = 0` as long as i is smaller than the number of poses (`i < poses.length;`) execute what we are about to write and then increase i by one (`i++`). In our Logic folder we now want to access all the people that PoseNet recognises. For this we store each person in a new variable `let pose = poses[i].pose` (blue). Then we repeat the whole thing for all points that are recognised by looping through this new array `for (let j = 0; j < pose.keypoints.length; j++)`, in which we again pick out the keypoints and draw a green circle at their X- and Y-positions.\
+      `fill(0, 255, 0); noStroke(); ellipse(keypoint.position.x, keypoint.position.y, 10, 10);` Our function then looks like this:
 
 ```jsx
 function drawKeypoints() {
@@ -181,7 +181,7 @@ function drawKeypoints() {
 }
 ```
 
-1. Jede Funktion die wir schreiben müssen wir auch irgendwo aufrufen, sonst sehen wir nicht. Das tun wir in der `draw()` Funktion, sodass unsere Keypoints 60 mal die Sekunde neu gezeichnet werden.
+1. Eery function we write we have to call somewhere, otherwise we don't see. We do this in the `draw()` function so that our keypoints are redrawn 60 times a second.
 
 ```jsx
 function draw() {
@@ -193,7 +193,7 @@ function draw() {
 
 ![Screenshot 2021-11-15 at 16.50.38.png](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644238344/Tutorials/PoseNet%20NoseNet/Screenshot_2021-11-15_at_16.50.38_bmyrim.png)
 
-12. Nun wollen wir nur noch die Nase identifizieren und dieser dann einen roten Kreis als Clownsnase geben. In dem Auszug aus der Antwort von PoseNet haben wir gesehen, dass die Nase das erste Objekt war. Dahingehend können wir nun den Code anpassen. Anstatt durch alle Punkte zu loopen, brauchen wir noch den ersten Punkt anzusprechen. Wir ersetzen den zweiten Loop mit `let keypoint = pose.keypoints[0];` das erstes Element eines Arrays spricht man nicht etwa mit 1 an sonder mit 0, deshalb die 0 in der eckigen Klammer. Der Rest bleibt unverändert. (Vergiss nicht die schließende Klammer des zweiten for-loops auch zu löschen.)
+12. Now we just want to identify the nose and then give it a red circle as a clown nose. In the excerpt from PoseNet's answer, we saw that the nose was the first object. We can now adjust the code accordingly. Instead of looping through all the points, we still need to address the first point. We replace the second loop with `let keypoint = pose.keypoints[0];` the first element of an array is not addressed with 1 but with 0, hence the 0 in the square bracket. The rest remains unchanged. (Don't forget to delete the closing bracket of the second for-loop).
 
 ```jsx
 function drawKeypoints() {
@@ -207,8 +207,8 @@ function drawKeypoints() {
 }
 ```
 
-1. Als letztes müssen wir die Nase nur noch rot und etwas größer machen. `fill(255, 0, 0);` `ellipse(keypoint.position.x, keypoint.position.y,50, 50);`
-   Der vollständige Code sieht dann so aus:
+1. The last thing we have to do is make the nose red and a little bigger. `fill(255, 0, 0);` `ellipse(keypoint.position.x, keypoint.position.y,50, 50);`
+   The complete code then looks like this:
 
 ```jsx
 let video;
