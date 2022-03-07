@@ -15,6 +15,6 @@ level:
   - tool
   - no-code
   - low-code
-  - kostenlos
-  - kostenpflichtig
+  - free
+  - premium
 ---
