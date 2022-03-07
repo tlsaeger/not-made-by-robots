@@ -50,13 +50,14 @@ collections:
         }
       - { label: "Preview", name: "preview", widget: "string", i18n: true }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Video", name: "video", widget: "image" }
+      - { label: "Image", name: "image", widget: "image", i18n: true }
+      - { label: "Video", name: "video", widget: "image", i18n: true }
       - {
           label: "Wissen",
           name: "wissen_link",
           widget: "list",
           required: false,
+          i18n: true,
         }
       - {
           label: "Level",
@@ -98,17 +99,19 @@ collections:
           i18n: true,
         }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image", name: "image", widget: "image", i18n: true }
       - {
           label: "Tutorial",
           name: "tutorial_link",
           widget: "list",
           requiered: false,
+          i18n: true,
         }
       - {
           label: "Level",
           name: "level",
           widget: "select",
+          i18n: true,
           options:
             [
               "tutorial",
@@ -143,8 +146,8 @@ collections:
           widget: "string",
           i18n: true,
         }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", i18n: true }
+      - { label: "Link", name: "link", widget: "string", i18n: true }
       - {
           label: "Level",
           name: "level",
@@ -153,6 +156,7 @@ collections:
           options:
             [
               "person",
+              "tool",
               "tutorial",
               "wissen",
               "theory",
