@@ -2,7 +2,12 @@
   <div class="footer-wrapper">
     <div class="imprint-about">
       <div @click="showAbout = true">About</div>
-      <div @click="showImprint = true">Impressum</div>
+      <div v-if="this.selectedLang == 'de'" @click="showImprint = true">
+        Impressum
+      </div>
+      <div v-else-if="this.selectedLang == 'en'" @click="showImprint = true">
+        Legal Notice
+      </div>
     </div>
     <div class="social-media">
       <a
@@ -138,8 +143,14 @@ export default {
   data() {
     return {
       showImprint: false,
-      showAbout: false
+      showAbout: false,
+      selectedLang: "en"
     };
+  },
+  beforeMount() {
+    if (navigator.language === "de") {
+      this.selectedLang = "de";
+    }
   },
   methods: {
     closeSomething(name) {
@@ -160,7 +171,7 @@ export default {
 .imprint-about {
   display: flex;
   flex-direction: row;
-  gap: 0.3em;
+  gap: 0.6em;
 }
 .imprint-about > div {
   transition: 0.2s;

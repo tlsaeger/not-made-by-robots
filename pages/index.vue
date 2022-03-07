@@ -19,19 +19,19 @@ export default {
 
   async asyncData({ $content, params, error }) {
     let tutorials;
-
-    let ressourcen;
+    let lang = navigator.language;
+    if (lang != "de") {
+      lang = "en";
+    } else if (lang == "de") {
+      lang = "de";
+    }
     try {
-      tutorials = await $content("tutorial", params.slug).fetch();
-      ressourcen = await $content("ressourcen", params.slug).fetch();
-      // OR const article = await $content(`articles/${params.slug}`).fetch()
+      tutorials = await $content("tutorial", lang, params.slug).fetch();
     } catch (e) {
       error({ message: "Blog Post not found" });
     }
-
     return {
-      tutorials,
-      ressourcen
+      tutorials
     };
   }
 };

@@ -2,14 +2,22 @@
   <div class="detail-page-main">
     <div class="edit-link-wrapper">
       <a
+        v-if="lang == 'de'"
         :href="
-          'https://github.com/tlsaeger/not-made-by-robots/blob/main/content' +
-            this.$route.path +
-            '.md'
+          'https://github.com/tlsaeger/not-made-by-robots/tree/main/content'
         "
         class="edit-link"
         target="_blank"
         >Seite Bearbeiten
+      </a>
+      <a
+        v-if="lang == 'en'"
+        :href="
+          'https://github.com/tlsaeger/not-made-by-robots/tree/main/content'
+        "
+        class="edit-link"
+        target="_blank"
+        >Edit Page
       </a>
       <p
         @click="showContribution = !showContribution"
@@ -56,15 +64,21 @@
 <script>
 export default {
   async asyncData({ $content, params, error }) {
+    let lang = navigator.language;
+    if (lang != "de") {
+      lang = "en";
+    } else if (lang == "de") {
+      lang = "de";
+    }
     let post;
     try {
-      post = await $content("tutorial", params.slug).fetch();
-      // OR const article = await $content(`articles/${params.slug}`).fetch()
+      post = await $content("tutorial", lang, params.slug).fetch();
     } catch (e) {
       error({ message: "Blog Post not found" });
     }
     return {
-      post
+      post,
+      lang
     };
   },
   data() {

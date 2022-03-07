@@ -1,7 +1,7 @@
 <template>
   <div @click="$emit('closePanel')" class="overlay">
     <div class="contribution-info">
-      <p>
+      <p v-if="this.selectedLang == 'de'">
         Mit einem Klick auf »Seite bearbeiten kannst du die Seite bearbeiten.
         Dafür wirst du auf GitHub weitergeleitet, dort liegt der Code der Seite.
         Über einen Klick auf das Stift Icon kannst du die Inhalte dieser Seite
@@ -15,12 +15,38 @@
           >hier ↗︎</a
         >
       </p>
+
+      <p v-else-if="this.selectedLang == 'en'">
+        Click on "Edit page" to edit the page. You will be redirected to GitHub,
+        where the code for the page is located. By clicking on the pencil icon,
+        you can adapt and improve the content of this page. and improve it.
+        Click on "Add File" to add a new entry. new entry. To do this, you have
+        to log in to GitHub once. Via "Commit New File" you send us the change,
+        if it is approved by us, you have your you have made your very first
+        "contribution" in the open source world. world. Thank you for your help!
+        You can find more information
+        <a
+          href="https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github"
+          >here ↗︎</a
+        >
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      selectedLang: "en"
+    };
+  },
+  beforeMount() {
+    if (navigator.language == "de") {
+      this.selectedLang = "de";
+    }
+  }
+};
 </script>
 
 <style>

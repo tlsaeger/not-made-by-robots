@@ -18,7 +18,8 @@
         v-if="navOpen"
         @click="burgerClicked()"
         ><div class="nav-burger" @click="burgerClicked()">
-          <h3 class="nav-text">Wissen</h3>
+          <h3 v-if="this.selectedLang == 'en'" class="nav-text">Theory</h3>
+          <h3 v-else class="nav-text">Wissen</h3>
         </div></nuxt-link
       >
       <nuxt-link
@@ -27,7 +28,8 @@
         v-if="navOpen"
         @click="burgerClicked()"
         ><div class="nav-burger" @click="burgerClicked()">
-          <h3 class="nav-text">Ressourcen</h3>
+          <h3 v-if="this.selectedLang == 'en'" class="nav-text">Ressources</h3>
+          <h3 v-else class="nav-text">Ressourcen</h3>
         </div>
       </nuxt-link>
       <nuxt-link
@@ -47,8 +49,14 @@ export default {
   data() {
     return {
       navOpen: true,
-      afterNav: true
+      afterNav: true,
+      selectedLang: "en"
     };
+  },
+  beforeMount() {
+    if (navigator.language == "de") {
+      this.selectedLang = "de";
+    }
   },
   transition: {
     afterLeave(el) {}

@@ -30,6 +30,7 @@ export default {
   },
   computed: {
     pageName() {
+      let lang = navigator.language;
       let count = 0;
       let pageIndexName = this.$route.path;
       for (let i = 0; i < pageIndexName.length; i++) {
@@ -45,6 +46,15 @@ export default {
       pageIndexName = pageIndexName.replaceAll("-", " ");
       if (pageIndexName === "") {
         pageIndexName = "Tutorials";
+      }
+      if (pageIndexName === "wissen" && lang === "de") {
+        pageIndexName = "wissen";
+      } else if (pageIndexName === "wissen" && lang !== "de") {
+        pageIndexName = "Theory";
+      } else if (pageIndexName === "ressourcen" && lang === "de") {
+        pageIndexName = "Ressourcen";
+      } else if (pageIndexName === "ressourcen" && lang !== "de") {
+        pageIndexName = "Ressources";
       }
       pageIndexName = pageIndexName.replaceAll("ae", "ä");
       return pageIndexName;

@@ -2,13 +2,24 @@
   <section class="fourth_section section">
     <div class="edit-link-wrapper">
       <a
+        v-if="this.selectedLang == 'de'"
         :href="
-          'https://github.com/tlsaeger/not-made-by-robots/tree/main/content' +
+          'https://github.com/tlsaeger/not-made-by-robots/tree/main/content/' +
             this.$route.path
         "
         class="edit-link"
         target="_blank"
         >Seite Bearbeiten
+      </a>
+      <a
+        v-if="this.selectedLang == 'en'"
+        :href="
+          'https://github.com/tlsaeger/not-made-by-robots/tree/main/content/' +
+            this.$route.path
+        "
+        class="edit-link"
+        target="_blank"
+        >Edit Page
       </a>
       <p
         @click="showContribution = !showContribution"
@@ -127,16 +138,21 @@ export default {
   },
   data() {
     return {
-      filterValues: filterValues.filterValues,
+      filterValues: filterValues.filterValuesEN,
       filteredArray: this.ressourcen,
       noContent: false,
       showContribution: false,
       myWissen: this.wissen,
-      myTutorials: this.tutorials
+      myTutorials: this.tutorials,
+      selectedLang: "en"
     };
   },
 
   beforeMount() {
+    if (navigator.language == "de") {
+      this.filterValues = filterValues.filterValuesDE;
+      this.selectedLang = "de";
+    }
     function addLinkandTag(myArray) {
       let element;
       for (element of myArray) {

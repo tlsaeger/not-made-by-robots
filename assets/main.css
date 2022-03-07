@@ -340,12 +340,14 @@ p {
 .person,
 .tool,
 .tutorial,
-.wissen {
+.wissen,
+.theory {
   border-color: #f876c1;
   color: #f876c1;
   transition: 0.2s;
 }
 .filter-element.wissen,
+.filter-element.theory,
 .filter-element.high-code {
   margin-right: 0.8em;
 }
@@ -354,22 +356,28 @@ p {
 .filter-element.tool:hover,
 .filter-element.tutorial:hover,
 .filter-element.wissen:hover,
+.filter-element.theory:hover,
 .filter-element.person.active,
 .filter-element.tool.active,
 .filter-element.tutorial.active,
-.filter-element.wissen.active {
+.filter-element.wissen.active,
+.filter-element.theory.active {
   background-color: #f876c1;
   transition: 0.2s;
 }
 .kostenlos,
-.kostenpflichtig {
+.kostenpflichtig,
+.free,
+.premium {
   border-color: #12d7f1;
   color: #12d7f1;
 }
 .filter-element.kostenlos:hover,
 .filter-element.kostenpflichtig:hover,
 .filter-element.kostenlos.active,
-.filter-element.kostenpflichtig.active {
+.filter-element.kostenpflichtig.active,
+.filter-element.free:hover,
+.filter-element.premium:hover {
   background-color: #12d7f1;
 }
 .tag-container {
@@ -479,24 +487,32 @@ li {
   .filter-element.tool:hover,
   .filter-element.tutorial:hover,
   .filter-element.wissen:hover,
+  .filter-element.theory:hover,
   .filter-element.person.active,
   .filter-element.tool.active,
   .filter-element.tutorial.active,
-  .filter-element.wissen.active {
+  .filter-element.wissen.active,
+  .filter-element.theory.active {
     background-color: #8134df;
     border: solid 1px #8134df;
     color: rgb(245, 245, 245);
   }
 
   .kostenlos,
-  .kostenpflichtig {
+  .kostenpflichtig,
+  .free,
+  .premium {
     border: solid 1px #005a70;
     color: #005a70;
   }
   .filter-element.kostenlos:hover,
   .filter-element.kostenpflichtig:hover,
+  .filter-element.free:hover,
+  .filter-element.premium:hover,
   .filter-element.kostenlos.active,
-  .filter-element.kostenpflichtig.active {
+  .filter-element.kostenpflichtig.active,
+  .filter-element.free.active,
+  .filter-element.premium.active {
     background-color: #005a70;
     border: solid 1px #005a70;
   }

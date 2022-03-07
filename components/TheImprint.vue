@@ -1,6 +1,10 @@
 <template>
   <div class="the-overlay" @click="$emit('closeTheImprint')">
-    <div class="the-imprint-wrapper" @click="$emit('closeTheImprint')">
+    <div
+      v-if="this.selectedLang == 'de'"
+      class="the-imprint-wrapper"
+      @click="$emit('closeTheImprint')"
+    >
       <div class="title-imprint">
         <h2>Impressum</h2>
         <p class="cross">X</p>
@@ -16,7 +20,7 @@
       <h3>Kontakt</h3>
       <p>
         E-Mail: mail@tlsaeger.de <br />
-        Webseite: <a href="tlsaeger.de">tlsager.de</a>
+        Webseite: <a href="https://tlsaeger.de">tlsager.de</a>
       </p>
 
       <h3>Haftung für Inhalte</h3>
@@ -62,8 +66,72 @@
         wir derartige Inhalte umgehend entfernen. Quelle: eRecht24
       </p>
     </div>
+    <div
+      v-if="this.selectedLang == 'en'"
+      class="the-imprint-wrapper"
+      @click="$emit('closeTheImprint')"
+    >
+      <div class="title-imprint">
+        <h2>Legal notice</h2>
+        <p class="cross">X</p>
+      </div>
+      <h3>
+        Information according to § 5 TMG
+      </h3>
+      <p>
+        Tom-Lucas Säger <br />
+        Erika-Mann-Bogen 9 <br />
+        22081 Hamburg
+      </p>
+      <h3>Contact</h3>
+      <p>
+        E-Mail: mail@tlsaeger.de <br />
+        Website: <a href="https://tlsaeger.de">tlsager.de</a>
+      </p>
+
+      <h3>Liability for contents</h3>
+      <p>
+        As a service provider, we are responsible for our own content on these
+        pages under on these pages according to the general laws. According to
+        §§ 8 to 10 TMG, however, we are not obligated as a service provider, to
+        monitor transmitted or stored third-party information or to investigate
+        or to investigate circumstances that indicate illegal activity.
+        Obligations to remove or block the use of information according to the
+        general laws remain unaffected. However, any liability in this respect
+        is only possible from the time knowledge of a concrete infringement. If
+        we become aware of infringements, we will remove this content
+        immediately.
+      </p>
+      <h3>Liability for links</h3>
+      <p>
+        Our website contains links to external websites of third parties. on
+        whose contents we have no influence. Therefore, we cannot assume any
+        liability for these external contents. The respective provider or
+        operator of th pages is responsible for the responsible. The linked
+        pages were checked for possible checked for possible legal violations at
+        the time of linking. Illegal contents were not recognisable at the time
+        of linking. A permanent control of the linked pages is not reasonable
+        without concrete of a violation of the law is not reasonable. If we
+        become aware of infringements become known, we will remove such links
+        immediately.
+      </p>
+    </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      selectedLang: "en"
+    };
+  },
+  beforeMount() {
+    if (navigator.language == "de") {
+      this.selectedLang = "de";
+    }
+  }
+};
+</script>
 <style scoped>
 .the-overlay {
   position: fixed;
