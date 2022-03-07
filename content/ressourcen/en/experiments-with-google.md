@@ -12,6 +12,7 @@ tags:
 level:
   - tutorial
   - theory
+  - tool
   - no-code
   - low-code
   - free
