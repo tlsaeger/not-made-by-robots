@@ -7,6 +7,7 @@ image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644143924/Tools/Tutor
 link: http://kaggle.com
 tags: null
 level:
+  - tool
   - tutorial
   - theory
   - no-code
