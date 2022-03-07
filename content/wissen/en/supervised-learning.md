@@ -5,13 +5,13 @@ description: Supervised Learning ist eine Art & Weise wie ML-Modelle lernen. Die
   Modelle werden dabei mit gelabelten Daten gefüttert…
 image: https://res.cloudinary.com/dt5cqs0lv/image/upload/v1627895537/Wissen/Supervised_Learning_fjq4z6.png
 tutorial_link:
-  - bananen-und-aepfel
-  - nosenet-mit-posenet
+  - apples-and-bananas
+  - nosenet-with-posenet
   - zoom-prank
 level:
-  - wissen
-  - kostenlos
+  - theory
+  - free
 ---
-Supervised Learning lässt sich am Besten an einem Beispiel erklären: Es liegen 100 Hundebilder und 100 Katzenbilder vor. Jeder dieser Datensätzen besteht aus einem Bild und einem Label, entweder Katze oder Hund. 80% dieser Daten werden verwendet um das Neuronale Netzwerk zu »trainieren«. Ist das Netzwerk trainiert können die restlichen 20% der Daten verwendet werden, um das Training zu validieren. Hier wird das Bild ohne Label gezeigt, woraufhin, wie schon erwähnt, die Maschine das Label ausgibt. Ist die Genauigkeit des Outputs noch nicht optimal, kann mit weiteren und/oder besseren Daten nachtrainiert werden. Ein konkretes Beispiel wäre hier das Erkennen eines Tumors auf einem Röntgenbild, mit genügend Trainingsdaten, also Bildern und Labeln. So ließe sich beispielsweise unterscheiden, ob es sich bei dem entdeckten Tumor, um einen bösartigen oder gutartigen Tumor handelt. Radiolog:innen könnte so in ihrer Arbeit unterstützt werden, da die Maschine bereits eine Vorauswahl mit potentiellen bösartigen Tumoren trifft. Denkbar wäre auch, dass dieser Prozess irgendwann vollends von einer Maschine übernommen werden kann. Eine solche Art des ML eignet sich besonders wenn das Ziel ist »menschliche« Erkennung nachzubilden, Hunde von Katzen unterscheiden, Sprache  verstehen etc.
+Supervised learning is best explained with an example: There are 100 dog pictures and 100 cat pictures. Each of these data sets consists of a picture and a label, either cat or dog. 80% of this data is used to "train" the neural network. Once the network is trained, the remaining 20% of the data can be used to validate the training. Here, the image is shown without a label, whereupon, as already mentioned, the machine outputs the label. If the accuracy of the output is still not optimal, further and/or better data can be used to retrain. A concrete example would be the recognition of a tumour on an X-ray image, with sufficient training data, i.e. images and labels. In this way, it would be possible, for example, to distinguish whether the tumour detected is malignant or benign. Radiologists could thus be supported in their work, as the machine already makes a preliminary selection of potential malignant tumours. It is also conceivable that this process could be completely taken over by a machine at some point. This type of ML is particularly suitable if the goal is to emulate "human" recognition, distinguish dogs from cats, understand language, etc.
 
 ![](https://res.cloudinary.com/dt5cqs0lv/image/upload/v1644323099/Wissen/fakes000000_supervised-2_ikd9kr.png)
