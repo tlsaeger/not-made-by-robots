@@ -28,9 +28,14 @@ export default {
       { name: "msapplication-TileColor", content: "#da532c" },
       { name: "theme-color", content: "#ffffff" },
       {
+        property: "og:image",
+        content:
+          "https://res.cloudinary.com/dt5cqs0lv/image/upload/v1646742453/nmbr_web_head_a9s7ks.jpg"
+      },
+      {
         name: "description",
         content:
-          "Wenn Roboter die besseren Kreativschaffenden sind, wozu brauchen wir dann noch Designer:innen?"
+          "If robots are the better creators, why do we need human-designers?"
       }
     ],
     link: [
