@@ -33,9 +33,13 @@ export default {
           "https://res.cloudinary.com/dt5cqs0lv/image/upload/v1646742453/nmbr_web_head_a9s7ks.jpg"
       },
       {
-        property: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image"
+      },
+      {
+        name: "twitter:description",
         content:
-          "https://res.cloudinary.com/dt5cqs0lv/image/upload/v1646742453/nmbr_web_head_a9s7ks.jpg"
+          "If robots are the better creators, why do we need human-designers?"
       },
       {
         name: "description",
