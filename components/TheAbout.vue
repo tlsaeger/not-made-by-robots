@@ -62,37 +62,36 @@
         <p class="cross">X</p>
       </div>
       <p>
-        Not Made by Robots is a collection that aims to bring the theme of
-        artificial artificial intelligence to as many artists and designers as
-        possible. artists and designers as possible. This collection provides an
-        insight into the subject and, with a "hands-on approach", makes sure
-        that everyone hands-on approach, so that everyone can get their hands
-        dirty in a simple way. can get their hands dirty.
+        Not Made by Robots is a collection that aims to bring the topic of
+        artificial intelligence to as many artists and designers as possible.
+        This collection gives an insight into the topic and ensures with a
+        "hands-on approach" that everyone can get their hands dirty in an easy
+        way.
       </p>
       <br />
       The collection offers four categories:
       <h3>Tutorials</h3>
       <p>
-        Here you can try out "artificial intelligence". You will be given a you
-        will also learn how to code a little. But don't be afraid!
+        Here you can try out "artificial intelligence". You will be given an
+        easy introduction and you will also learn a bit of coding. But don't be
+        afraid!
       </p>
       <h3>News</h3>
       <p>
-        What's going on in the world of between design and AI? provides you
-        daily with the news of the most important people and institutions from
-        the field of AI & Design.
+        What's going on in the world of between design and AI, a Twitter bot
+        provides you with daily news from the most important people and
+        institutions in the field of AI & Design.
       </p>
       <h3>Theory</h3>
       <p>
         Here you will find background knowledge on the topic, what is supervised
-        learning again? Supervised Learning, how does a GAN work? Soon you will
-        be smarter!
+        learning again, how does a GAN work? Soon you will be smarter!
       </p>
       <h3>Ressources</h3>
       <p>
-        The topic has hooked you and you want to run off into the free world of
-        AI. of AI, then you'll find a few good starting points here from which
-        you can start your journey.
+        The topic has hooked you and you want to run off free into the world of
+        AI, then here are a few good starting points from which to begin your
+        journey.
         <br />
         Not Made by Robots is a master's thesis by
         <a href="https://tlsaeger.de" target="_blank">Tom-Lucas Säger</a>↗︎, it
