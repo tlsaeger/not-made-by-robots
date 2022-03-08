@@ -11,7 +11,7 @@
         >Seite Bearbeiten
       </a>
       <a
-        v-if="lang == 'en'"
+        v-else-if="lang == 'en'"
         :href="
           'https://github.com/tlsaeger/not-made-by-robots/tree/main/content'
         "
@@ -74,7 +74,8 @@ export default {
       error({ message: "Blog Post not found" });
     }
     return {
-      post
+      post,
+      lang
     };
   },
   transition: "slide-bottom",
