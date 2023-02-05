@@ -1,7 +1,8 @@
 <template>
   <section class="fifth_section section">
     <div class="text-block-wrapper text-block-wrapper-mini">
-      <transition v-for="tweet in tweets" :key="tweet.id" name="fade">
+      <h1 class="news-header">No more news, thanks Elon!</h1>
+      <!-- <transition v-for="tweet in tweets" :key="tweet.id" name="fade">
         <a
           :href="
             `https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
@@ -33,7 +34,7 @@
             </div>
           </div>
         </a>
-      </transition>
+      </transition> -->
     </div>
   </section>
 </template>
@@ -102,5 +103,8 @@ export default {
 <style scoped>
 .tweet-details {
   font-size: 0.7em;
+}
+.news-header {
+  margin-bottom: 75vh;
 }
 </style>
